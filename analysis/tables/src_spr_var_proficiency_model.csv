@@ -1,0 +1,25 @@
+Parameter,Estimate,$SE$,df,$t$,$p$
+(Intercept), 0.07,0.00,129.42,14.16,< .001
+Dependency[RP],−0.04,0.01,191.79,−7.13,< .001
+Environment[Long], 0.02,0.01,206.55, 2.93,0.004
+Environment[Island], 0.03,0.01,407.72, 4.77,< .001
+Group[MLE],−0.01,0.01,129.42,−1.58,0.117
+Proficiency,−0.02,0.00,129.42,−4.64,< .001
+Dependency[RP]:Environment[Long],−0.03,0.01,515.97,−2.53,0.012
+Dependency[RP]:Environment[Island],−0.02,0.01,515.97,−1.67,0.096
+Dependency[RP]:Group[MLE], 0.01,0.01,191.79, 0.72,0.470
+Environment[Long]:Group[MLE],−0.01,0.01,206.55,−0.40,0.693
+Environment[Island]:Group[MLE],−0.02,0.01,407.72,−1.33,0.186
+Dependency[RP]:Proficiency, 0.01,0.01,191.79, 0.84,0.399
+Environment[Long]:Proficiency, 0.00,0.01,206.55, 0.52,0.606
+Environment[Island]:Proficiency, 0.01,0.01,407.72, 0.92,0.358
+Group[MLE]:Proficiency, 0.00,0.01,129.42,−0.20,0.841
+Dependency[RP]:Envir.[Long]:Group[MLE],−0.02,0.03,515.97,−0.59,0.556
+Dependency[RP]:Envir.[Island]:Group[MLE], 0.01,0.03,515.97, 0.44,0.659
+Dependency[RP]:Envir.[Long]:Proficiency, 0.02,0.01,515.97, 1.72,0.086
+Dependency[RP]:Envir.[Island]:Proficiency, 0.00,0.01,515.97,−0.07,0.943
+Dependency[RP]:Group[MLE]:Proficiency, 0.00,0.01,191.79,−0.33,0.740
+Environment[Long]:Group[MLE]:Proficiency,−0.02,0.01,206.55,−1.22,0.224
+Environment[Island]:Group[MLE]:Proficiency, 0.00,0.01,407.72, 0.09,0.925
+Dependency[RP]:Envir.[Long]:Group[MLE]:Proficiency,−0.02,0.03,515.97,−0.57,0.567
+Dependency[RP]:Envir.[Island]:Group[MLE]:Proficiency, 0.05,0.03,515.97, 1.98,0.048

@@ -1,0 +1,47 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% # C-Test Validation Study
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Corpus Analysis on Verb Transitivity}\label{app-transitivity}
+
+\setlength{\parindent}{2.6em}
+\setstretch{1.5}
+
+Following discussion with my Korean and Mandarin language consultants, I shortlisted 15 verbs for inclusion in the ORC study stimuli: \textit{arrest}, \textit{catch}, \textit{defend}, \textit{employ}, \textit{examine}, \textit{fire}, \textit{hire}, \textit{interview}, \textit{punish}, \textit{question}, \textit{recruit}, \textit{release}, \textit{rescue}, \textit{treat}, and \textit{welcome}. To confirm that these verbs were strongly transitive, I conducted a corpus analysis on the 14.5-million-word Open American National Corpus (OANC; \url{https://anc.org}), making use of the \textit{spaCy} library (\cite{honnibal.montani2017}; language model: en\_core\_web\_lg) in Python (\cite{pythonsoftwarefoundation2021}) to tokenize sentences and to construct dependency parses for each of them. Further data processing and analysis were performed in R (relevant scripts available at \url{https://osf.io/v8erj}).
+
+Verb tokens were categorized as transitive if their children (i.e.,~immediate syntactic dependents as determined by the \textit{spaCy} dependency parser) bore tags for direct objects (DOBJ; as in \textit{I interviewed him}: I-NSUBJ interviewed-ROOT him-DOBJ) or for at least one of the three elements common in passive constructions: (NSUBJPASS = nominal subject in passive construction; AUXPASS = auxiliary verb in passive construction; AGENT = \textit{by}-phrase containing agent in passive construction---as in \textit{She was punished by her parents}: she-NSUBJPASS was-AUXPASS punished-ROOT by-AGENT). I excluded from analysis any tokens that had children with either the tensed clausal complement tag (CCOMP; as in \textit{We examined whether the White House influenced press releases}: we-NSUBJ examined-ROOT influenced-CCOMP) or the tenseless clausal complement tag (XCOMP; as in \textit{I welcomed doing a book}: I-NSUBJ welcomed-ROOT doing-XCOMP) but no children with the DOBJ, NSUBJPASS, AUXPASS, or AGENT tags. All other verb tokens were categorized as intransitive.
+
+Preliminary testing of this transitivity-tagging procedure revealed that the majority of categorization errors could be ameliorated through a few simple data-cleaning measures. First, the dataset was filtered to three major clause types: ROOT (main clause; as in \textit{They fired her}: fired-ROOT), CCOMP (tensed clausal complement; as in \textit{I thought I was being punished}: punished-CCOMP), and RELCL (relative clause; as in \textit{the doctor who treated him}: treated-RELCL). Verbs with other dependency tags were excluded from analysis. This was done because the dependency parser assigned verb-labeled tokens a variety of dependency tags, only some of which are associated with verbs in fully-fledged clauses. For instance, ACOMP (adjectival complement; as in \textit{He was very welcoming}: welcoming-ACOMP) marks verbal adjectives rather than bona fide verbs. Second, sentences containing more than 50 word tokens were omitted because those above this threshold tended to be run-on sentences containing many parsing errors. Third, verbs lacking a nominal subject with an NSUBJ or NSUBJPASS tag were removed because clauses for which the dependency parser failed to identify a subject tended to contain other types of errors and complications that made the verbs in them difficult to categorize correctly. Fourth, phrasal verbs (i.e.,~those with a child tagged as PRT `particle') were excluded because they constituted distinct lexical items from the verbs of interest in the analysis. Instances of the phrasal verbs \textit{catch on}, \textit{catch onto}, and \textit{fire back}, for which the dependency tagger failed to apply the PRT tag, were also located and removed. Fifth, intransitive-tagged tokens with children containing indicators of verb coordination (i.e., the CC `coordinating conjunction' tag and the CONJ `conjunct' tag; as in \textit{The note taker welcomed and oriented the subjects}: taker-NSUBJ welcomed-ROOT and-CC oriented-CONJ) were removed because the dependency parser was incapable of associating a direct object with more than one verb. Finally, verbs with the RELCL tag and either an NSUBJ child (as in \textit{[books] that you read}, where \textit{you} carries the NSUBJ tag) or a \textit{to}-AUX child (as in \textit{[stories] to tell}, where \textit{to} carries the AUX tag)---i.e.,~verbs in ORCs---were classified as transitive; this step was necessary because the transitivity tagger tended to incorrectly categorize verbs in ORCs as intransitive due to the absence of a DOBJ-tagged child within the bounds of clause.
+
+Table \ref{tab:app-transitivity-orc} shows the transitivity-bias information for each verb as determined by the automated tagging procedure. All verbs had transitivity rates in excess of 80\%, indicating that they are strongly transitive and therefore appropriate for use in the stimuli. Of the 4,009 transitive-tagged tokens, 56\% were so categorized because of a DOBJ tag, 41\% were so categorized because of an NSUBJPASS/AUXPASS/AGENT tag, and 2\% were so categorized via the improvised procedure for identifying ORCs. The verb \textit{fire} (intended meaning for use in the stimuli: `to dismiss someone from employment') had a somewhat lower transitivity rate than the other 14 verbs because of interference from its optionally transitive homonym meaning `to discharge a firearm.' The fact that the tagger conflated verbs with the same spelling was arguably desirable, though, since L2ers are known to experience interference from homonyms during online processing tasks (e.g.,~\cite{elston-guttler.friederici2005}). With the exception of \textit{interview} and \textit{fire}, all verbs of interest ranked in the top 50\% of verbs in the corpus for transitivity bias.
+
+\begin{table}
+\caption{Transitivity rates for verbs in the ORC study}\label{tab:app-transitivity-orc}
+\raggedright\setstretch{1}
+\begin{tabularx}{\linewidth}{XYYYY}\toprule
+Verb & Transitive Tokens & Total Tokens & Transitivity Rate & Percent Rank\\\midrule
+\csvreader[late after line=\\,late after last line=\\\bottomrule]
+{../analysis/tables/orc_trans_automated.csv}{}{\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv}
+\end{tabularx}
+\textit{Note}. Verbs organized by transitivity rate.
+\vspace{-12pt}
+\end{table}
+
+To assess the accuracy of the transitivity-tagging procedure on the 15 verbs of interest, two human coders manually checked a 1,000-word sample of verb-of-interest tokens taken from the corpus (coding verbs as `transitive' or `intransitive'); this sample consisted of all 104 tokens that had been tagged as intransitive and 896 randomly-selected tokens that had been tagged as transitive. Inter-rater reliability was high ($\kappa$~=~.93), and coding disparities were settled through discussion. Results showed that the accuracy rate was 26\% for intransitive-tagged tokens and nearly 100\% (specifically, 99.67\%) for transitive-tagged tokens. The majority of tagging errors (96\%) involved tokens being incorrectly classified as intransitive. These errors could almost always be traced to inaccurate dependency tagging. For instance, verbs in direct object reduced relative clauses (e.g.,~\textit{the figures released Thursday}; \textit{cells treated with resveratrol}) should receive the ACL `adjectival clause' tag (and thus been excluded from the analysis), but sometimes they received a CCOMP, RELCL, or ROOT tag instead. As a consequence, the tagger erroneously categorized such tokens as intransitive. There were also a few cases of part-of-speech misassignment (nouns tagged as verbs, etc.). When the accuracy rates are weighted according to the relative proportions of intransitive-tagged tokens and transitive-tagged tokens among the verbs of interest in the corpus (intransitive: 3\%; transitive: 97\%), the overall accuracy rate comes out to 98\%. These results suggest that the automated transitivity tagger is highly accurate on strongly transitive verbs and, if anything, it slightly underestimates the transitivity bias of such verbs.
+
+Although the transitivity bias of the verbs was not crucial in the SRC study, it is generally desirable for the lexical items used in a set of stimuli to have similar distributional properties (excluding any planned experimental manipulations), and so another corpus analysis was conducted to determine the transitivity bias of the verbs selected for inclusion in the SRC stimuli following the same procedure as for the ORC stimuli. The results from this analysis, shown in Table \ref{tab:app-transitivity-src}, indicated that all 15 of these verbs were likewise strongly (> 80\%) transitive. 
+
+\begin{table}
+\caption{Transitivity rates for verbs in the SRC study}\label{tab:app-transitivity-src}
+\raggedright\setstretch{1}
+\begin{tabularx}{\linewidth}{XYYYY}\toprule
+Verb & Transitive Tokens & Total Tokens & Transitivity Rate & Percent Rank\\\midrule
+\csvreader[late after line=\\,late after last line=\\\bottomrule]
+{../analysis/tables/src_trans_automated.csv}{}{\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv}
+\end{tabularx}
+\textit{Note}. Verbs organized by transitivity rate.
+\vspace{-12pt}
+\end{table}
+
+\setlength{\parindent}{0em}
+\setstretch{1}

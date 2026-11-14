@@ -1,0 +1,7 @@
+Group,Environment,Contrast,Estimate,$SE$,$z$,$p$
+KLE,Short,RP − Gap, 0.01,0.27, 0.04,> .999
+KLE,Long,RP − Gap, 0.11,0.26, 0.44,0.999
+KLE,Island,RP − Gap, 0.08,0.27, 0.30,> .999
+MLE,Short,RP − Gap,−0.24,0.31,−0.79,0.966
+MLE,Long,RP − Gap, 0.07,0.29, 0.24,> .999
+MLE,Island,RP − Gap,−0.25,0.28,−0.89,0.941

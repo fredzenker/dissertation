@@ -1,0 +1,13 @@
+Parameter,Estimate,$SE$,$z$,$p$
+(Intercept), −7.88, 9.57,−0.82,0.411
+Environment[Long], 19.06,28.69, 0.66,0.507
+Environment[Island], 19.98,28.69, 0.70,0.486
+Group[MLE],  8.92,19.14, 0.47,0.641
+Proficiency,  0.73, 8.47, 0.09,0.931
+Environment[Long]:Group[MLE],−17.23,57.34,−0.30,0.764
+Environment[Island]:Group[MLE],−18.78,57.34,−0.33,0.743
+Environment[Long]:Proficiency,  0.58,25.39, 0.02,0.982
+Environment[Island]:Proficiency,  1.49,25.39, 0.06,0.953
+Group[MLE]:Proficiency, −0.41,16.93,−0.02,0.980
+Environment[Long]:Group[MLE]:Proficiency,  2.65,50.71, 0.05,0.958
+Environment[Island]:Group[MLE]:Proficiency,  0.14,50.71, 0.00,0.998

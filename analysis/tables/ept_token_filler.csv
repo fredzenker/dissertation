@@ -1,0 +1,55 @@
+study,Group,Type,Dependency,Tokens,$CI$,Percent
+ORC,ENS,F1,Gapping,4.67,"[ 4.47, 4.88]",93.48
+ORC,ENS,F1,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+ORC,ENS,F1,Other,0.09,"[ 0.01, 0.17]", 1.80
+ORC,ENS,F2,Gapping,4.39,"[ 4.15, 4.64]",87.87
+ORC,ENS,F2,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+ORC,ENS,F2,Other,0.35,"[ 0.19, 0.51]", 6.97
+ORC,ENS,F3,Gapping,4.55,"[ 4.33, 4.78]",91.01
+ORC,ENS,F3,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+ORC,ENS,F3,Other,0.22,"[ 0.09, 0.36]", 4.49
+ORC,KLE,F1,Gapping,4.40,"[ 4.06, 4.74]",88.00
+ORC,KLE,F1,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+ORC,KLE,F1,Other,0.09,"[−0.02, 0.21]", 1.85
+ORC,KLE,F2,Gapping,4.32,"[ 3.98, 4.67]",86.46
+ORC,KLE,F2,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+ORC,KLE,F2,Other,0.12,"[−0.04, 0.28]", 2.46
+ORC,KLE,F3,Gapping,4.26,"[ 3.89, 4.63]",85.23
+ORC,KLE,F3,Resumption,0.02,"[−0.02, 0.05]", 0.31
+ORC,KLE,F3,Other,0.15,"[−0.03, 0.34]", 3.08
+ORC,MLE,F1,Gapping,4.27,"[ 3.93, 4.60]",85.35
+ORC,MLE,F1,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+ORC,MLE,F1,Other,0.06,"[−0.03, 0.14]", 1.13
+ORC,MLE,F2,Gapping,4.24,"[ 3.90, 4.58]",84.79
+ORC,MLE,F2,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+ORC,MLE,F2,Other,0.06,"[−0.01, 0.12]", 1.13
+ORC,MLE,F3,Gapping,4.20,"[ 3.84, 4.55]",83.94
+ORC,MLE,F3,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+ORC,MLE,F3,Other,0.06,"[−0.03, 0.14]", 1.13
+SRC,ENS,F1,Gapping,4.47,"[ 4.15, 4.80]",89.49
+SRC,ENS,F1,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+SRC,ENS,F1,Other,0.10,"[−0.02, 0.23]", 2.03
+SRC,ENS,F2,Gapping,4.32,"[ 3.99, 4.66]",86.44
+SRC,ENS,F2,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+SRC,ENS,F2,Other,0.22,"[ 0.10, 0.34]", 4.41
+SRC,ENS,F3,Gapping,4.42,"[ 4.09, 4.75]",88.47
+SRC,ENS,F3,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+SRC,ENS,F3,Other,0.07,"[ 0.00, 0.13]", 1.36
+SRC,KLE,F1,Gapping,4.57,"[ 4.31, 4.82]",91.38
+SRC,KLE,F1,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+SRC,KLE,F1,Other,0.03,"[−0.01, 0.07]", 0.62
+SRC,KLE,F2,Gapping,4.42,"[ 4.13, 4.71]",88.31
+SRC,KLE,F2,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+SRC,KLE,F2,Other,0.14,"[ 0.01, 0.27]", 2.77
+SRC,KLE,F3,Gapping,4.52,"[ 4.24, 4.80]",90.46
+SRC,KLE,F3,Resumption,0.00,"[ 0.00, 0.00]", 0.00
+SRC,KLE,F3,Other,0.11,"[−0.02, 0.24]", 2.15
+SRC,MLE,F1,Gapping,3.62,"[ 3.16, 4.07]",72.35
+SRC,MLE,F1,Resumption,0.12,"[−0.03, 0.27]", 2.35
+SRC,MLE,F1,Other,0.03,"[−0.01, 0.07]", 0.59
+SRC,MLE,F2,Gapping,3.59,"[ 3.09, 4.08]",71.76
+SRC,MLE,F2,Resumption,0.22,"[ 0.01, 0.43]", 4.41
+SRC,MLE,F2,Other,0.01,"[−0.01, 0.04]", 0.29
+SRC,MLE,F3,Gapping,3.59,"[ 3.14, 4.04]",71.76
+SRC,MLE,F3,Resumption,0.18,"[−0.04, 0.39]", 3.53
+SRC,MLE,F3,Other,0.03,"[−0.01, 0.07]", 0.59

@@ -1,0 +1,4 @@
+Parameter,Estimate,$SE$,$t$,$p$
+(Intercept), 0.04,0.11, 0.36,0.722
+Type[Rejector], 0.24,0.25, 0.95,0.343
+Type[Inconsistent],−0.03,0.23,−0.14,0.886

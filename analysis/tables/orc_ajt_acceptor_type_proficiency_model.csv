@@ -1,0 +1,7 @@
+Parameter,Estimate,$SE$,$t$,$p$
+(Intercept), 0.07,0.09, 0.79,0.433
+Group[MLE],−0.04,0.18,−0.21,0.837
+Type[Rejector], 0.65,0.19, 3.41,< .001
+Type[Inconsistent], 0.23,0.22, 1.03,0.305
+Group[MLE]:Type[Rejector],−0.07,0.38,−0.19,0.847
+Group[MLE]:Type[Inconsistent],−0.25,0.44,−0.57,0.572

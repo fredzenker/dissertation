@@ -1,0 +1,76 @@
+\documentclass[12pt]{report}
+
+\usepackage{style}
+\addbibresource{references.bib}
+% \includeonly{chapter/resumption}
+% \includeonly{front/drafttitle,chapter/study,chapter/ept,chapter/spr,chapter/ajt,appendix/lbq,appendix/materials-ept,appendix/materials-spr,appendix/materials-ajt,appendix/zenker,appendix/exit,appendix/results-ctest,appendix/image,appendix/results-ept,appendix/results-spr,appendix/results-ajt}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% # Front Matter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{front/frontmatter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% # Chapters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\phantomsection
+\renewcommand\thepage{\romannumeral\numexpr\value{page}\relax}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\setstretch{1.5}
+\setlength{\parskip}{0pt}
+
+\include{chapter/introduction}
+\include{chapter/properties}
+\include{chapter/gapping}
+\include{chapter/resumption}
+\include{chapter/acquisition}
+\include{chapter/study}
+\include{chapter/ept}
+\include{chapter/spr}
+\include{chapter/ajt}
+\include{chapter/reanalysis}
+\include{chapter/discussion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% # Appendices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\phantomsection
+\setlength{\parindent}{0in}
+\setstretch{1}
+
+\appendix
+\include{appendix/lbq}
+\include{appendix/materials-ept}
+\include{appendix/materials-spr}
+\include{appendix/materials-ajt}
+\include{appendix/zenker}
+\include{appendix/exit}
+\include{appendix/image}
+\include{appendix/transitivity}
+\include{appendix/validation}
+\include{appendix/results-ctest}
+\include{appendix/results-ept}
+\include{appendix/results-spr}
+\include{appendix/results-ajt}
+\include{appendix/results-reanalysis}
+% \include{appendix/results-variance}
+\include{appendix/parkchoi}
+\include{appendix/brown}
+\include{appendix/speaking}
+\include{appendix/writing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% # References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\bibname}{References}
+\printbibliography
+\addcontentsline{toc}{part}{References}
+
+\end{document}

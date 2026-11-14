@@ -1,0 +1,91 @@
+study,Pairing,Environment,Type,Count,Percent
+ORC,EE,Short,RP Acceptor,4, 4.49
+ORC,EE,Short,RP Rejector,76,85.39
+ORC,EE,Short,Other,9,10.11
+ORC,EE,Long,RP Acceptor,4, 4.49
+ORC,EE,Long,RP Rejector,73,82.02
+ORC,EE,Long,Other,12,13.48
+ORC,EE,Island,RP Acceptor,13,14.61
+ORC,EE,Island,RP Rejector,64,71.91
+ORC,EE,Island,Other,12,13.48
+ORC,KE,Short,RP Acceptor,16,23.53
+ORC,KE,Short,RP Rejector,43,63.24
+ORC,KE,Short,Other,9,13.24
+ORC,KE,Long,RP Acceptor,20,29.41
+ORC,KE,Long,RP Rejector,39,57.35
+ORC,KE,Long,Other,9,13.24
+ORC,KE,Island,RP Acceptor,29,42.65
+ORC,KE,Island,RP Rejector,24,35.29
+ORC,KE,Island,Other,15,22.06
+ORC,ME,Short,RP Acceptor,32,42.11
+ORC,ME,Short,RP Rejector,34,44.74
+ORC,ME,Short,Other,10,13.16
+ORC,ME,Long,RP Acceptor,32,42.11
+ORC,ME,Long,RP Rejector,26,34.21
+ORC,ME,Long,Other,18,23.68
+ORC,ME,Island,RP Acceptor,29,38.16
+ORC,ME,Island,RP Rejector,25,32.89
+ORC,ME,Island,Other,22,28.95
+ORC,KK,Short,RP Acceptor,9,13.24
+ORC,KK,Short,RP Rejector,47,69.12
+ORC,KK,Short,Other,12,17.65
+ORC,KK,Long,RP Acceptor,19,27.94
+ORC,KK,Long,RP Rejector,36,52.94
+ORC,KK,Long,Other,13,19.12
+ORC,KK,Island,RP Acceptor,24,35.29
+ORC,KK,Island,RP Rejector,24,35.29
+ORC,KK,Island,Other,20,29.41
+ORC,MM,Short,RP Acceptor,15,20.00
+ORC,MM,Short,RP Rejector,44,58.67
+ORC,MM,Short,Other,16,21.33
+ORC,MM,Long,RP Acceptor,29,38.67
+ORC,MM,Long,RP Rejector,33,44.00
+ORC,MM,Long,Other,13,17.33
+ORC,MM,Island,RP Acceptor,20,26.67
+ORC,MM,Island,RP Rejector,38,50.67
+ORC,MM,Island,Other,17,22.67
+SRC,EE,Short,RP Acceptor,1, 1.67
+SRC,EE,Short,RP Rejector,57,95.00
+SRC,EE,Short,Other,2, 3.33
+SRC,EE,Long,RP Acceptor,1, 1.69
+SRC,EE,Long,RP Rejector,53,89.83
+SRC,EE,Long,Other,5, 8.47
+SRC,EE,Island,RP Acceptor,9,15.25
+SRC,EE,Island,RP Rejector,46,77.97
+SRC,EE,Island,Other,4, 6.78
+SRC,KE,Short,RP Acceptor,11,16.67
+SRC,KE,Short,RP Rejector,51,77.27
+SRC,KE,Short,Other,4, 6.06
+SRC,KE,Long,RP Acceptor,19,28.79
+SRC,KE,Long,RP Rejector,37,56.06
+SRC,KE,Long,Other,10,15.15
+SRC,KE,Island,RP Acceptor,29,43.94
+SRC,KE,Island,RP Rejector,20,30.30
+SRC,KE,Island,Other,17,25.76
+SRC,ME,Short,RP Acceptor,34,47.22
+SRC,ME,Short,RP Rejector,21,29.17
+SRC,ME,Short,Other,17,23.61
+SRC,ME,Long,RP Acceptor,46,63.89
+SRC,ME,Long,RP Rejector,13,18.06
+SRC,ME,Long,Other,13,18.06
+SRC,ME,Island,RP Acceptor,41,56.94
+SRC,ME,Island,RP Rejector,12,16.67
+SRC,ME,Island,Other,19,26.39
+SRC,KK,Short,RP Acceptor,4, 6.06
+SRC,KK,Short,RP Rejector,54,81.82
+SRC,KK,Short,Other,8,12.12
+SRC,KK,Long,RP Acceptor,30,45.45
+SRC,KK,Long,RP Rejector,24,36.36
+SRC,KK,Long,Other,12,18.18
+SRC,KK,Island,RP Acceptor,28,42.42
+SRC,KK,Island,RP Rejector,27,40.91
+SRC,KK,Island,Other,11,16.67
+SRC,MM,Short,RP Acceptor,18,24.66
+SRC,MM,Short,RP Rejector,32,43.84
+SRC,MM,Short,Other,23,31.51
+SRC,MM,Long,RP Acceptor,36,49.32
+SRC,MM,Long,RP Rejector,17,23.29
+SRC,MM,Long,Other,20,27.40
+SRC,MM,Island,RP Acceptor,35,47.95
+SRC,MM,Island,RP Rejector,16,21.92
+SRC,MM,Island,Other,22,30.14

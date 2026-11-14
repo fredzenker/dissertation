@@ -1,0 +1,1109 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% # Processing of Gapped Relative Clauses
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Processing of Gapped Relative Clauses}\label{ch-gapping}
+
+% \excnt=39
+
+It is widely acknowledged that gapped RCs, and gapped dependencies more generally, are difficult to process (\cite{goodall2004}, p.~102; \cite{hawkins1999}, p.~246; \cite{hofmeister.sag2010}, p.~380; \cite{ogrady2022a}, p.~57). However, the amount of strain placed on the processor can vary widely from one gapped RC to another. This chapter begins in Section 3.1 by introducing four processing asymmetries for gapped RCs that are relevant to the present dissertation: the subject vs. object asymmetry in nonislands, the short-distance vs. long-distance asymmetry, the COMP-clause vs. \textit{wh}-clause asymmetry, and the subject vs. object asymmetry in \textit{wh}-islands. In doing so, I review some of the experimental literature on each of the asymmetries. When studies specifically dealing with RCs are hard to come by, I supplement with studies examining \textit{wh}-questions, on the understanding that asymmetries observed in one type of gapped dependency\footnotemark{} typically hold for other types of gapped dependencies (e.g.,~\cite{friedmann.etal2009,schippers.etal2019}. In Section 3.2, I go on to explore some of the ways that these asymmetries have been explained in the processing literature, focusing on distance effects, intervention effects, push-down storage effects, and expectation effects. Section 3.3 concludes the chapter.
+
+\footnotetext{As a reminder, I use `gapped dependency' as an umbrella term for filler-gap dependencies and gap-filler dependencies; I am referring to what the generative literature calls `A-bar dependencies' (see~Section~\ref{pro-distribution}).}
+
+%========================================================%
+\section{Processing asymmetries}\label{gap-asymmetry}
+%========================================================%
+
+\subsection{The subject vs. object asymmetry in nonislands}\label{gap-so}
+
+By far the most heavily researched RC processing asymmetry is the one between subject RCs (SRCs), as in (\ref{ex-gap-so-a}), and direct object RCs (ORCs), as in (\ref{ex-gap-so-b}). I follow the common practice of using the `>' symbol to mean `is easier to process than' (e.g.,~\cite{alexopoulou.keller2007}, p.~138; \cite{kluender1998}, p.~256; \cite{lau.tanaka2021}, p.~10; \cite{sag.etal2007}, p.~218).
+
+\pex \label{ex-gap-so}
+\a the man [that \_\_ hired you] > \label{ex-gap-so-a}
+\a the man [that you hired \_\_] \label{ex-gap-so-b}
+\xe 
+
+For English, experimental data generally show a robust processing advantage for SRCs over ORCs. Three representative examples of studies testing L1-English adults via different methodologies are provided in Table~\ref{tab:gap-so-en}.
+
+\begin{table}
+\caption{Studies probing the subject vs. object asymmetry among L1-English adults}\label{tab:gap-so-en}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={llll}}\toprule
+Study & Phenomenon & Method & Results \\\midrule
+\cite{king.just1991} & RCs & self-paced reading & subject > object \\
+\cite{just.etal1996} & RCs & fMRI & subject > object \\
+\cite{traxler.etal2002} & RCs & eye-tracking while reading & subject > object \\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+King and Just's (\citeyear{king.just1991}) study involved the self-paced reading task outlined in Table~\ref{tblr:gap-so-kj91}. At the matrix verb following the RC, response times were faster in the SRC condition than in the ORC condition; moreover accuracy on comprehension probes was higher for SRCs than for ORCs. Taken together, these results indicate that SRCs are easier to process than ORCs.
+
+\begin{longtblr}[caption={\textcite{king.just1991}: Self-paced reading task (Experiment 1)}, label={tblr:gap-so-kj91}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 46 L1-English adults \vspace{5pt}\\*
+\textbf{Procedure:} Participants' response times were recorded while they read sentences on a computer screen, pushing a button to advance one word at a time. Each trial consisted of one, two, or three sentences, the last of which was the critical or filler sentence. After reading all the sentences, participants were prompted to recall the final word from each of them. The trial ended with a comprehension probe (e.g.,~\textit{The reporter attacked the senator, true or false?}). \vspace{5pt}\\
+\textbf{Conditions (p. 584):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{SRC condition:}\par\nobreak
+The reporter that attacked the senator admitted the error publicly after the hearing.
+\item \textbf{ORC condition:}\par\nobreak
+The reporter that the senator attacked admitted the error publicly after the hearing.
+\end{enumerate}\end{varwidth}\\\hline
+\end{longtblr}
+
+Just et al.'s (\citeyear{just.etal1996}) fMRI experiment is summarized in Table~\ref{tblr:gap-so-j96}. Participants' levels of neural activity were higher in ORCs than in SRCs at each of the four brain areas measured. Although comprehension probes were included in the experiment, Just et al. do not comment on those data except to say that there were moderate correlations between comprehension accuracy and levels of brain activity across conditions: ``r~=~0.60 and 0.44 for the left middle and laterosuperior gyri, respectively'' (p.~116). Overall, these results were taken as evidence that comprehending ORCs requires more effort than comprehending SRCs.
+
+\begin{longtblr}[caption={\textcite{just.etal1996}: fMRI experiment}, label={tblr:gap-so-j96}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 15 L1-English adults \vspace{5pt}\\*
+\textbf{Procedure:} Levels of activity in four brain areas were monitored while participants read sentences on a computer screen. Each trial contained four or five sentences, the last of which was the critical stimulus. The trial ended with a comprehension probe (e.g.,~\textit{The reporter attacked the senator, true or false?}). \vspace{5pt}\\
+\textbf{Relevant conditions (p. 114, (2) and (3)):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{SRC condition:}\par\nobreak
+The reporter that attacked the senator admitted the error.
+\item \textbf{ORC condition:}\par\nobreak
+The reporter that the senator attacked admitted the error.
+\end{enumerate}\end{varwidth}\vspace{5pt}\\*
+\textit{Note}. There was also a control condition with no RC.\\\hline
+\end{longtblr}
+
+Traxler et al.'s (\citeyear{traxler.etal2002}) eye-tracking while reading task is summarized in Table~\ref{tblr:gap-so-t02}. Analysis of the data revealed that first-pass regressions (i.e.,~instances where the reader's gaze crosses the left edge of the scoring region following an initial fixation in that region) were more numerous in the ORC condition than in the SRC condition. Furthermore, total reading times at two regions, the RC region and at the matrix verb region immediately following the RC, were both longer in ORC trials than in SRC trials. These results indicate that ORCs place more strain on the processor than SRCs do.
+
+\begin{longtblr}[caption={\textcite{traxler.etal2002}: Eye-tracking while reading task (Experiment 1)}, label={tblr:gap-so-t02}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 40 L1-English adults \vspace{5pt}\\*
+\textbf{Procedure:} Participants' eye movements were monitored while they read sentences on a computer screen. Some of the filler trials included comprehension questions. \vspace{5pt}\\
+\textbf{Conditions (p. 73, (1a) and (1b)):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{SRC condition:}\par\nobreak
+The lawyer that irritated the banker filed a hefty lawsuit.
+\item \textbf{ORC condition:}\par\nobreak
+The lawyer that the banker irritated filed a hefty lawsuit.
+\end{enumerate}\end{varwidth}\\\hline
+\end{longtblr}
+
+Korean also displays a consistent SRC advantage in experimental settings. Three studies testing L1-Korean adults, which I do not review individually here to keep the primary focus on English, are listed in Table~\ref{tab:gap-so-ko}.
+
+\begin{table}
+\caption{Studies probing the subject vs. object asymmetry among L1-Korean adults}\label{tab:gap-so-ko}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={llll}}\toprule
+Study & Phenomenon & Method & Results \\\midrule
+\cite{kwon.etal2006} & RCs & self-paced reading & subject > object \\
+\cite{kwon.etal2010} & RCs & eye-tracking while reading & subject > object \\
+\cite{kwon.etal2013} & RCs & ERP & subject > object \\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+\noindent For Mandarin, the results have been more mixed. As Table~\ref{tab:gap-so-zh} shows, some studies involving L1-Mandarin adults report an ORC advantage, some report an SRC advantage, and still others report no advantage one way or the other.
+
+\begin{table}
+\caption{Studies probing the subject vs. object asymmetry among L1-Mandarin adults}\label{tab:gap-so-zh}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={llll}}\toprule
+Study & Phenomenon & Method & Results \\\midrule
+\cite{hsiao.gibson2003} & RCs & self-paced reading & object > subject \\
+\cite{lin2006} & RCs & self-paced reading & subject > object \\
+\cite{hu.etal2016} & RCs & picture selection & subject = object \\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+\noindent However, there may be reason to doubt the findings of at least some studies that have found an object~>~subject advantage in Mandarin. According to \textcite{lin.bever2006}, the results from \textcite{hsiao.gibson2003} are attributable to methodological problems rather than a true object~>~subject processing advantage (see p.~255). For instance, in Hsiao and Gibson's singly-embedded RC stimuli (see (\ref{ex-hsiao-a}) and (\ref{ex-hsiao-b})), there was a significant object advantage only at the regions preceding the relativizer, at which point there is ambiguity between a main clause interpretation and an RC interpretation. The longer reading times in the subject condition may therefore simply reflect the extra effort associated with positing a null subject (required in the main clause interpretation). Furthermore, in their doubly-embedded RC stimuli (see (\ref{ex-hsiao-c}) and (\ref{ex-hsiao-d})), the subject condition had nested RC dependencies, which are relatively hard to process, whereas the object condition had serial RC dependencies, which are relatively easy to process.\footnotemark{} The experimental design, then, did not provide a fair comparison between SRCs and ORCs.
+
+\footnotetext{Note that things are different in the English glosses, where it is the doubly-embedded SRC condition that has serial RC dependencies and the doubly-embedded ORC condition that has nested RC dependencies.}
+
+\pex[everygla = \zh, belowglpreambleskip = -3pt] \label{ex-gap-canon}
+Conditions from \textcite{hsiao.gibson2003}\par\nobreak
+\a 
+\begingl
+\glpreamble Singly-embedded SRC: //
+\gla \nogloss{[\textit{e} } @ 邀請 富豪 的] 官員 心懷不軌 但是 善於隱藏。 //
+\glb yaoqing fuhao de guanyuan xinhuaibugui danshi shanyuyincang //
+\glc invite tycoon {\sc adn} official have.bad.intentions but good.at.hiding //
+\glft `The official who invited the tycoon has bad intentions but is good at hiding them.' //
+\endgl\label{ex-hsiao-a}
+\a
+\begingl
+\glpreamble Singly-embedded ORC: //
+\gla \nogloss{[} @ 富豪 邀請 \nogloss{\textit{e} } @ 的] 官員 心懷不軌 但是 善於隱藏。 //
+\glb fuhao yaoqing de guanyuan xinhuaibugui danshi shanyuyincang //
+\glc tycoon invite {\sc adn} official have.bad.intentions but good.at.hiding //
+\glft `The official who the tycoon invited has bad intentions but is good at hiding them.' //
+\endgl\label{ex-hsiao-b}
+\a 
+\begingl
+\glpreamble Doubly-embedded SRC: //
+\gla \nogloss{[\textit{e}$_1$ } @ 邀請 \nogloss{[\textit{e}$_2$ } @ 勾結 法官 的] 富豪$_2$ 的] 官員$_1$ 心懷不軌。 //
+\glb yaoqing goujie faguan de fuhao de guanyuan xinhuaibugui  //
+\glc invite conspire judge {\sc adn} tycoon {\sc adn} official have.bad.intentions //
+\glft `The official who invited the tycoon who conspired with the judge has bad intentions.' //
+\endgl\label{ex-hsiao-c}
+\a 
+\begingl
+\glpreamble Doubly-embedded ORC: //
+\gla \nogloss{[[} @ 富豪 邀請 \nogloss{\textit{e}$_1$ } @ 的] 法官$_1$ 勾結 \nogloss{\textit{e}$_2$ } @ 的] 官員$_2$ 心懷不軌。 //
+\glb fuhao yaoqing de faguan goujie de guanyuan xinhuaibugui //
+\glc tycoon invite {\sc adn} judge conspire {\sc adn} official have.bad.intentions //
+\glft `The official who the judge who the tycoon invited conspired with has bad intentions.' //
+\endgl\label{ex-hsiao-d}
+\xe 
+
+%--------------------------------------------------------%
+\subsection{The short-distance vs. long-distance asymmetry}\label{gap-sl}
+%--------------------------------------------------------%
+
+Another processing asymmetry that has been examined in the experimental literature is the one that exists between short-distance (monoclausal) gapped dependencies like the one in (\ref{ex-gap-sl-a}) and long-distance (cross-clausal) gapped dependencies like the one in (\ref{ex-gap-sl-b}). 
+
+\pex \label{ex-gap-sl}
+\a the man [that you hired \_\_] > \label{ex-gap-sl-a}
+\a the man [that I think [you hired \_\_]] \label{ex-gap-sl-b}
+\xe 
+
+Table 3.7 lists three studies involving L1-English adults which found that short-distance dependencies are associated with less processing cost than long-distance ones.
+
+\begin{table}
+\caption{Studies probing the short-distance vs. long-distance asymmetry among L1-English adults}\label{tab:gap-sl-en}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={llll}}\toprule
+Study & Phenomenon & Method & Results \\\midrule
+\cite{frazier.clifton1989} & \textit{wh}-questions & self-paced reading & short > long \\
+\cite{phillips.etal2005} & \textit{wh}-questions & complexity judgment + ERP & short > long \\
+\cite{alexopoulou.keller2007} & \textit{wh}-questions & acceptability judgment & short > long \\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+The design of Frazier and Clifton's (\citeyear{frazier.clifton1989}) self-paced reading task is shown in Table~\ref{tblr:gap-sl-fc89}. Reading times at the verb immediately preceding the first possible gap site were much faster in short-distance trials than in long-distance trials, and this was interpreted as evidence that there is a processing cost associated with carrying a filler across a clause boundary.
+
+\begin{longtblr}[caption={\textcite{frazier.clifton1989}: Self-paced reading task (Experiment 2)}, label={tblr:gap-sl-fc89}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 60 L1-English adults \vspace{5pt}\\*
+\textbf{Procedure:} Participants' response times were recorded while they read sentences on a computer screen, pushing a button to advance one segment at a time. \vspace{5pt}\\*
+\textbf{Relevant conditions (pp. 100--101, (5a) and (5c)):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{Short-distance ORC:}\par\nobreak
+What did / the cautious old man / whisper / to his fiancee / during the movie / last~night?
+% \item \textbf{Short-distance ORC with late gap:}\par\nobreak
+% What did / the cautious old man / whisper / to his fiancee about / during the movie / last~night?
+\item \textbf{Long-distance ORC:}\par\nobreak
+What did / you think the man / whispered / to his fiancee / during the movie / last~night?
+% \item \textbf{Long-distance ORC with late gap:}\par\nobreak
+% What did / you think the man / whispered / to his fiancee about / during the movie / last~night?
+\end{enumerate}\end{varwidth}\vspace{5pt}\\*
+\textit{Note}. Slashes divide segments; some of the stimuli had their gaps later in the sentence, but the early gap vs. late gap contrast is not relevant to the present discussion.
+\\\hline
+\end{longtblr}
+
+As summarized in Table~\ref{tblr:gap-sl-p05}, Phillips et al.'s (\citeyear{phillips.etal2005}) study involved both a complexity rating task and an ERP task. In the complexity rating task, participants rated long-distance \textit{wh}-dependencies as more difficult to understand than short-distance \textit{wh}-dependencies. In the ERP task, the onset of the P600 response (associated with filler integration) was delayed in the long-distance \textit{wh}-question condition relative to the short-distance \textit{wh}-question condition. These results indicate that long-distance gapped dependencies take more effort to process.
+
+\begin{longtblr}[caption={\textcite{phillips.etal2005}: Complexity rating task (Experiment 1) and ERP task (Experiment 2)}, label={tblr:gap-sl-p05}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 20 L1-English adults in the complexity rating task and 20 L1-English adults in the ERP task \vspace{5pt}\\*
+\textbf{Procedure:} In the complexity rating task, participants rated sentences on a 5-point scale ranging from 1 (very easy to understand) to 5 (very difficult to understand). In the ERP task, participants read sentences presented one word at a time on a computer screen while wearing an electrode cap; each sentence was followed by a yes/no comprehension question (e.g.,~\textit{Was the witness expected to identify an accomplice in the lineup?}). \vspace{5pt}\\
+\textbf{Relevant conditions (p. 410, Table 1):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{Short-distance \textit{wh}-question:}\par\nobreak
+The detective hoped that the lieutenant knew which accomplice the shrewd witness would recognize in the lineup.
+\item \textbf{Long-distance \textit{wh}-question:}\par\nobreak
+The lieutenant knew which accomplice the detective hoped that the shrewd witness would recognize in the lineup.
+\end{enumerate}\end{varwidth}\vspace{5pt}\\*
+\textit{Note}. There were also control conditions with no gapped dependency.\\\hline
+\end{longtblr}
+
+Analysis of the results from Alexopoulou and Keller's (\citeyear{alexopoulou.keller2007}) acceptability judgment task (see~Table~\ref{tblr:gap-sl-ak07}) showed that participants' ratings for gapped \textit{wh}-questions were modulated by level of embedding, with ratings being highest in the zero embedding condition and lowest in the double embedding condition. This result was interpreted as a sign that dependencies that cross clause boundaries are harder to process.
+
+\begin{longtblr}[caption={\textcite{alexopoulou.keller2007}: Acceptability judgment task (Experiment 1)}, label={tblr:gap-sl-ak07}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 55 L1-English adults \vspace{5pt}\\*
+\textbf{Procedure:} Participants read sentences and rated them using magnitude estimation (\cite{bard.etal1996}). \vspace{5pt}\\*
+\textbf{Relevant conditions (p. 117, (11a)--(11c)):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{Zero embedding condition:}\par\nobreak
+Who will we fire?
+\item \textbf{Single embedding condition:}\par\nobreak
+Who does Mary claim we will fire?
+\item \textbf{Double embedding condition:}\par\nobreak
+Who does Jane think Mary claims we will fire?
+\end{enumerate}\end{varwidth}\vspace{5pt}\\*
+\textit{Note}. Other conditions probed \textit{whether}-islands and RC islands (each with gaps vs. RPs).\\\hline
+\end{longtblr}
+
+Studies probing the short- vs. long-distance contrast in Korean and Mandarin gapped dependencies are few and far between, but the results from Han's (\citeyear{han2013}) acceptability judgment task (see~Table~\ref{tblr:gap-sl-h13}) showed that long-distance RCs received lower acceptability judgments from L1-Korean adults than short-distance RCs did (though both received relatively high ratings). Han did not report whether this contrast reached statistical significance, but the difference in means still suggests that long-distance RCs may be harder to process. As far as I am aware, no studies have argued that long-distance dependencies are easier to process than short-distance ones, or that they are equally easy to process.
+
+\begin{longtblr}[caption={\textcite{han2013}: Acceptability judgment task (Experiment 1)}, label={tblr:gap-sl-h13}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 23 L1-Korean adults \vspace{5pt}\\*
+\textbf{Procedure:} Participants read sentences and rated them using magnitude estimation. \vspace{5pt}\\*
+\textbf{Relevant conditions (p. 329, (24a) and (24b)):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{Short-distance gapped SRC:}\par\nobreak\vspace{3pt}
+\hspace{5pt}\begin{minipage}{0.85\linewidth}
+\begingl[everygla = \ko]
+\gla 강형사는 김경관을 보석 가게에서 때린 남자를 심문하였다. //
+\glb Kang-hyengsa-nun Kim-kyengkwan-ul posek kakey-eyse ttayli-n namca-lul simmwunha-yess-ta //
+\glc Kang-detective-{\sc top} Kim-inspector-{\sc acc} jewelry store-{\sc loc} hit-{\sc adn} man-{\sc acc} question-{\sc pst-dec} //
+\glft `Detective Kang questioned the man who hit Inspector Kim at the jewelry store.' //
+\endgl
+\end{minipage}
+\item \textbf{Long-distance gapped SRC:}\par\nobreak\vspace{3pt}
+\hspace{5pt}\begin{minipage}{0.85\linewidth}
+\begingl[everygla = \ko]
+\gla 강형사는 김경관을 때리었다고 박변호사가 믿는 남자를 심문하였다. //
+\glb Kang-hyengsa-nun Kim-kyengkwan-ul ttayli-ess-tako Park-pyenhosa-ka mit-nun namca-lul simmwunha-yess-ta //
+\glc Kang-detective-{\sc top} Kim-inspector-{\sc acc} hit-{\sc pst-comp} Park-lawyer-{\sc nom} believe-{\sc adn} man-{\sc acc} question-{\sc pst-dec} //
+\glft `Detective Kang questioned the man who Lawyer Park thinks hit Inspector Kim.' //
+\endgl
+\end{minipage}
+\end{enumerate}\end{varwidth}\vspace{5pt}\\*
+\textit{Note}. Other conditions probed the double nominative construction, adjunct islands, complex NP islands, and \textit{whether}-islands (each with gaps vs. RPs).\\\hline
+\end{longtblr}
+
+%--------------------------------------------------------%
+\subsection{The COMP-clause vs. \textit{wh}-clause asymmetry}\label{gap-lw}
+%--------------------------------------------------------%
+
+There are also experimental data indicating that long-distance gapped dependencies that resolve inside interrogative complement clauses (henceforth, \textit{wh}-clauses), as in (\ref{ex-gap-lw-b}), are more costly to process than long-distance gapped dependencies that resolve inside declarative complement clauses (henceforth, COMP-clauses), as in (\ref{ex-gap-lw-a}). 
+
+Note that in languages like English that allow gapped dependencies to extend into COMP-clauses but not into \textit{wh}-clauses, the contrast in well-formedness between the two may be either partially or fully responsible for the asymmetry in processing difficulty. In such languages, \textit{wh}-clauses are commonly referred to as `\textit{wh}-islands' (see Section~\ref{pro-distribution}).
+
+\pex \label{ex-gap-lw}
+\a the man$_1$ [that I think [you hired \_\_$_1$]] > \label{ex-gap-lw-a}
+\a \ljudge*the man$_1$ [that I wonder [who$_2$ \_\_$_2$ hired \_\_$_1$]] \label{ex-gap-lw-b}
+\xe 
+
+\noindent As the two studies in Table~\ref{tab:gap-lw-en} illustrate, there is research on L1-English adults indicating that \textit{wh}-questions and RCs with gaps inside \textit{wh}-clauses are more difficult to process than those with gaps inside COMP-clauses.
+
+\begin{table}
+\caption{Studies probing the COMP-clause vs. \textit{wh}-clause asymmetry among L1-English adults}\label{tab:gap-lw-en}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={llll}}\toprule
+Study & Phenomenon & Method & Results \\\midrule
+\cite{kluender.kutas1993} & \textit{wh}-questions & ERP & COMP > \textit{wh} \\
+\cite{hammerly2022} & RCs & self-paced reading & COMP > \textit{wh}  \\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+Kluender and Kutas's (\citeyear{kluender.kutas1993}) ERP task (see~Table~\ref{tblr:gap-lw-kk93}) found increased LAN effects (associated with the effort involved in maintaining a filler in working memory) in their \textit{wh}-clause condition relative to their COMP-clause condition. The contrast was found to be present at all three regions of interest within the embedded clause, i.e.,~the underlined words between the square brackets in Table~\ref{tblr:gap-lw-kk93}. These results were taken as evidence that \textit{wh}-questions with gaps in \textit{wh}-clauses are more challenging to process than \textit{wh}-questions with gaps in COMP-clauses.
+
+\begin{longtblr}[caption={\textcite{kluender.kutas1993}: ERP task (Experiment 3)}, label={tblr:gap-lw-kk93}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 30 L1-English adults \vspace{5pt}\\*
+\textbf{Procedure:} Participants read sentences presented one word at a time on a computer screen while wearing an electrode cap. After each sentence, a probe word appeared on the screen, and participants had to judge whether or not it had appeared in the sentence. \vspace{5pt}\\
+\textbf{Relevant conditions (p. 603, (3b) and (5b)):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{COMP-clause condition:}\par\nobreak\vspace{3pt}
+What do \myuline{\bfseries\itshape you} suppose [that \myuline{\bfseries\itshape they} caught him \myuline{\bfseries\itshape at} \myuline{\bfseries\itshape by} accident]?
+\item \textbf{\textit{Wh}-clause condition:}\par\nobreak\vspace{3pt}
+*What do \myuline{\bfseries\itshape you} wonder [who \myuline{\bfseries\itshape they} caught \myuline{\bfseries\itshape at} \myuline{\bfseries\itshape by} accident]?
+\end{enumerate}\end{varwidth}\vspace{5pt}\\*
+\textit{Note}. Underlining marks regions of interest; other conditions probed yes/no questions, \textit{if}-clauses, and subject gaps. \\\hline
+\end{longtblr}
+
+Results from Hammerly's (\citeyear{hammerly2022}) self-paced reading task (see~Table~\ref{tblr:gap-lw-h22}) showed that response times at the region of interest were much slower for RCs with gaps in \textit{wh}-clauses than for RCs with gaps in COMP-clauses. Analysis of the comprehension-question data also showed that accuracy was higher for RCs with gaps in COMP-clauses than for RCs with gaps in \textit{wh}-clauses. This pattern of results indicates that RCs with gaps in \textit{wh}-clauses are harder to process.
+
+\begin{longtblr}[caption={\textcite{hammerly2022}: Self-paced reading task}, label={tblr:gap-lw-h22}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 48 L1-English adults \vspace{5pt}\\*
+\textbf{Procedure:} Participants' response times were recorded while they read sentences on a computer screen, pushing a button to advance one segment at a time. Each sentence was followed by a multiple-choice comprehension question (e.g.,~\textit{Who was recruited over the summer: (a) the spy, (b) Beth, (b) the agency, or (d) I don't know?}). \vspace{5pt}\\
+\textbf{Relevant conditions (p. 825, (2a) and (2b)):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{ORC with gap in COMP-clause:}\par\nobreak\vspace{3pt}
+Mary trained / the spy / who Beth / announced that the agency / had recruited / \myuline{\bfseries\itshape over the summer} / for the program.
+\item \textbf{ORC with gap in \textit{wh}-clause:}\par\nobreak\vspace{3pt}
+*Mary trained / the spy / who Beth / announced which agency / had recruited / \myuline{\bfseries\itshape over the summer} / for the program.
+\end{enumerate}\end{varwidth}\vspace{5pt}\\*
+\textit{Note}. Slashes divide segments; underlining marks region of interest; other conditions probed resumptive RCs. \\\hline
+\end{longtblr}
+
+Because English displays \textit{wh}-island effects, the higher processing difficulty associated with English RCs that have gaps in \textit{wh}-clauses could be ascribed at least in part to their ill-formedness. However, there are data indicating that long-distance gapped dependencies that resolve inside \textit{wh}-clauses are harder to process than those that resolve inside COMP-clauses even in languages like Hebrew that allow gaps in both clause types (e.g.,~\cite{keshev.meltzer-asscher2019}; \cite{reinhart1981}). For instance, \textcite{keshev.meltzer-asscher2019} found in an acceptability judgment task (see~Table~\ref{tblr:gap-lw-km19}) that L1-Hebrew adults rate ORCs with gaps in COMP-clauses significantly higher than ORCs with gaps in \textit{wh}-clauses, even although neither condition received consistently low ratings. The authors interpreted this result as a sign that, while both types of ORCs are well-formed in Hebrew, those with gaps in \textit{wh}-clauses require more effort to process. 
+
+\begin{longtblr}[caption={\textcite{keshev.meltzer-asscher2019}: Acceptability judgment task (Experiment 1)}, label={tblr:gap-lw-km19}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 33 L1-Hebrew adults \vspace{5pt}\\*
+\textbf{Procedure:} Participants read sentences and rated them on a 7-point scale with options ranging from 1 (not natural at all) to 7 (very natural). \vspace{5pt}\\*
+\textbf{Relevant conditions (p. 630, Table 2):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{ORC with gap in COMP-clause:}\par\nobreak\vspace{3pt}
+\hspace{0pt}\begin{minipage}{0.9\linewidth}
+\begingl
+\gla Ha-safranit mekira et ha-student ha-mitkashe she-ha-profesor ha-kashuax hisik she-ha-metargelet telamed. //
+\glb the-librarian knows {\sc acc} the-student the-weak that-the-professor the-strict gathered that-the-assistant will.teach //
+\glft `The librarian knows the weak student that the strict professor gathered that the assistant will teach.' //
+\endgl
+\end{minipage}
+\item \textbf{ORC with gap in \textit{wh}-clause:}\par\nobreak\vspace{3pt}
+\hspace{0pt}\begin{minipage}{0.9\linewidth}
+\begingl
+\gla Ha-safranit mekira et ha-student ha-mitkashe she-ha-profesor ha-kashuax hisik matai ha-metargelet telamed. //
+\glb the-librarian knows {\sc acc} the-student the-weak that-the-professor the-strict gathered when the-assistant will.teach //
+\glft `The librarian knows the weak student that the strict professor gathered when the assistant will teach.' //
+\endgl
+\end{minipage}
+\end{enumerate}\end{varwidth}\vspace{5pt}\\*
+\textit{Note}. Other conditions probed short-distance ORCs. \\\hline
+\end{longtblr}
+
+The situation where a gapped dependency resolves in a \textit{wh}-clause is impossible to replicate in Korean and Mandarin RCs for two reasons: First, Korean and Mandarin do not have overt \textit{wh}-movement in questions, so the default is for \textit{wh}-phrases to remain in situ. Second, Korean and Mandarin have head-final RCs, so scrambling a \textit{wh}-phrase to the left edge of an embedded clause never has the effect of placing the \textit{wh}-phrase directly in the path between the filler and the gap in the RC dependency; if anything, scrambling of the \textit{wh}-phrase removes it as a linear intervener between the filler and the gap, as shown in (\ref{ex-gap-scramble}).
+
+\ex \label{ex-gap-scramble}
+[ \dots ~[ \boxing{\sc scrambled \textit{wh}-phrase}$_2$ \dots ~\_\_$_1$ \dots ~\_\_$_2$ \dots ~] \dots ~] \boxing{\sc head noun}$_1$
+\xe 
+
+\noindent Indeed, the dominant view in the literature on Korean and Mandarin is that those languages lack \textit{wh}-islands at the level of overt syntax (Korean: \cite{cho2017}, p.~333; \cite{kim.goodall2016}, p.~3; Mandarin: \cite{huang.etal2009}, p.~264; \cite{ning1993}, p.~68). Studies that comment specifically on the well-formedness of Korean and Mandarin RCs with gaps in embedded questions are few and far between, but those that do exist tend to report that such RCs are grammatical. \textcite{kwon2008} provides the example in (\ref{ex-gap-kwon}) to demonstrate that Korean permits RCs that resolve inside embedded questions containing an in situ \textit{wh}-argument.
+
+\ex 
+\begingl[everygla = \ko]\label{ex-gap-kwon}
+\gla \nogloss{[} @ 톰이 \nogloss{[} @ 내가 어떤 질문을 \nogloss{\_\_ } @ 주는지] 아는] 학생 //
+\glb Tom-i nay-ka etten cilmwun-ul cwu-nunci a-nun haksayng //
+\glc Tom-{\sc nom} {\sc 1s-nom} which question-{\sc acc} give-{\sc q} know-{\sc adn} student //
+\glft *`the student to whom Tom knows which question I gave' //
+\endgl
+\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{kwon2008}, p. 53, (2.130))
+\xe 
+
+\noindent One exception is \textcite{han2013}, who reports on an acceptability judgment task which found low ratings on average for RCs with gaps in \textit{whether}-clauses like the one in (\ref{ex-gap-han}).
+
+\ex 
+\begingl[everygla = \ko]\label{ex-gap-han}
+\gla 강형사는 김경관을 때리었는지 박검사가 궁금해하는 남자를 심문하였다. //
+\glb Kang-hyengsa-nun Kim-kyengkwan-ul ttayli-ess-nunci Park-kemsa-ka kwungkumhayha-nun namca-lul simmwunha-yess-ta //
+\glc Kang-detective-{\sc top} Kim-inspector-{\sc acc}  hit-{\sc pst-q} Park-prosecutor-{\sc nom} wonder-{\sc adn} man-{\sc acc} question-{\sc pst-dec} //
+\glft *`Detective Kang questioned the man who Prosecutor Park wonders whether he hit Inspector Kim.' //
+\endgl
+\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{han2013}, p. 329, (24f))
+\xe 
+
+I was not able to find any examples of RCs with gaps in embedded questions in the literature on Mandarin, but I did notice that papers describing island effects for Mandarin relativization invariably exclude \textit{wh}-islands (e.g.,~\cite{huang.etal2009}, p.~219; \cite{ning1993}, p.~68ff). \textcite{ning1993}, for instance, begins his section on the topic by saying the following:
+
+\begin{quote}
+There are no \textit{wh}-islands available at S-structure in Chinese since it is a language without overt \textit{wh}-movement. Island effects will be examined in terms of (a) the Sentential-Subject Condition; (b) the Adjunct Condition and (c) the Complex NP Constraint. \par\nobreak\vspace{5pt}
+\hfill (\cite{ning1993}, p. 68)
+\end{quote}
+\vspace{-12pt}
+
+Furthermore, my Korean and Mandarin language consultants uniformly accepted RCs with gaps in embedded questions, such as the Korean RC in (\ref{ex-gap-ko-island}) and the Mandarin RC in (\ref{ex-gap-zh-island}). Note that the English translation equivalents are ill-formed.
+
+\ex 
+\begingl[everygla = \ko]\label{ex-gap-ko-island}
+\gla \nogloss{[[} @ 어느 형사들이 \nogloss{\_\_ } @  체포했는지] 내가 궁금해하는] 남자 //
+\glb enu hyengsa-tul-i cheyphohay-ss-nunci nay-ka kwungkumhayha-nun namca //
+\glc which detective-{\sc pl-nom} arrest-{\sc pst-q} {\sc 1s-nom} wonder-{\sc adn} man //
+\glft *`the man that I wonder which detectives arrested' //
+\endgl
+\xe 
+
+\ex 
+\begingl[everygla = \zh]\label{ex-gap-zh-island}
+\gla \nogloss{[} @ 我 好奇 \nogloss{[} @ 哪 些 偵探 逮捕 \nogloss{\_\_] } @  的] 男人 //
+\glb wo haoqi na xie zhentan daibu de nanren //
+\glc I curious which {\sc cl} detective arrest {\sc adn} man //
+\glft *`the man that I wonder which detectives arrested' //
+\endgl
+\xe 
+
+\noindent Studies on \textit{wh}-island effects in Korean and Mandarin tend to focus on the (un)availability of matrix-scope readings for in-situ \textit{wh}-phrases in embedded questions (Korean: e.g.,~\cite{cho2017}; \cite{kim.goodall2016}; Mandarin: e.g.,~\cite{chen2024}; \cite{huang1982}). Cases where the matrix-scope reading is unavailable are interpreted as \textit{wh}-island effects, since matrix scope putatively relies on covert movement of the \textit{wh}-phrase out of the embedded clause (\cite{chen2024}, p.~14ff; \cite{cho2017}, p.~330; \cite{lu.etal2020}, p.~612). A typical finding for experimental studies in this line of research (e.g.,~\cite{chen2024}; \cite{cho2017}; \cite{kim.goodall2016}) is that for embedded in-situ \textit{wh}-phrases like the ones in (\ref{ex-gap-ko-kg}), the embedded scope interpretation is strongly preferred over the matrix scope interpretation, and this is taken to be a \textit{wh}-island effect.
+
+\ex 
+\begingl[everygla = \ko]
+\gla 메리는 \nogloss{[} @ 오바마가 누구를 만났는지] 들었니? //\label{ex-gap-ko-kg}
+\glb Mary-nun Obama-ka nwukwu-lul manna-ss-nunci tul-ess-ni  //
+\glc Mary-{\sc top} Obama-{\sc nom} who-{\sc acc} meet-{\sc pst-q} hear-{\sc pst-q} //
+\glft Matrix-scope reading: *`Who did Mary hear whether Obama met?' (dispreferred) \newline
+Embedded-scope reading: `Did Mary hear who Obama met?' (preferred) //
+\endgl
+\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{kim.goodall2016}, p. 4, (14))
+\xe 
+
+While investigations such as these are doubtless of theoretical import, they have little bearing on the question of whether Korean and Mandarin display \textit{wh}-island effects for relativization. In the stimuli I used in this dissertation, the embedded question was always the only interrogative clause in the sentence, thereby forcing an embedded scope reading of the \textit{wh}-phrase and rendering any scopal in-situ \textit{wh}-island effect irrelevant. My starting assumption, then, was that the embedded questions in the Korean and Mandarin translation equivalents of my English stimuli do not contain islands for relativization.
+
+The closest parallel to the English \textit{wh}-island configuration in Korean and Mandarin may be instances of multiple long-distance scrambling of the kind shown in (\ref{ex-gap-ko-scramble}) and (\ref{ex-gap-zh-scramble}). The sentence in (\ref{ex-gap-zh-scramble}) has been slightly modified from the original version given by \textcite{ren2023} to turn short-distance scrambling into long-distance scrambling, but my Mandarin language consultants assured me that the resulting sentence is still well-formed.
+
+\ex 
+\begingl[everygla = \ko]\label{ex-gap-ko-scramble}
+\gla 누구에게$_1$ 무엇을$_2$ 미나가 \nogloss{[} @ 순희가 \nogloss{$e_1$ $e_2$ } @ 선물했는가] 알니? //
+\glb nwukwu-eykey mwues-ul Mina-ka Swunhuy-ka senmwulhay-ss-nunka al-ni //
+\glc who-{\sc dat} what-{\sc acc} Mina-{\sc nom} Sunhee-{\sc nom} give-{\sc pst-q} know-{\sc q} //
+\glft `Does Mina know what Sunhee gave to whom?' //
+\endgl
+\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{kang2005}, p. 148, (40b))
+\xe 
+
+\ex 
+\begingl[everygla = \zh]\label{ex-gap-zh-scramble}
+\gla 什麼 話題$_1$, 和 誰$_2$ 他 覺得 \nogloss{[} @ 瑪麗 從來 沒有 \nogloss{$e_2$ } @ 討論 過 $e_1$?] //
+\glb shenme huati he shei ta juede Mali conglai meiyou taolun guo //
+\glc what topic with who {\sc 3ms} think Mary at.all.times {\sc neg} discuss {\sc exp} //
+\glft `Which of the topics and with whom does he think Mary has never discussed?' //
+\endgl
+\par\nobreak\vspace{5pt}
+\hfill (based on \cite{ren2023}, p. 4, (4d))
+\xe 
+
+Like English long-distance RCs that resolve inside embedded argument \textit{wh}-questions (e.g.,~*\textit{the man that I wonder what did}), these long-distance scrambling questions have two displaced \textit{wh}-phrases that need to be integrated into the same clause. If the tolerance that Korean and Mandarin speakers have for these types of questions carries over into superficially similar constructions in an L2, then it would be reasonable to expect that L1-Korean and L1-Mandarin L2ers might also accept English RCs whose head links to a gap inside a \textit{wh}-clause, at least initially.
+
+%--------------------------------------------------------%
+\subsection{The subject vs. object asymmetry in \textit{wh}-islands}\label{gap-wi}
+%--------------------------------------------------------%
+
+The final asymmetry that is relevant to this dissertation is the subject vs. object asymmetry in \textit{wh}-islands. Whereas the RC processing literature has shown that many languages display a robust subject~>~object advantage in nonislands, there are experimental data indicating the asymmetry works in the opposite direction in islands. Table~\ref{tab:gap-wi-en} lists three studies involving L1-English adults that found an object~>~subject advantage in \textit{wh}-island RCs.
+
+\begin{table}
+\caption{Studies probing the subject vs. object asymmetry in \textit{wh}-islands among L1-English adults}\label{tab:gap-wi-en}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={llll}}\toprule
+Study & Phenomenon & Method & Results \\\midrule
+\cite{keffala.goodall2011} & RCs & acceptability judgment & object > subject \\
+\cite{han.etal2012} & RCs & acceptability judgment & object > subject \\
+\cite{morgan.wagers2018} & RCs & elicited production & object > subject \\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+In an acceptability judgment task (see~Table~\ref{tblr:gap-wi-kg11}), \textcite{keffala.goodall2011} found that RCs with gaps in \textit{wh}-islands and received low mean ratings in general; however, the mean ratings were even lower with subject gaps than with object gaps. This result suggests that while both conditions are ill-formed, \textit{wh}-island RCs are somewhat harder to process with subject gaps than with object gaps.
+
+\begin{longtblr}[caption={\textcite{keffala.goodall2011}: Acceptability judgment task}, label={tblr:gap-wi-kg11}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 121 L1-English adults \vspace{5pt}\\*
+\textbf{Procedure:} Participants read sentences and rated them on an 11-point acceptability scale. \vspace{5pt}\\
+\textbf{Relevant conditions:} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{\textit{Wh}-island SRC:}\par\nobreak\vspace{3pt}
+*This is the chef [that Ted inquired [how \_\_ prepared the potatoes]].
+\item \textbf{\textit{Wh}-island ORC:}\par\nobreak\vspace{3pt}
+*These are the potatoes [that Ted inquired [how the chef prepared \_\_]].
+\end{enumerate}\end{varwidth}\vspace{5pt}\\*
+\textit{Note}. Other conditions probed short-distance nonislands, \textit{that}-clauses, and RC islands (each with gaps vs. RPs). \\\hline
+\end{longtblr}
+
+\noindent \textcite{han.etal2012} reported a similar pattern of results in their acceptability judgment task (see~Table~\ref{tblr:gap-wi-h12}): Across all conditions involving islands (including \textit{wh}-islands), RCs with object gaps received significantly higher scores than those with subject gaps. The same general pattern was observed across written (Experiment~1) and aural (Experiment~2) modes of presentation.
+
+\begin{longtblr}[caption={\textcite{han.etal2012}: Acceptability judgment task}, label={tblr:gap-wi-h12}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 42 L1-English adults \vspace{5pt}\\*
+\textbf{Procedure:} Participants rated sentences presented either textually (Experiment 1) or aurally (Experiment 2) using magnitude estimation. \vspace{5pt}\\
+\textbf{Relevant conditions (pp. 155--156, (7d) and (8d)):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{\textit{Wh}-island SRC:}\par\nobreak\vspace{3pt}
+*The manager fired the reporter [who the editor speculated [why \_\_ defamed the senator].
+\item \textbf{\textit{Wh}-island ORC:}\par\nobreak\vspace{3pt}
+*The manager fired a reporter [who the editor wondered [whether the senator sued \_\_ for defamation]].
+\end{enumerate}\end{varwidth}\vspace{5pt}\\*
+\textit{Note}. Other conditions probed short-distance nonislands, long-distance nonislands, adjunct islands, and NP islands (each with gaps vs. RPs). \\\hline
+\end{longtblr}
+
+\noindent Based on the example stimuli that Han et al. provide in their paper, it appears that they always used adjunct \textit{wh}-islands in their \textit{wh}-island SRC condition and \textit{whether}-islands in their \textit{wh}-island ORC condition. If that was indeed the case, it would be unfortunate, since \textit{whether}-islands are known to be weaker than other \textit{wh}-islands (e.g.,~\cite{phillips2013}, p.~71ff).
+
+Finally, the results from Morgan and Wagers's (\citeyear{morgan.wagers2018}) RC elicitation task (see~Table~\ref{tblr:gap-wi-mw18}) showed that rates of resumptive RC responses were higher for SRCs than for ORCs across all island types tested (including \textit{wh}-islands). No such difference was observed in their nonisland conditions. These results were taken as evidence that subject-gap island RCs are harder to process than object-gap island RCs, on the assumption that English resumption represents a means of reducing cognitive load during RC production (see Chapter~\ref{ch-resumption}).
+
+\begin{longtblr}[caption={\textcite{morgan.wagers2018}: RC elicitation task}, label={tblr:gap-wi-mw18}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 47 L1-English adults \vspace{5pt}\\*
+\textbf{Procedure:} Participants were presented with a base sentence (e.g.,~\textit{The ogre claims a prince slayed the troll}) and a prompt (e.g.,~\textit{There's a prince that\dots}) and responded by writing a continuation to the prompt (e.g.,~\textit{\dots the ogre claims slayed the troll}). \vspace{5pt}\\
+\textbf{Target responses in the relevant conditions (p.~864, Table~1):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{\textit{Wh}-island SRC:}\par\nobreak\vspace{3pt}
+There's a prince that the ogre doesn't care if \{*\_\_/*he\} slayed the troll.
+\item \textbf{\textit{Wh}-island ORC:}\par\nobreak\vspace{3pt}
+There's a prince that the ogre doesn't care if the troll slayed \{*\_\_/*him\}.
+\end{enumerate}\end{varwidth}\vspace{5pt}\\*
+\textit{Note}. Some of the `'\textit{wh}-island' stimuli had embedded clauses heading by \textit{if} and others had embedded clauses headed by \textit{wh}-words (p.~863); it is unclear whether argument \textit{wh}-islands and/or adjunct \textit{wh}-islands were included; other conditions probed singly- and doubly-embedded nonislands, subject- and object-modifying complex NP islands, and adjunct islands. \\\hline
+\end{longtblr}
+
+Relevant experimental studies on Korean and Mandarin are hard to come by. As explained in the previous section, adjunct and argument \textit{wh}-island RCs of the kind observed in English do not exist in Korean and Mandarin. However, there has been at least one study that looked at (the translation equivalent of) \textit{whether}-islands in Korean SRCs and ORCs: Han's (\citeyear{han2013}) acceptability judgment study (see~Table~\ref{tblr:gap-wi-h13}), which included separate experiments testing the acceptability of subject gaps and object gaps in a variety of island types (including \textit{whether}-islands). Ratings in subject-gap islands were lower on average than ratings in object-gap islands, but the difference did not come out as significant in her data analyses. It is unclear whether the numerical subject vs. object contrast holds for \textit{wh}-islands when considered separately from the other island types in the study---Han provides a breakdown of the various island types when she reviews the SRC results but not when she reviews the ORC results. 
+
+\begin{longtblr}[caption={\textcite{han2013}: Acceptability judgment tasks (Experiments 1 and 2)}, label={tblr:gap-wi-h13}]{colspec={|X|}, rowhead=0, rows={font=\raggedright\setstretch{1}}}\hline
+\textbf{Participants:} 23 L1-Korean adults in the SRC experiment and 23 L1-Korean adults in the ORC experiment \vspace{5pt}\\*
+\textbf{Procedure:} Participants read sentences and rated them using magnitude estimation. \vspace{5pt}\\
+\textbf{Relevant conditions (p. 329, (24a) and (24b)):} \vspace{5pt}\\*
+\begin{varwidth}{\linewidth}\begin{enumerate}[\bfseries (a),itemsep=5pt] 
+\item \textbf{\textit{Wh}-island SRC (from Experiment 1):}\par\nobreak\vspace{3pt}
+\begingl[everygla = \ko]
+\gla 강형사는 김경관을 때리었는지 박검사가 궁금해하는 남자를 심문하였다. //
+\glb Kang-hyengsa-nun Kim-kyengkwan-ul ttayli-ess-nunci Park-kemsa-ka kwungkumhayha-nun namca-lul simmwunha-yess-ta //
+\glc Kang-detective-{\sc top} Kim-inspector-{\sc acc}  hit-{\sc pst-q} Park-prosecutor-{\sc nom} wonder-{\sc adn} man-{\sc acc} question-{\sc pst-dec} //
+\glft *`Detective Kang questioned the man who Prosecutor Park wonders whether he hit Inspector Kim.' //
+\endgl
+\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{han2013}, p. 329, (24f))
+\item \textbf{\textit{Wh}-island ORC (from Experiment 2):}\par\nobreak\vspace{3pt}
+\begingl[everygla = \ko]
+\gla 김부장은 한의원이 명예훼손으로 고소하였는지 편집장이 궁금해하는 기자를 해고하였다. //
+\glb Kim-pwucang-un Han-uywen-i myengyeyhweyson-ulo kosoha-yess-nunci phyencipcang-i kwungkumhayha-nun kica-lul haykoha-yess-ta //
+\glc Kim-manager-{\sc top} Han-senator-{\sc nom}  defamation-{\sc for} sue-{\sc pst-q} editor-{\sc nom} wonder-{\sc adn} reporter-{\sc acc} fire-{\sc pst-dec} //
+\glft *`Manager Kim fired the reporter who the editor wonders whether Senator Han sued him for defamation.' //
+\endgl
+\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{han2013}, p. 337, (30d))
+\end{enumerate}\end{varwidth}\vspace{5pt}\\*
+\textit{Note}. The remaining ORC conditions probed short-distance nonislands, long-distance nonislands, and adjunct islands (each with gaps vs. RPs); the SRC experiment additionally had conditions with gaps/RPs in complex NP islands and RC islands. \\\hline
+\end{longtblr}
+
+As the studies reviewed in this section show, previous experiments looking at the \textit{wh}-island ORC~>~\textit{wh}-island SRC asymmetry have looked at \textit{whether}-islands and adjunct \textit{wh}-islands. I could not find any experimental studies that probed for a subject gap vs. object gap contrast in argument \textit{wh}-islands (the type of island examined in this dissertation).
+
+%========================================================%
+\section{Accounting for processing asymmetries}\label{gap-explanation}
+%========================================================%
+
+The remainder of this chapter examines some of the factors thought to contribute to the processing asymmetries described in the previous sections, keeping in mind that any satisfactory account of how processing difficulty arises should be able to explain not only why asymmetries arise in certain situations but also why they are neutralized in others.
+
+%--------------------------------------------------------%
+\subsection{Distance effects}\label{gap-distance}
+%--------------------------------------------------------%
+
+If the processor is under pressure to resolve gapped dependencies as quickly as possible, as has often been claimed in the processing literature (\cite{gibson1998}, p.~54; \cite{hawkins2004}, p.~173; \cite{ogrady.etal2003}, p.~435; \cite{sag.etal2007}, p.~217ff), then one obvious way to increase cognitive load is by putting more distance between the filler and the gap (\cite{hawkins1999}, p.~248; \cite{tarallo.myhill1983}, p.~71).
+
+A variety of approaches to calculating filler-gap distance (FGD) has been put forward over the years. As for distance in terms of linearity, a popular approach first proposed by \textcite{gibson1998,gibson2000} involves counting only those intervening elements which are expected to incur a significant processing cost, namely nominals and verbs that introduce new discourse referents. Each word that meets these criteria is assigned a cost of one memory unit (MU). The idea here is not that other sorts of intervening elements place no strain at all on the processor, but rather that their contribution is negligible by comparison (\cite{gibson1998}, p.~13). By this method of counting, English short-distance SRCs have an FGD of zero MUs, as in (\ref{ex-gibson-1}), English short-distance ORCs have a minimal FGD of two MUs, as in (\ref{ex-gibson-2}), and English long-distance ORCs have a minimal FGD of four MUs, as in (\ref{ex-gibson-3}).
+
+\pex \label{ex-gibson}
+\a English short-distance SRC: \par\nobreak
+the \boxing{man} [$\stackrel{0}{\mathrm{that}}$ \boxing{\_\_} hired Tina] (0 MUs)\label{ex-gibson-1}
+\a English short-distance ORC: \par\nobreak
+the \boxing{man} [$\stackrel{0}{\mathrm{that}}$ $\stackrel{1}{\mathrm{Tina}}$ $\stackrel{1}{\mathrm{hired}}$ \boxing{\_\_}] (2 MUs)\label{ex-gibson-2}
+\a English long-distance ORC: \par\nobreak
+the \boxing{man} [$\stackrel{0}{\mathrm{that}}$ $\stackrel{1}{\mathrm{Judy}}$ $\stackrel{1}{\mathrm{thinks}}$ [$\stackrel{0}{\mathrm{that}}$ $\stackrel{1}{\mathrm{Tina}}$ $\stackrel{1}{\mathrm{hired}}$ \boxing{\_\_}]] (4 MUs)\label{ex-gibson-3}
+\xe 
+
+\noindent This approach does a good job of capturing the subject~>~object and short-distance~>~long-distance asymmetries in English, but it fails to account for the subject~>~object asymmetry that is reported in research on Korean and also in some of the research on Mandarin. Going by linear distance, Korean and Mandarin both have longer FGDs in SRCs than in ORCs, as demonstrated in (\ref{ex-gibson-ko}) and (\ref{ex-gibson-zh}), respectively. Korean and Mandarin would therefore both display a consistent object~>~subject advantage if linear distance was an accurate predictor of processing difficulty.
+
+\pex[everygla = \ko, belowglpreambleskip = -5pt] \label{ex-gibson-ko}
+\a
+\begingl
+\glpreamble Korean short-distance SRC: //
+\gla \nogloss{[\boxing{\_\_} } @ $\stackrel{1}{\text{\ko 티나를}}$ $\stackrel{1}{\text{\ko 고용한}}$] \boxing{남자} {\normalfont (2 MUs)} //
+\glb Thina-lul koyongha-n namca //
+\glc Tina-{\sc acc} hire-{\sc adn} man //
+\glft `the man that hired Tina' //
+\endgl\label{ex-gibson-ko-1}
+\a 
+\begingl
+\glpreamble Korean short-distance ORC: //
+\gla \nogloss{[} @ 티나가 \nogloss{\boxing{\_\_} } @ $\stackrel{1}{\text{\ko 고용한}}$] \boxing{남자} {\normalfont (1 MU)} //
+\glb Thina-ka koyongha-n namca //
+\glc Tina-{\sc nom} hire-{\sc adn} man //
+\glft `the man that Tina hired' //
+\endgl\label{ex-gibson-ko-2}
+\xe 
+
+\pex[everygla = \zh, belowglpreambleskip = -5pt] \label{ex-gibson-zh}
+\a
+\begingl
+\glpreamble Mandarin short-distance SRC: //
+\gla \nogloss{[\boxing{\_\_} } @ $\stackrel{1}{\text{\zh 僱用}}$ $\stackrel{1}{\text{\zh 蒂娜}}$ $\stackrel{0}{\text{\zh 的}}$] \boxing{男人} {\normalfont (2 MUs)} //
+\glb guyong Dina de nanren //
+\glc hire Tina {\sc adn} man //
+\glft `the man that hired Tina' //
+\endgl\label{ex-gibson-zh-1}
+\a 
+\begingl
+\glpreamble Mandarin short-distance ORC: //
+\gla \nogloss{[} @ 蒂娜 僱用 \nogloss{\boxing{\_\_} } @ $\stackrel{0}{\text{\zh 的}}$] \boxing{男人} {\normalfont (0 MUs)} //
+\glb Dina guyong de nanren //
+\glc Tina hire {\sc adn} man //
+\glft `the man that Tina hired' //
+\endgl\label{ex-gibson-zh-2}
+\xe 
+
+Another approach to measuring the FGD is to assess the amount of structural distance between the filler and the gap. There have been different proposals regarding how structural distance ought to be measured, but one of the simplest and most familiar methods is to count the number of XP nodes intervening between the filler and the gap in the syntactic tree (\cite{collins1994}, p.~56; \cite{kim2013}, p.~6ff; \cite{ogrady1997}, p.~135ff). In the approach to representing syntax outlined in Section~\ref{pro-structure}, English SRCs have an FGD of two XP nodes, as shown in (\ref{tree-en-fgd-su}), whereas English ORCs have a minimal FGD of three XP nodes, as shown in (\ref{tree-en-fgd-do}). The trees in (\ref{tree-ko-fgd-su})--(\ref{tree-zh-fgd-do})\footnotemark{} illustrate that the node counts are exactly the same in Korean (cf.~\cite{kwon.etal2006}, p.~8, (16a) \& (16b)) and Mandarin (cf.~\cite{sung.etal2016}, p. 1092, (3) \& (4)) as in English; this is because the hierarchical structures depicted in the trees are identical and it is only the linear ordering of the nodes (as well as the lexical items that occupy the terminal nodes) that differs between them. According to the structural-distance approach, then, all three languages should display a subject~>~object advantage, which is consistent with most of the experimental findings for English and Korean and some of the experimental findings for Mandarin. 
+
+\footnotetext{To keep the non-English trees in this chapter as simple as possible, I show only the English translations in the terminal nodes. To see the original Korean and Mandarin words for (\ref{tree-ko-fgd-su})--(\ref{tree-zh-fgd-do}), please refer to (\ref{ex-gibson-ko}) and (\ref{ex-gibson-zh}).}
+
+% English short-distance RCs
+\hbox{
+\vtop{\hsize=.5\textwidth
+\ex English short-distance SRC: \par\nobreak\vspace{5pt}
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[NP[N[man]][\textbf{CP}, draw, circle, thick [DP[\textbf{OP}, name = target]][C′ [C [that][+REL]][\textbf{TP}, draw, circle, thick [DP[$\mathbfit{t}$, name = source]][T′[T[+PST]][VP[V[hired]][DP[Tina, roof]]]]]]]]
+\end{forest} \label{tree-en-fgd-su}
+\xe
+}
+\vtop{\hsize=.5\textwidth
+\ex English short-distance ORC: \\\vspace{5pt}
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[NP[N[man]][\textbf{CP}, circle, draw, thick [DP[\textbf{OP}, name = target]][C′[C [that][+REL]][\textbf{TP}, circle, draw, thick [DP [Tina, roof]][T′ [T [+PST]][\textbf{VP}, circle, draw, thick [V [hired]][DP[$\mathbfit{t}$, name = source]]]]]]]]
+\end{forest} \label{tree-en-fgd-do}
+\xe
+}
+}
+
+% Korean short-distance RCs
+\hbox{
+\vtop{\hsize=.5\textwidth
+\ex Korean short-distance SRC: \par\nobreak\vspace{5pt}
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[NP[\textbf{CP}, draw, circle, thick [DP[\textbf{OP}, name = target]][C′ [\textbf{TP}, draw, circle, thick [DP[$\mathbfit{t}$, name = source]][T′[VP[DP[Tina-ACC, roof]][V[hire-PST]]][T[+PST]]]] [C [-ADN][+REL]]]][N[man]]]
+\end{forest} \label{tree-ko-fgd-su}
+\xe
+}
+\vtop{\hsize=.5\textwidth
+\ex Korean short-distance ORC: \par\nobreak\vspace{5pt}
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[NP[\textbf{CP}, draw, circle, thick [DP[\textbf{OP}, name = target]][C′ [\textbf{TP}, draw, circle, thick [DP[Tina-NOM, roof]][T′[\textbf{VP}, draw, circle, thick [DP[$\mathbfit{t}$, name = source]][V[hire-PST]]][T[+PST]]]] [C [-ADN][+REL]]]][N[man]]]
+\end{forest} \label{tree-ko-fgd-do}
+\xe
+}
+}
+
+% Mandarin short-distance RCs
+\hbox{
+\vtop{\hsize=.5\textwidth
+\ex Mandarin short-distance SRC: \par\nobreak\vspace{5pt}
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[NP[\textbf{CP}, draw, circle, thick [DP[\textbf{OP}, name = target]][C′ [\textbf{TP}, draw, circle, thick [DP[$\mathbfit{t}$, name = source]][T′[VP[V[hire]][DP[Tina, roof]]][T[+PST]]]] [C [ADN][+REL]]]][N[man]]]
+\end{forest} \label{tree-zh-fgd-su}
+\xe
+}
+\vtop{\hsize=.5\textwidth
+\ex Mandarin short-distance ORC: \par\nobreak\vspace{5pt}
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[NP[\textbf{CP}, draw, circle, thick [DP[\textbf{OP}, name = target]][C′ [\textbf{TP}, draw, circle, thick [DP[Tina, roof]][T′[\textbf{VP}, draw, circle, thick [V[hire]][DP[$\mathbfit{t}$, name = source]]][T[+PST]]]] [C [ADN][+REL]]]][N[man]]]
+\end{forest} \label{tree-zh-fgd-do}
+\xe
+}
+}
+
+The structural-distance approach also captures the short-distance~>~long-distance asymmetry. Observe that the English long-distance SRC in (\ref{tree-en-fgd-lsu}) is three nodes longer than the English short-distance SRC in (\ref{tree-en-fgd-su}). The intermediate trace (i.e.,~t′) at spec-CP in the lower clause marks cyclic movement of the relative operator to the upper clause; in the generative tradition, this multi-step approach to cross-clausal movement is thought to be necessary to the licensing of long-distance gapped dependencies (e.g., Chomsky 1973, 1977).
+
+% English long-distance RCs
+\ex English long-distance SRC: \par\nobreak\vspace{5pt}
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[NP[N[man]][\textbf{CP}, draw, circle, thick [DP[\textbf{OP}, name = target]][C′ [C [that][+REL]][\textbf{TP}, draw, circle, thick [DP[Judy, roof]][T′[T[−PST]][\textbf{VP}, draw, circle, thick [V[thinks]][\textbf{CP}, draw, circle, thick [DP[\textbf{$\mathbfit{t}$′}]][C′[C[−Q]][\textbf{TP}, draw, circle, thick [DP[$\mathbfit{t}$]][T'[T[+PST]][VP[V[hired]][DP[Tina, roof]]]]]]]]]]]]]
+\end{forest} \label{tree-en-fgd-lsu}
+\xe
+
+\noindent The effect of placing the gap in an embedded clause is the same in Korean and Mandarin, as shown in (\ref{ex-gap-ldl-en})--(\ref{ex-gap-ldl-zh}). To save space, I show the structure of the RCs using brackets instead of branches.
+
+% long-distance RCs
+\pex\label{ex-gap-ldl}
+\a English long-distance SRC:\par\nobreak\vspace{5pt}
+the man$_1$ [\crclb{CP} {\sc op}$_1$ that [\crclb{TP} Judy [\crclb{VP} thinks [\crclb{CP} $t$′$_1$ [\crclb{TP} $t_1$ [{\scriptsize VP} hired Tina]]]]]]\label{ex-gap-ldl-en}
+\a Korean long-distance SRC:\par\nobreak\vspace{5pt}
+[\crclb{CP} {\sc op}$_1$ [\crclb{TP} Judy-{\sc nom} [\crclb{VP} [\crclb{CP} $t$′$_1$ [\crclb{TP} $t$$_1$ [{\scriptsize VP} Tina-{\sc acc} hire-{\sc pst}]] -{\sc comp}] think]] -{\sc adn}] man$_1$\label{ex-gap-ldl-ko}
+\a Mandarin long-distance SRC:\par\nobreak\vspace{5pt}
+[\crclb{CP} {\sc op}$_1$ [\crclb{TP} Judy [\crclb{VP} think [\crclb{CP} $t$′$_1$ [\crclb{TP} $t_1$ [{\scriptsize VP} [hire Tina]]]]]] {\sc adn}] man$_1$\label{ex-gap-ldl-zh}
+\xe
+
+%--------------------------------------------------------%
+\subsection{Intervention effects}\label{gap-intervention}
+%--------------------------------------------------------%
+
+Although the structural-distance approach does a good job of capturing the subject~>~object and short-distance~>~long-distance asymmetries, we run into problems when we try to explain the COMP-clause~>~\textit{wh}-clause asymmetry in terms of structural distance alone. Let us begin by considering the FGD in English COMP-clause and \textit{wh}-clause ORCs, as shown in (\ref{ex-gap-ldo}).
+
+% English long-distance vs. wh-island RCs
+\pex \label{ex-gap-ldo}
+\a the man$_1$ [\crclb{CP} {\sc op}$_1$ that [\crclb{TP} I [\crclb{VP} think [\crclb{CP} $t$′$_1$ [\crclb{TP} you [\crclb{VP} [hired $t_1$]]]]]]]\label{ex-gap-ldo-a}
+\a \ljudge*the man$_1$ [\crclb{CP} that [\crclb{TP} I [\crclb{VP} wonder [\crclb{CP} who$_2$ [\crclb{TP} $t_2$ [\crclb{VP} [hired {\sc op}$_1$]]]]]]]\label{ex-gap-ldo-b}
+\xe
+
+The traditional generative explanation for the ill-formedness of RCs like the one in (\ref{ex-gap-ldo-b}) is that the fronted \textit{wh}-phrase in the lower clause occupies spec-CP, thereby blocking cyclic movement of the relative operator (i.e.,~OP) to the upper clause (\cite{chomsky1973,chomsky1977,chomsky1986,chomsky2000,chomsky2001,ishii2000}). I show OP in its base position (i.e.,~the complement of V) in (\ref{ex-gap-ldo-b}) to reflect its inability to escape the \textit{wh}-island. If it were the case that all languages with \textit{wh}-clauses displayed \textit{wh}-island effects, then perhaps we could explain the COMP-clause~>~\textit{wh}-clause asymmetry in terms of structural distance alone. In (\ref{ex-gap-ldo-a}), cyclic movement breaks up a seven-node FGD into two shorter movement operations: one crossing two XP nodes and another crossing four XP nodes. In (\ref{ex-gap-ldo-b}), by contrast, cyclic movement is blocked by the fronted embedded \textit{wh}-phrase, and so the distance between the head noun and the would-be gap remains fixed at six nodes. It is therefore conceivable that structural distance contributes to a processing advantage for (\ref{ex-gap-ldo-a}) over (\ref{ex-gap-ldo-b}), perhaps in conjunction with other facts, such as the grammaticality contrast between the two RCs.
+
+However, a different sort of explanation is required for languages like Hebrew that display a COMP-clause~>~\textit{wh}-clause processing advantage despite permitting gapped dependencies to extend into both types of embedded clause. Consider, for instance, (\ref{ex-gap-heb-a}) and (\ref{ex-gap-heb-b}), which are based on the RCs in Table~\ref{tblr:gap-lw-km19} (for the sake of simplicity, I only show the English translation equivalent for each word here). A standard generative explanation for the well-formedness of gapping in Hebrew \textit{wh}-clauses is that there is another Specifier position, either in the same CP (e.g.,~\cite{sabel2002}) or in another XP projection (e.g.,~\cite{preminger2010}), into which the \textit{wh}-phrase moves, thereby allowing cyclic movement of OP out of the lower clause. An example of how this might work according to \textcite{preminger2010} is illustrated in (\ref{ex-gap-heb-b}), where \textit{when} moves to the Specifier position in an XP projection below CP, leaving spec-CP open for OP's intermediate trace. I follow Preminger in calling this lower peripheral projection `FocP' for convenience (see~p.~213), though neither he nor I make any firm claims about what specific type of phrase it is. If this analysis is on the right track, then the structural FGD in Hebrew COMP-clause RCs like the one in (\ref{ex-gap-heb-a}) is equal to the structural FGD in Hebrew \textit{wh}-clause RCs like the one in (\ref{ex-gap-heb-b}). In both cases, a seven-node FGD is broken up into two shorter movement operations: one crossing three XP nodes and another crossing four XP nodes.
+
+% Hebrew long-distance vs. wh-island RCs
+\pex 
+\a the-student$_1$ [\crclb{CP} {\sc op}$_1$ that- [\crclb{FocP} [\crclb{TP} the-professor [\crclb{VP} gathered [\crclb{CP} $t$′$_1$ that [\crclb{FocP} [\crclb{TP}~the-assistant [\crclb{VP} [will.teach $t_1$]]]]]]]]]\label{ex-gap-heb-a}
+\a the-student$_1$ [\crclb{CP} that- [\crclb{FocP} [\crclb{TP} the-professor [\crclb{VP} gathered [\crclb{CP} $t$′$_1$ [\crclb{FocP} when$_2$ [\crclb{TP}~the-assistant [\crclb{VP} [will.teach $t_1$ $t_2$]]]]]]]]]\label{ex-gap-heb-b}
+\xe 
+
+How, then, can we account for the COMP-clause~>~\textit{wh}-clause asymmetry? One possibility is to view the increased difficulty of processing RCs with gaps in \textit{wh}-clauses as an `intervention effect.' An intervention configuration occurs when (a) there is a dependency between two elements X and Y and (b) a third element Z, which is of the same structural type as X, intervenes between X and Y (e.g.,~\cite{rizzi2004}, p.~223). In the context of gapped dependencies, X is the filler, Y is the gap, and Z is an intervening nominal, as shown in (\ref{ex-gap-config}).
+
+% intervention configuration
+\ex 
+the \tikzmarknode{x}{man} [that \tikzmarknode{z}{Tina} hired \tikzmarknode{y}{\_\_}] \label{ex-gap-config}
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (l) at ([yshift=-13pt]x.south) {X}; \node at ($(z |- l)$) {Z}; \node at ($(y |- l)$) {Y}; \end{tikzpicture}\vspace{12pt}
+\xe 
+
+Perhaps the most popular approach to understanding intervention effects in the generative program is the locality principle known as featural Relativized Minimality, or fRM for short (\cite{rizzi2004,rizzi2013,rizzi2018}). According to fRM, the relation between X and Y is disrupted by the presence of a hierarchical intervener Z that shares relevant features with X, and the degree of disruption depends on the amount of featural overlap between X and Z (\cite{rizzi2018}, p.~347), in accordance with the distinctness hierarchy in (\ref{ex-gap-distinct}).
+
+% distinctness hierarchy
+\ex 
+The distinctness hierarchy (from least disruptive to most disruptive):\par\nobreak\vspace{5pt}
+Disjunction > non-criterial inclusion > criterial inclusion > identity\par\nobreak\vspace{5pt}
+\hfill (based on Rizzi, 2018, p. 360)\label{ex-gap-distinct}
+\xe 
+
+`Disjunction' describes the situation where X and Z have no relevant features in common. In (\ref{ex-gap-distinct1}), for instance, \textit{you} does not bear any relevant features, whereas \textit{man} does. According to \textcite{rizzi2018}, relevant features are those that define syntactic positions through licensing external or internal merge (p.~346); RCs, for instance, are commonly thought to involve internal merge (i.e.,~movement) of a relative pronoun or relative operator to a Specifier position in the left periphery of the clause (see~Section~\ref{pro-structure}). \textcite{rizzi2013} identifies three features that are relevant for English gapped dependencies: N, Q, and R. The feature N is associated with a lexical restriction and is therefore present in nouns but not in pronouns (\cite{rizzi2018}, p.~344). R and Q, on the other hand, are the features that trigger \textit{wh}-movement in \textit{wh}-questions and RCs, respectively. Because \textcite{rizzi2013} describes Q and R as being `equivalent' features (p.~181), I make the small notational change here of grouping them together under the label `Op' (similar to suggestions by \cite{abels2012}, p.~250 and \cite{kush.etal2018}, p.~775; but cf.~\cite{rizzi2006}, p.~126, fn.~2); my intent in doing so is to suggest that \textit{wh}-questions and RCs involve the same movement-driving feature or---if these features are indeed distinct---then they are at least similar enough to trigger intervention effects. As we will see shortly, this minor adjustment ensures that fRM correctly yields intervention effects for cases of relativization from \textit{wh}-clauses.
+
+% disjunction
+\pex \label{ex-gap-distinct1}
+the \tikzmarknode{filler}{man} [that \tikzmarknode{intervener}{you} hired \tikzmarknode{gap}{\_\_}]
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+\end{tikzpicture}\vspace{24pt}
+\xe 
+
+`Non-criterial inclusion' is when the relevant features on Z form a subset of the relevant features on X and those features are all non-criterial, where `criterial' means capable of triggering movement and `non-criterial' means not capable of triggering movement. In (\ref{ex-gap-distinct2}), \textit{director} bears only the N feature, which is a non-criterial feature.
+
+% non-criterial inclusion
+\pex \label{ex-gap-distinct2}
+the \tikzmarknode{filler}{man} [that the \tikzmarknode{intervener}{director} hired \tikzmarknode{gap}{\_\_}]
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+\node(fz) at ($(z |- fx)$) {\footnotesize[N]};
+\end{tikzpicture}\vspace{24pt}
+\xe 
+
+`Criterial inclusion' is when the relevant features on Z form a subset of the relevant features on X and at least one of those features is criterial (as defined above). In (\ref{ex-gap-distinct3}), the Op feature on \textit{who} is a criterial feature because it triggers \textit{wh}-movement.
+
+% criterial inclusion
+\pex \label{ex-gap-distinct3}
+\ljudge*the \tikzmarknode{filler}{man}$_1$ [that \tikzmarknode{intervener2}{I} wonder [\tikzmarknode{intervener}{who}$_2$ \_\_$_2$ hired \tikzmarknode{gap}{\_\_}$_1$]]
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (z2) at ($(intervener2 |- x)$) {Z};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+\node(fz) at ($(z |- fx)$) {\footnotesize[Op]};
+\end{tikzpicture}\vspace{24pt}
+\xe 
+
+Finally, `identity' is when X is non-distinct from Z and Z is non-distinct from X. In (\ref{ex-gap-distinct4})---which contains a long-distance \textit{wh}-question with its gap inside a \textit{wh}-island---\textit{what} and \textit{who} both carry the Op feature. In (\ref{ex-gap-distinct5})---which contains a long-distance RC with its gap inside an RC island---\textit{man} and \textit{director} both carry the features N and Op.
+
+% identity - question
+\pex \label{ex-gap-distinct4}
+\ljudge*\tikzmarknode{filler}{What}$_1$ [do \tikzmarknode{intervener2}{you} wonder [\tikzmarknode{intervener}{who}$_2$ \_\_$_2$ bought \tikzmarknode{gap}{\_\_}$_1$]]?
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (z2) at ($(intervener2 |- x)$) {Z};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[Op]};
+\node(fz) at ($(z |- fx)$) {\footnotesize[Op]};
+\end{tikzpicture}\vspace{18pt}
+\xe 
+
+% identity - RC
+\pex \label{ex-gap-distinct5}
+\ljudge*the \tikzmarknode{filler}{man}$_1$ [that \tikzmarknode{intervener2}{I} know the \tikzmarknode{intervener}{director}$_2$ [that \_\_$_2$ hired \tikzmarknode{gap}{\_\_}$_1$]]
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (z2) at ($(intervener2 |- x)$) {Z};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+\node(fz) at ($(z |- fx)$) {\footnotesize[N, Op]};
+\end{tikzpicture}\vspace{24pt}
+\xe 
+
+fRM is simultaneously a theory of processing and a theory of grammar, as the following quotation from \textcite{belletti.rizzi2013} makes clear:
+
+\begin{quote}
+We intend to show that a combination of the Relativized Minimality approach and a properly defined featural typology of nominal expressions provides a fine-grained system capable of predicting subtle gradations in intervention effects, such as those uncovered in the experimental work both with children and adults. The system thus provides a basis for a unified account of formal syntactic generalizations (e.g.,~the selectivity of weak islands), developmental facts, and results of real-time psycholinguistic experimentation in the adult.
+\par\nobreak\vspace{5pt}
+\hfill (\cite{belletti.rizzi2013}, p. 294)
+\end{quote}
+\vspace{-6pt}
+
+\noindent The distinctness hierarchy can thus be viewed as a scale of processing difficulty, with disjunction being easiest and identity being hardest (\cite{rizzi2018}, p.~362), and it also plays the important role of determining where languages draw the line between well-formed and ill-formed gapped dependencies. As demonstrated in (\ref{ex-gap-distinct1})--(\ref{ex-gap-distinct5}), English tolerates disjunction and non-criterial inclusion but not criterial inclusion or identity (\cite{rizzi2018}, p.~360).\footnotemark{} 
+
+\footnotetext{Notice that if I had chosen to represent Q and R as separate features instead of grouping them together under the `Op' label, that would have resulted in categorizing the \textit{wh}-island RC in (\ref{ex-gap-distinct3}) as a case of disjunction (with \textit{man} carrying the N and R features and \textit{who} carrying the Q feature), which would have erroneously led to the conclusion that such RCs should be permitted in English; it is therefore essential for present purposes that the feature that triggers movement in \textit{wh}-questions and the feature that triggers movement in RCs be treated as one and the same.}
+
+There is variation regarding how far down the distinctness hierarchy languages are willing to go, because languages like Hebrew appear to tolerate criterial inclusion, as illustrated in (\ref{ex-gap-frm-heb}), which is based on the English gloss of Keshev and Meltzer-Asscher's (\citeyear{keshev.meltzer-asscher2019}) \textit{wh}-clause condition from Table~\ref{tblr:gap-lw-km19}. Notice that the dependency is well-formed in Hebrew even though \textit{student} and \textit{when} both carry the criterial Op feature.
+
+% criterial inclusion in Hebrew
+\pex \label{ex-gap-frm-heb}
+the-\tikzmarknode{filler}{student}$_1$ [that-the-\tikzmarknode{intervener2}{professor} gathered [\tikzmarknode{intervener}{when}$_2$ the-\tikzmarknode{intervener3}{assistant} will.teach \tikzmarknode{gap}{\_\_}$_1$ \_\_$_2$]]
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (z2) at ($(intervener2 |- x)$) {Z};
+\node (z3) at ($(intervener3 |- x)$) {Z};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+\node(fz) at ($(z |- fx)$) {\footnotesize[Op]};
+\node(fz2) at ($(z2 |- fx)$) {\footnotesize[N]};
+\node(fz3) at ($(z3 |- fx)$) {\footnotesize[N]};
+\end{tikzpicture}\vspace{24pt}
+\xe 
+
+The requirement that Z must be a hierarchical intervener between X and Y prevents well-formed RCs like the one in (\ref{ex-gap-gram1}) from being ruled out in English. For an intervening nominal to qualify as a hierarchical intervener, two conditions must be met: (a) X must c-command the intervening nominal and (b) the intervening nominal must in turn c-command Y (\cite{rizzi2013}, p.~174). Notice that \textit{who} in (\ref{ex-gap-gram1}) does not disrupt the dependency between X and Y because it is embedded in a complex subject such that X c-commands \textit{who} but \textit{who} does not c-command Y. I mark \textit{who} with a zero instead of a Z to show that it does not count as a hierarchical intervener.
+
+% grammatical1
+\pex \label{ex-gap-gram1}
+\tikzmarknode{filler}{When}$_1$ did [the uncertainty [about [\tikzmarknode{intervener}{who}$_2$ \_\_$_2$ won]]] dissolve \tikzmarknode{gap}{\_\_}$_1$?
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {0};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[Op]};
+\node(fz) at ($(z |- fx)$) {\footnotesize[Op]};
+\end{tikzpicture}\par\nobreak\vspace{24pt}
+\hfill (adapted from \cite{rizzi2018}, p. 342, (5b))
+\xe 
+
+A problem I have noticed with the way that RCs are typically represented in the fRM literature (e.g.,~\cite{rizzi2013,rizzi2018}) is that treating the head noun as the filler results in the incorrect prediction that RCs like the one in (\ref{ex-gap-gram2}) will be ill-formed. Notice that Z (\textit{man}) is portrayed as being in an identity configuration with X (\textit{book}), which should result in ungrammaticality. This is, as far as I can tell, a novel observation in the literature on fRM.
+
+% grammatical2
+\pex \label{ex-gap-gram2}
+the \tikzmarknode{filler}{book}$_1$ [that the \tikzmarknode{intervener}{man}$_2$ [my \tikzmarknode{intervener2}{friend} is dating \_\_$_2$] bought \tikzmarknode{gap}{\_\_}$_1$]
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (z2) at ($(intervener2 |- x)$) {0};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+\node(fz) at ($(z |- fx)$) {\footnotesize[N, Op]};
+\node(fz2) at ($(z2 |- fx)$) {\footnotesize[N]};
+\end{tikzpicture}\par\nobreak\vspace{18pt}
+\xe 
+
+\noindent I would like to propose that this error can be corrected by treating the relative operator (either OP or a relative pronoun) as the filler instead of the head noun, as shown in (\ref{ex-gap-gram3-a}) and (\ref{ex-gap-gram3-b}). Doing so moves the criterial Op feature into the embedded RC, thereby removing it as a hierarchical intervener between X and Y. However, note that this only works if the filler is permitted to inherit an N feature through coindexation with the head noun, such that any hierarchical interveners that also have the N feature will still disrupt the dependency. 
+
+% grammatical3
+\pex \label{ex-gap-gram3}
+\a
+the \tikzmarknode{head}{book}$_1$ [\tikzmarknode{filler}{OP}$_1$ that the \tikzmarknode{intervener}{man}$_2$ [\tikzmarknode{intervener2}{OP}$_2$ my \tikzmarknode{intervener3}{friend} is dating \_\_$_2$] bought \tikzmarknode{gap}{\_\_}$_1$]
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (z2) at ($(intervener2 |- x)$) {0};
+\node (z3) at ($(intervener3 |- x)$) {0};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+\node(fz) at ($(z |- fx)$) {\footnotesize[N]};
+\node(fz2) at ($(z2 |- fx)$) {\footnotesize[N, Op]};
+\node(fz3) at ($(z3 |- fx)$) {\footnotesize[N]};
+\end{tikzpicture}\par\nobreak\vspace{20pt}\label{ex-gap-gram3-a}
+\a 
+the \tikzmarknode{head}{book}$_1$ [\tikzmarknode{filler}{which}$_1$ the \tikzmarknode{intervener}{man}$_2$ [\tikzmarknode{intervener2}{who}$_2$ my \tikzmarknode{intervener3}{friend} is dating \_\_$_2$] bought \tikzmarknode{gap}{\_\_}$_1$]
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (z2) at ($(intervener2 |- x)$) {0};
+\node (z3) at ($(intervener3 |- x)$) {0};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+\node(fz) at ($(z |- fx)$) {\footnotesize[N]};
+\node(fz2) at ($(z2 |- fx)$) {\footnotesize[N, Op]};
+\node(fz3) at ($(z3 |- fx)$) {\footnotesize[N]};
+\end{tikzpicture}\par\nobreak\vspace{24pt}\label{ex-gap-gram3-b}
+\xe 
+
+\noindent This revised approach to representing RCs under fRM works equally well for the RCs discussed earlier in the section, as demonstrated in (\ref{ex-gap-distinct6}), which is an updated version of (\ref{ex-gap-distinct5}). Just as before, this RC exemplifies the identity configuration, with the relative operator in the upper RC (OP$_1$) and the the relative operator in the embedded RC (OP$_2$) both carrying the features N and Op.
+
+% identity - RC -revised
+\pex \label{ex-gap-distinct6}
+\ljudge*the man$_1$ [\tikzmarknode{filler}{OP}$_1$ that \tikzmarknode{intervener2}{I} know the \tikzmarknode{intervener}{director}$_2$ [\tikzmarknode{intervener3}{OP}$_2$ that \_\_$_2$ hired \tikzmarknode{gap}{\_\_}$_1$]]
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (z2) at ($(intervener2 |- x)$) {Z};
+\node (z3) at ($(intervener3 |- x)$) {Z};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+\node(fz) at ($(z |- fx)$) {\footnotesize[N]};
+\node(fz3) at ($(z3 |- fx)$) {\footnotesize[N, Op]};
+\end{tikzpicture}\vspace{24pt}
+\xe 
+
+% In-situ \textit{wh}-phrases do not severely disrupt the dependency between a filler and its gap, as attested by the high acceptability of English multiple \textit{wh}-questions (e.g.,~\textit{When did Bill buy what?}). We can account for this under fRM if we posit that in-situ \textit{wh}-phrases do not carry the Op feature. In (\ref{ex-gap-gram5}), for instance, \textit{what} disrupts the dependency between X and Y in only a trivial way, if at all, because it remains in-situ and therefore lacks a Op feature. 
+
+% % grammatical5
+% \pex \label{ex-gap-gram5}
+% \tikzmarknode{filler}{When} did Bill buy \tikzmarknode{intervener}{what} \tikzmarknode{gap}{\_\_}?
+% \begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+% \node (x) at ([yshift=-13pt]filler.south) {X};
+% \node (z) at ($(intervener |- x)$) {Z};
+% \node (y) at ($(gap |- x)$) {Y};
+% \node(fx) at ([yshift=-1pt]x.south) {\footnotesize[Op]};
+% \end{tikzpicture}\par\nobreak\vspace{18pt}
+% \xe 
+
+As we have seen in this section, fRM provides a powerful framework for explaining processing asymmetries in gapped dependencies. Importantly for this dissertation, it easily accommodates the COMP-clause~>~\textit{wh}-clause asymmetry, as illustrated by the contrast between (\ref{ex-gap-asym1-a}), a long-distance RC with its gap in a COMP-clause, and (\ref{ex-gap-asym1-b}), a long-distance RC with its gap in a \textit{wh}-clause. While these two RCs have the same number of interveners, we would expect the criterial inclusion configuration exemplified in (\ref{ex-gap-asym1-b}) to place more strain on the processor (and render the RC ill-formed, at least in English) compared with the non-criterial inclusion configuration exemplified in (\ref{ex-gap-asym1-a}). 
+
+% COMP-clause > wh-clause
+\pex \label{ex-gap-asym1}
+\a
+the \tikzmarknode{head}{man}$_1$ [\tikzmarknode{filler}{OP}$_1$ that \tikzmarknode{intervener}{I} think [\tikzmarknode{intervener2}{Tina} hired \tikzmarknode{gap}{\_\_}$_1$]] (COMP-clause)
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (z2) at ($(intervener2 |- x)$) {Z};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+% \node(fz) at ($(z |- fx)$) {\footnotesize[N]};
+\node(fz2) at ($(z2 |- fx)$) {\footnotesize[N]};
+\end{tikzpicture}\par\nobreak\vspace{20pt}\label{ex-gap-asym1-a}
+\a
+\ljudge*the \tikzmarknode{head}{man}$_1$ [\tikzmarknode{filler}{OP}$_1$ that \tikzmarknode{intervener}{I} wonder [\tikzmarknode{intervener2}{who}$_2$ \_\_$_2$ hired \tikzmarknode{gap}{\_\_}$_1$]] (\textit{wh}-clause)
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (z2) at ($(intervener2 |- x)$) {Z};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+% \node(fz) at ($(z |- fx)$) {\footnotesize[N]};
+\node(fz2) at ($(z2 |- fx)$) {\footnotesize[Op]};
+\end{tikzpicture}\par\nobreak\vspace{24pt}\label{ex-gap-asym1-b}
+\xe
+
+% Intervention effects can also potentially subsume the distance effects outlined in the previous section, as shown in (\ref{ex-gap-asym2-a})--(\ref{ex-gap-asym2-c}). Whereas the short-distance SRC in (\ref{ex-gap-asym2-a}) has no interveners at all, the short-distance ORC in (\ref{ex-gap-asym2-b}) has one intervener, and the long-distance ORC in (\ref{ex-gap-asym2-b}) has two interveners. Because the interveners in these examples are all pronouns, we should expect each of them to little or nothing to processing difficulty under fRM.
+
+% % subject > object > long
+% \pex \label{ex-gap-asym2}
+% \a
+% the \tikzmarknode{head}{man}$_1$ [\tikzmarknode{filler}{OP}$_1$ that \tikzmarknode{gap}{\_\_}$_1$ hired you] (short-distance SRC)
+% \begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+% \node (x) at ([yshift=-13pt]filler.south) {X};
+% \node (y) at ($(gap |- x)$) {Y};
+% \node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+% \end{tikzpicture}\par\nobreak\vspace{20pt}\label{ex-gap-asym2-a}
+% \a
+% the \tikzmarknode{head}{man}$_1$ [\tikzmarknode{filler}{OP}$_1$ that \tikzmarknode{intervener}{you} hired \tikzmarknode{gap}{\_\_}$_1$] (short-distance ORC)
+% \begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+% \node (x) at ([yshift=-13pt]filler.south) {X};
+% \node (z) at ($(intervener |- x)$) {Z};
+% \node (y) at ($(gap |- x)$) {Y};
+% \node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+% \end{tikzpicture}\par\nobreak\vspace{18pt}\label{ex-gap-asym2-b}
+% \a
+% the \tikzmarknode{head}{man}$_1$ [\tikzmarknode{filler}{OP}$_1$ that \tikzmarknode{intervener}{I} think [\tikzmarknode{intervener2}{you} hired \tikzmarknode{gap}{\_\_}$_1$]] (long-distance ORC)
+% \begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+% \node (x) at ([yshift=-13pt]filler.south) {X};
+% \node (z) at ($(intervener |- x)$) {Z};
+% \node (z2) at ($(intervener2 |- x)$) {Z};
+% \node (y) at ($(gap |- x)$) {Y};
+% \node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+% \end{tikzpicture}\par\nobreak\vspace{20pt}\label{ex-gap-asym2-c}
+% \xe 
+
+% \noindent We could increase the strain on the processor in short-distance and long-distance ORCs by replacing the pronoun interveners with full-NP interveners, as shown in (\ref{ex-gap-asym3-a})--(\ref{ex-gap-asym3-b}), where the N feature on \textit{intern} and \textit{lawyer} amplifies the difficulty of processing the dependency between X and Y.
+
+% % full NPs
+% \pex \label{ex-gap-asym3}
+% \a
+% the \tikzmarknode{head}{man}$_1$ [\tikzmarknode{filler}{OP}$_1$ that the \tikzmarknode{intervener}{lawyer} hired \tikzmarknode{gap}{\_\_}$_1$] (short-distance ORC)
+% \begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+% \node (x) at ([yshift=-13pt]filler.south) {X};
+% \node (z) at ($(intervener |- x)$) {Z};
+% \node (y) at ($(gap |- x)$) {Y};
+% \node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+% \node(fz) at ($(z |- fx)$) {\footnotesize[N]};
+% \end{tikzpicture}\par\nobreak\vspace{18pt}\label{ex-gap-asym3-a}
+% \a
+% the \tikzmarknode{head}{man}$_1$ [\tikzmarknode{filler}{OP}$_1$ that the \tikzmarknode{intervener}{intern} thinks the [\tikzmarknode{intervener2}{lawyer} hired \tikzmarknode{gap}{\_\_}$_1$]] (long-distance ORC)
+% \begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+% \node (x) at ([yshift=-13pt]filler.south) {X};
+% \node (z) at ($(intervener |- x)$) {Z};
+% \node (z2) at ($(intervener2 |- x)$) {Z};
+% \node (y) at ($(gap |- x)$) {Y};
+% \node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+% \node(fz) at ($(z |- fx)$) {\footnotesize[N]};
+% \node(fz2) at ($(z2 |- fx)$) {\footnotesize[N]};
+% \end{tikzpicture}\par\nobreak\vspace{20pt}\label{ex-gap-asym3-b}
+% \xe
+
+%--------------------------------------------------------%
+\subsection{Push-down storage effects}\label{gap-pushdown}
+%--------------------------------------------------------%
+
+One processing asymmetry that intervention-based theories such as fRM have trouble capturing is the one between subject gaps and object gaps in \textit{wh}-islands. Take, for example, the RCs in (\ref{ex-gap-islands}). According to fRM, (\ref{ex-gap-islands-a}) and (\ref{ex-gap-islands-b}) should be equally difficult to process because the intervener \textit{which lawyer} is in an identity configuration with the filler in both cases. Note that the two RCs have the same linear word order but different interpretations: A lawyer has annoyed the banker in (\ref{ex-gap-islands-a}), whereas the banker has annoyed a lawyer in (\ref{ex-gap-islands-b}).
+
+% subject > object wh-islands
+\pex \label{ex-gap-islands}
+\a
+\ljudge*the \tikzmarknode{head}{banker}$_1$ [\tikzmarknode{filler}{OP}$_1$ that \tikzmarknode{intervener}{I} wonder [\tikzmarknode{intervener2}{which lawyer}$_2$ \tikzmarknode{gap}{\_\_}$_2$ annoyed \tikzmarknode{gap}{\_\_}$_1$]] (\textit{wh}-island ORC)
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (z2) at ($(intervener2 |- x)$) {Z};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+\node(fz2) at ($(z2 |- fx)$) {\footnotesize[N, Op]};
+\end{tikzpicture}\par\nobreak\vspace{24pt}\label{ex-gap-islands-a}
+Intended meaning: `the banker $x$ such that I wonder which lawyer annoyed $x$'
+\a
+\ljudge*the \tikzmarknode{head}{banker}$_1$ [\tikzmarknode{filler}{OP}$_1$ that \tikzmarknode{intervener}{I} wonder [\tikzmarknode{intervener2}{which lawyer}$_2$ \tikzmarknode{gap}{\_\_}$_1$ annoyed \tikzmarknode{gap}{\_\_}$_2$]] (\textit{wh}-island SRC)
+\begin{tikzpicture}[arrow, overlay, every node/.style={text depth=5pt, text height=5pt, anchor=base, baseline}]
+\node (x) at ([yshift=-13pt]filler.south) {X};
+\node (z) at ($(intervener |- x)$) {Z};
+\node (z2) at ($(intervener2 |- x)$) {Z};
+\node (y) at ($(gap |- x)$) {Y};
+\node(fx) at ([yshift=-1pt]x.south) {\footnotesize[N, Op]};
+\node(fz2) at ($(z2 |- fx)$) {\footnotesize[N, Op]};
+\end{tikzpicture}\par\nobreak\vspace{24pt}\label{ex-gap-islands-b}
+Intended meaning: `the banker $x$ such that I wonder which lawyer $x$ annoyed'
+\xe 
+
+How, then, can we account for this asymmetry? The push-down storage principle (\cite{marcus1978}, p.~59; see~also \cite{kempen.hoenkamp1987}, p.~245; \cite{ogrady2005}, p.~118ff) offers a possible solution. According to this principle, recently stored items in working memory have a higher level of activation and are therefore more accessible than previously stored items; the most recently stored item is thus said to be at the top of the `push-down stack' (\cite{marcus1978}, p.~31). The processing of \textit{wh}-island ORCs complies with push-down storage in that fillers are retrieved in the reverse of the order in which they are introduced, as illustrated in (\ref{ex-gap-push-a}). By contrast, \textit{wh}-island SRCs violate push-down storage because they require the filler at the bottom of the stack to be retrieved before the filler at the top of the stack, as shown in (\ref{ex-gap-push-b}).
+
+% push-down storage
+\pex \label{ex-gap-push}
+\a
+\ljudge*the \tikzmarknode{af1}{\strut \boxing{banker}}$_1$ [that I wonder [\tikzmarknode{af2}{\strut \boxing{which lawyer}}$_2$ \tikzmarknode{ag2}{\strut \_\_}$_2$ hired \tikzmarknode{ag1}{\strut \_\_}$_1$]] (\textit{wh}-island ORC)
+\begin{tikzpicture}[arrow, overlay]\draw[->,semithick] ([yshift=2pt]af1.south) to [out=270, in=270, looseness=.15] ([yshift=2pt]ag1.south);\draw[->,semithick] ([yshift=2pt]af2.south) to [out=270, in=270, looseness=.45] ([yshift=2pt]ag2.south);\end{tikzpicture}\vspace{7pt}\label{ex-gap-push-a}
+\a
+\ljudge*the \tikzmarknode{bf1}{\strut \boxing{banker}}$_1$ [that I wonder [\tikzmarknode{bf2}{\strut \boxing{which lawyer}}$_2$ \tikzmarknode{bg2}{\strut \_\_}$_1$ hired \tikzmarknode{bg1}{\strut \_\_}$_2$]] (\textit{wh}-island SRC)
+\begin{tikzpicture}[arrow, overlay]\draw[->,semithick] ([yshift=2pt]bf1.south) to [out=270, in=270, looseness=.15] ([yshift=2pt]bg2.south);\draw[->,semithick] ([yshift=2pt]bf2.south) to [out=270, in=270, looseness=.28] ([yshift=2pt]bg1.south);\end{tikzpicture}\vspace{7pt}\label{ex-gap-push-b}
+\xe 
+
+\noindent The arrows represent the approximate points in the processing of the RC where each filler is stored and subsequently retrieved. The non-crossing lines in (\ref{ex-gap-push-a}) are indicative of push-down storage compliance (the last-stored filler is the first to be retrieved), whereas the crossing lines in (\ref{ex-gap-push-b}) are indicative of a push-down storage violation (the first-stored filler is the first to be retrieved).
+
+%--------------------------------------------------------%
+\subsection{Expectation effects}\label{gap-expectation}
+%--------------------------------------------------------%
+
+There has also been a great deal of interest among researchers in how expectations can influence processing of linguistic expressions in general and RCs in particular (\cite{hale2001,hale2003,hale2006,jager.etal2015,kim2013,levy2008,roland.etal2012,rohde.etal2011}). One of the most prominent complexity metrics for expectation-based theories of sentence processing is surprisal (\cite{hale2001,levy2008}), according to which comprehenders actively generate probabilistic expectations about upcoming linguistic material. The lower the likelihood of a word in a given context, the higher the processing cost (\cite{ronai.xiang2023}, p.~3). Thus, out of the three sentences in (\ref{ex-expectation1}), we might expect processing to be easiest in (\ref{ex-expectation1-a}) and hardest in (\ref{ex-expectation1-c}).
+
+\pex \label{ex-expectation1}
+\a the criminal [that they arrested \_\_] > \label{ex-expectation1-a}
+\a the person [that they arrested \_\_] > \label{ex-expectation1-b}
+\a the officer [that they arrested \_\_] \label{ex-expectation1-c}
+\xe 
+
+\noindent Processing of (\ref{ex-expectation1-a}) is facilitated by the fact that the pairing of the verb \textit{arrest} with the direct object (DO) \textit{the criminal} is a highly predictable. The example in (\ref{ex-expectation1-b}) is the neutral case, where the pairing of the verb \textit{arrest} with the DO \textit{the person} is neither expected nor surprising. Finally, (\ref{ex-expectation1-c}) is relatively difficult to process because the pairing of the verb \textit{arrest} with the DO \textit{the officer} is a highly unusual one. For both semantic and statistical reasons, we would expect \textit{the officer} to be the subject rather than the DO of \textit{arrest}.
+
+Expectation-based theories can help us fill in certain blind spots left by other theories, such explaining why the subject vs. object asymmetry in English is often  neutralized when the head is inanimate (\cite{gordon.etal2001,gordon.etal2002}; \cite{mak2001}; \cite{mak.etal2006,mak.etal2002}; \cite{reali.christiansen2007}; \cite{traxler.etal2005}). Experimental studies finding a strong subject~>~object asymmetry typically use reversible RCs with animate heads. In a reversible RC, the subject and object can be swapped without any decrease in naturalness, as illustrated in (\ref{ex-traxler1-a}) and (\ref{ex-traxler1-b}). 
+
+\pex \label{ex-traxler1}
+\a SRC with animate head: \par\nobreak\vspace{5pt}
+The lawyer [that \_\_ irritated the banker] filed a hefty lawsuit. \label{ex-traxler1-a}
+\a ORC with animate head: \par\nobreak\vspace{5pt}
+The lawyer [that the banker irritated \_\_] filed a hefty lawsuit. \label{ex-traxler1-b}
+\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{traxler.etal2002}, p. 73, (1a) and (1b))
+\xe
+
+The problem with using reversible RCs is that there is a strong statistical tendency for SRCs to have animate heads and for ORCs to have inanimate heads (\cite{gennari.macdonald2008,mak.etal2006,reali.christiansen2007}). There is evidence that these frequency effects, paired with the general strategy of the processor to resolve gapped dependencies at the first possible opportunity (\cite{frazier1987,stowe1986}), result in the initial adoption of an SRC interpretation in both (\ref{ex-traxler1-a}) and (\ref{ex-traxler1-b}). In Traxler et al.'s (\citeyear{traxler.etal2002}) eye-tracking-while-reading study (see~Section~\ref{gap-so}), for instance, the strong subject~>~object advantage found with reversible RCs (for both first-pass regressions and total reading times) disappeared when the animate-headed ORCs were replaced with inanimate-headed ones of the kind shown in (\ref{ex-gap-inanimate}). These results suggest that the difficulty participants have with animate-headed ORCs is at least partly a garden-path effect, with participants initially adopting an SRC interpretation and subsequently needing to switch to an ORC interpretation. This garden pathing did not occur in inanimate-headed ORCs, by contrast, and processing of the dependency was streamlined as a result.
+
+\pex 
+ORC with inanimate head:\par\nobreak\vspace{5pt}\label{ex-gap-inanimate}\par\nobreak
+The movie [that the director watched \_\_] received a prize at the film festival.\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{traxler.etal2002}, p. 79, (3d))
+\xe 
+
+% Expectation-based factors may also help to account for why experimental results for the subject vs. object asymmetry have been inconsistent in Mandarin (see~Table~\ref{tab:gap-so-zh}). \textcite{lin.bever2010} point out that there is a push and pull between opposing factors in the parsing of Mandarin ORCs, some facilitating processing and others disrupting processing. On the facilitation side, Mandarin ORCs follow canonical (and therefore more expected) subject-verb-object word order (p.~292), as shown in (\ref{ex-gap-canon-b}); this is viewed as an advantage relative to Mandarin SRCs, which display non-canonical (and therefore less expected) verb-object-subject word order, as shown in (\ref{ex-gap-canon-a}). However, this canonical word order can also be a liability, since it means that Mandarin ORCs are more likely to be misanalysed as main clauses up to the point where the adnominal particle is encountered (p.~280). Lin and Bever argue that when such garden-path effects are neutralized, e.g., through the use of carefully worded instructions (p.~293), L1 Mandarin adults display a consistent object > subject processing advantage.
+
+% \pex[everygla = \zh, belowglpreambleskip = -3pt] \label{ex-gap-canon}
+% \a
+% \begingl
+% \glpreamble Mandarin short-distance SRC: //
+% \gla \nogloss{[\_\_ } @ $\stackrel{\mathrm{VERB}}{\text{\zh 僱用}}$ $\stackrel{\mathrm{OBJECT}}{\text{\zh 蒂娜}}$ 的] $\stackrel{\mathrm{SUBJECT}}{\text{\zh 男人}}$ //
+% \glb guyong Dina de nanren //
+% \glc hire Tina {\sc adn} man //
+% \glft `the man that hired Tina' //
+% \endgl\label{ex-gap-canon-a}
+% \a 
+% \begingl
+% \glpreamble Mandarin short-distance ORC: //
+% \gla \nogloss{[} @ $\stackrel{\mathrm{SUBJECT}}{\text{\zh 蒂娜}}$ $\stackrel{\mathrm{VERB}}{\text{\zh 僱用}}$ \nogloss{\_\_ } @ 的]  $\stackrel{\mathrm{OBJECT}}{\text{\zh 男人}}$ //
+% \glb Dina guyong de nanren //
+% \glc Tina hire {\sc adn} man //
+% \glft `the man that Tina hired' //
+% \endgl\label{ex-gap-canon-b}
+% \xe 
+
+%========================================================%
+\section{Summing up}\label{gap-conclusion}
+%========================================================%
+
+This chapter introduced the reader to four processing asymmetries for gapped RCs: the subject vs. object asymmetry in nonislands, the short-distance vs. long-distance asymmetry, the COMP-clause vs. \textit{wh}-clause asymmetry, and the subject vs. object asymmetry in \textit{wh}-islands. I have shown that there is experimental evidence for each of these asymmetries. I have also reviewed some of the explanations that have been put forward for each of the asymmetries, focusing on those that have received the most attention in the processing literature. As we have seen, there appear to be a variety of processing factors at play in the real-time comprehension and production of RCs.

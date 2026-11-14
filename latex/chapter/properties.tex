@@ -1,0 +1,1480 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% # General Background on Relative Clauses
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{General Background on Relative Clauses}\label{ch-properties}
+
+% \excnt=2
+
+This chapter marks the beginning of the background section of the dissertation. Section~\ref{pro-constraint} establishes what a relative clause (RC) is by laying out two basic constraints to which all RCs must adhere. Section~\ref{pro-aboutness} explains the distinction between gapped and resumptive RCs. Section~\ref{pro-distribution} explores how the set of RC environments where gapping and resumption are permitted varies across languages, and Section~\ref{pro-compare} describes a few additional ways in which RCs differ between my three languages of interest: English, Korean, and Mandarin. In Sections~\ref{pro-structure} and \ref{pro-routine}, I~go on to present models of, respectively, the structure of RCs and the processing of RCs. Section~\ref{pro-conclusion} concludes the chapter.
+
+%========================================================%
+\section{What is an RC?}\label{pro-constraint}
+%========================================================%
+
+RCs are sentential categories that modify another category in the sentence. The modified category---typically a nominal---is referred to as the `head' of the RC. An example is provided in (\ref{ex-dog}), where the RC \textit{who like dogs} modifies the head noun \textit{people}.
+
+\ex
+people [who like dogs] \label{ex-dog}
+\xe
+
+\noindent By their very definition, RCs must adhere to the two constraints shown in (\ref{ex-constraint}).
+
+\pex \label{ex-constraint}
+\a Aboutness Constraint: \par\nobreak\vspace{5pt} RCs must provide information about their heads.
+\a Sentential Category Constraint: \par\nobreak\vspace{5pt} RCs must be sentential categories. \par\nobreak\vspace{5pt}
+\hfill (based on \cite{kuno1976}, p. 420; \cite{ogrady2011}, p. 15)
+\xe
+
+\noindent Of the four attempts at relativization shown in Table \ref{tab:constraint}, \textit{that is fat} is the only one that satisfies both the Aboutness Constraint and the Sentential Category Constraint, thereby qualifying as a genuine RC.
+
+\begin{table}
+\caption{Demonstration of the Aboutness Constraint and the Sentential Category Constraint}\label{tab:constraint}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={lll}}\toprule
+& \phantom{* }+Aboutness & \phantom{* }−Aboutness\\\midrule
++Sentential Category~~~~~ & \phantom{* }the dog [that is fat]~~~~~ & * the dog [that the cat is fat]~~~~~\\
+−Sentential Category & * the dog [that fat] & * the dog [that the cat]\\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+\newpage
+
+The experiments reported in the present dissertation focus on restrictive RCs, which have the added property of restricting the set of referents denoted by the head. The bracketed RC in (\ref{ex-cake-a}), for instance, winnows down the possible referents of the head noun from all members of the class of cakes to the subset of cakes that Mary bought. This sets restrictive RCs apart from non-restrictive RCs like the one in (\ref{ex-cake-b}), which are purely descriptive, and kind-denoting RCs like the one in (\ref{ex-cake-c}), which define the semantic class to which the head belongs (\cite{beninca.cinque2014}, p.~262).
+
+\pex
+\a The cake [that Mary bought] is on the table. (restrictive)\label{ex-cake-a}
+\a The cake, [which Mary bought], is on the table. (non-restrictive)\label{ex-cake-b}
+\a This is the kind of cake [that Mary bought]. (kind-denoting)\label{ex-cake-c}
+\xe
+
+Not all languages make it easy to tell restrictive RCs apart from non-restrictive RCs based on form alone, but in English there are intonational, morphological, syntactic, and orthographic cues that help to distinguish between the two. For one thing, non-restrictive RCs are set off by prosodic breaks, represented with commas in the orthography, as illustrated in (\ref{ex-prosody-b}), whereas restrictive RCs have no such prosodic breaks, as illustrated in (\ref{ex-prosody-a}).
+
+\pex
+\a The girl [who is wearing overalls] is my friend. (restrictive) \label{ex-prosody-a}
+\a The girl, [who is wearing overalls], is my friend. (non-restrictive)\label{ex-prosody-b}
+\xe
+
+\noindent Depending on the verb form and the targeted argument, restrictive RCs may be able to take a relative pronoun (\textit{who}, \textit{which}, \textit{whose}, etc.), a complementizer (\textit{that}), and/or a null relativizer ($\emptyset$), whereas non-restrictive RCs must always have a relative pronoun, as shown in (\ref{ex-relativizer}).
+
+\pex \label{ex-relativizer}
+\a Relativizer options for restrictive RCs: \par\nobreak\vspace{5pt}
+The chef [\{who/that/$\emptyset$\} I hired] is in the kitchen. \label{ex-relativizer-a}
+\a Relativizer options for non-restrictive RCs: \par\nobreak\vspace{5pt}
+The chef, [\{who/*that/*$\emptyset$\} I hired], is in the kitchen. \label{ex-relativizer-b}
+\xe
+
+\noindent Furthermore, only restrictive RCs can be stacked, as demonstrated in (\ref{ex-stack}).
+
+\pex \label{ex-stack}
+\a Stacked restrictive RCs:\vspace{5pt}\newline\nobreak
+The one person [that I met] [that really impressed me] was Chomsky.\newpage
+\a Stacked non-restrictive RCs:\vspace{5pt}\newline\nobreak
+\ljudge*Chomsky, [who I met in Cambridge], [who really impressed me], always replies to emails.\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{radford2019}, p. 9, (5))
+\xe
+
+\noindent Finally, while restrictive RCs can only modify nominals, as shown in (\ref{ex-rest}), non-restrictive RCs can modify both nominals and entire propositions, as shown in (\ref{ex-nonrest}). 
+
+\pex \label{ex-rest}
+\a The girl [who is wearing overalls] is my friend.
+\a \ljudge* The storm ended [which was a relief].
+\xe 
+
+\pex \label{ex-nonrest}
+\a The girl, [who is wearing overalls], is my friend.
+\a The storm ended, [which was a relief].
+\xe 
+
+It can be harder to tell restrictive and non-restrictive RCs apart in Korean and Mandarin. Korean RCs of the kind shown in (\ref{ex-restrictive-ko-a}), for instance, can have either a restrictive or a non-restrictive reading (\cite{kim1993a}, p.~190ff). However, the addition of a determiner to the expression can help to distinguish between these two interpretations (\cite{kim1997}, p.~100), with the sequence [determiner~+ RC~+~head] signaling a restrictive RC and the sequence [RC~+~determiner~+~head] signaling a non-restrictive RC, as demonstrated in (\ref{ex-restrictive-ko-b}) and (\ref{ex-restrictive-ko-c}), respectively.
+
+\pex[everygla=\ko]
+\a
+\begingl
+\gla 내가 도서관에서 만난 여자 //
+\glb nay-ka tosekwan-eyse manna-n yeca //
+\glc {\sc 1s-nom} library-{\sc loc} meet-{\sc adn} woman //
+\glft `the woman who I met at the library' / `the woman, who I met at the library' //
+\endgl \label{ex-restrictive-ko-a}
+\a
+\begingl
+\gla 그 내가 도서관$\acute{\textrm{\ko 에}}$서 만난 여자 //
+\glb ku nay-ka tosekwan-$\acute{\textrm{e}}$yse manna-n yeca //
+\glc that {\sc 1s-nom} library-{\sc loc} meet-{\sc adn} woman //
+\glft `the woman who I met at the library' //
+\endgl \label{ex-restrictive-ko-b}
+\a
+\begingl
+\gla 내가 도서관에서 만난 그 $\acute{\textrm{\ko 여}}$자 //
+\glb nay-ka tosekwan-eyse manna-n ku y$\acute{\textrm{e}}$ca //
+\glc {\sc 1s-nom} library-{\sc loc} meet-{\sc adn} that woman //
+\glft `the woman, who I met at the library' //
+\endgl \label{ex-restrictive-ko-c}
+\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{kim1997}, p. 102, (9a) and (9b))
+\xe
+
+\noindent Korean also uses prosody to distinguish between the two readings, with primary stress being placed on the head noun in non-restrictive RCs and somewhere internal to the RC in restrictive RCs (\cite{kim1993a}, p.~189ff; \cite{kim1997}, p.~100ff). I~use acute accents to indicate the placement of the primary stress in (\ref{ex-restrictive-ko-b}) and (\ref{ex-restrictive-ko-c}) as reported by \textcite{kim1997}.
+
+It has been argued that Mandarin also uses the placement of the determiner to clarify how the RC ought to be interpreted. When no determiner is present, the RC is ambiguous between a restrictive reading and a non-restrictive reading, as shown in (\ref{ex-restrictive-zh-a}), while adding a determiner can push the comprehender towards one or the other of the two interpretations (\cite{chao1968}; \cite{hashimoto1971}; \cite{huang1982}; see also \cite{ming2010}). Unlike in Korean, though, the sequence [determiner~+~RC~+~head] tends to receive a non-restrictive reading, and the sequence [RC~+~determiner~+~head] tends to receive a restrictive reading, as illustrated in (\ref{ex-restrictive-zh-b}) and (\ref{ex-restrictive-zh-c}), respectively.
+
+\pex[everygla=\zh]
+\a
+\begingl
+\gla 我 昨天 買 的 書 //
+\glb wo zuotian mai de shu //
+\glc I yesterday buy {\sc adn} book //
+\glft `the book that I bought yesterday' / `the book, which I bought yesterday' //
+\endgl \label{ex-restrictive-zh-a}
+\a
+\begingl
+\gla 那 本 我 昨天 買 的 書 //
+\glb nei ben wo zuotian mai de shu //
+\glc that {\sc cl} I yesterday buy {\sc adn} book //
+\glft `that book, which I bought yesterday' //
+\endgl \label{ex-restrictive-zh-b}
+\a
+\begingl
+\gla 我 昨天 買 的 那 本 書 //
+\glb wo zuotian mai de nei ben shu //
+\glc I yesterday buy {\sc adn} that {\sc cl} book //
+\glft `the book that I bought yesterday' //
+\vspace{5pt}
+\hfill (adapted from \cite{huang1982}, p. 68, (69) and (70))
+\endgl \label{ex-restrictive-zh-c}
+\xe
+
+\noindent Though \textcite{huang1982} claims that this interpretive distinction does exist, he admits that it is a subtle one, going so far as to say, ``it may even be argued that speakers often feel free to use either word order without intending a difference in meaning'' (p. 68).
+
+%========================================================%
+\section{Gapping and resumption in RCs}\label{pro-aboutness}
+%========================================================%
+
+The vast majority of RCs in any language satisfy the Aboutness Constraint by referencing the head directly in the body of the RC. The only exceptions are so-called `gapless' RCs, which according to \textcite{radford2019} rely instead on pragmatic inferencing to establish an aboutness relationship with the head (p.~216). An example of an English gapless RC is provided in (\ref{ex-miller}).
+
+\ex\label{ex-miller}
+I haven't been to a party yet [that I haven't got home the same night].
+\par\nobreak\vspace{5pt}
+\hfill (\cite{miller1993}, p. 112, as cited in Comrie, 2004, p. 34, (40))
+\xe
+
+\noindent Korean and Mandarin have a class of clauses of a somewhat different sort, as shown in, respectively, (\ref{ex-smell-ko}) and (\ref{ex-smell-zh}), which have also traditionally been referred to as gapless RCs, though it is disputed whether these ought to be regarded as RCs (\cite{cha2005,cha1999}; \cite{ning1993}; \cite{tsai1997}; \cite{yeom2015}; \cite{yeon2021}), complement clauses (\cite{huang.etal2009}; \cite{kim2011a}; \cite{tsai2008}), or something else entirely (\cite{zhang2008}).
+
+\ex[everygla=\ko]
+\begingl
+\gla 고무가 타는 냄새 //
+\glb komwu-ka tha-nun naymsay //
+\glc rubber-{\sc nom} burn-{\sc adn} smell //
+\glft `the smell of burning rubber' //
+\vspace{5pt}
+\hfill (adapted from \cite{cha1999}, p. 25, (3))
+\endgl \label{ex-smell-ko}
+\xe
+
+\ex[everygla=\zh]
+\begingl
+\gla 橡皮 燃燒 的 味道 //
+\glb xiangpi ranshao de weidao //
+\glc rubber burn {\sc adn} smell //
+\glft `the smell of burning rubber' //
+\vspace{5pt}
+\hfill (adapted from \cite{zhang2008}, p. 105)
+\endgl \label{ex-smell-zh}
+\xe
+
+\noindent Direct referencing of the head can be accomplished via either gapping or resumption, as shown in (\ref{ex-strategy1}). The subscripts mark elements with the same referent.
+
+\pex\label{ex-strategy1}
+\a Gapped RC (foot = missing or unpronounced element):\vspace{5pt}\newline\nobreak
+the book$_1$ [that I bought \_\_$_1$] \label{ex-strategy1-a}
+\a Resumptive RC (foot = overt pronoun or other nominal):\vspace{5pt}\newline\nobreak 
+\ljudge*the book$_1$ [that I bought it$_1$] \label{ex-strategy1-b}
+\xe
+
+\noindent Gapping and resumption are alike in that they both involve a dependency between the head noun and the point at which it is referenced in the RC, called the `foot.' Where they differ is with regard to how the foot is realized: as a missing or unpronounced element in the case of gapped RCs and as an overt pronoun or other nominal in the case of resumptive RCs.
+
+The foot of a gapped RC is commonly referred to as the `gap,' following \textcite{fodor1978}. The placement of the gap in example sentences such as (\ref{ex-strategy1-a}) represents both (a)~the position that the foot would have occupied if it had been overtly expressed and (b)~the approximate point in the processing of the clause where the foot can first be identified (\cite{ogrady2022a}, p.~56).
+
+The foot of a resumptive RC is typically realized as a pronoun (\cite{aoun.choueiri2000}, p.~11; \cite{radford2019}, p.~95), but it can also take the form of other sorts of nominals, as demonstrated by the English examples in (\ref{ex-nominal1})--(\ref{ex-nominal4}). Cases where the foot is a pronoun are referred to as `pronominal' resumption (\cite{asudeh2012,kroch1981,prince1990,radford2019}) and those where the foot is another sort of nominal are referred to as `full NP' resumption (\cite{gavarro.hu2013}; \cite{prince1990}).
+
+\ex
+Pronominal resumption with personal pronoun: \par\nobreak\vspace{5pt}
+There are always guests [who I am curious about what \boxing{they} are going to say]. \par\nobreak\vspace{5pt} 
+\hfill (adapted from \cite{prince1990}, p. 482, (3a))\label{ex-nominal1}
+\xe
+
+\ex
+Pronominal resumption with demonstrative pronoun: \par\nobreak\vspace{5pt}
+It came up in the charge to the jury, [which we have been discussing what \boxing{that} meant]. \par\nobreak\vspace{5pt} \label{ex-nominal2}
+\hfill (adapted from \cite{kroch1981}, p. 129, (13b))
+\xe
+
+\ex
+Full NP resumption with repeated head: \par\nobreak\vspace{5pt}
+He's got this lifelong friend [who he takes money from the parish to give to \boxing{this lifelong friend}]. \par\nobreak\vspace{5pt} \label{ex-nominal3}
+\hfill (adapted from \cite{prince1990}, p. 492, (34b))
+\xe
+
+\ex
+Full NP resumption with epithet: \par\nobreak\vspace{5pt}
+There was one prisoner [that we didn't understand why \boxing{the guy} was even in jail]. \par\nobreak\vspace{5pt} \label{ex-nominal4}
+\hfill (adapted from \cite{kroch1981}, p. 129, (13a))
+\xe
+
+Although pronominal resumption and full NP resumption alike are usually considered ill-formed in English, there are languages in which both are considered well-formed, as illustrated in the Lebanese Arabic examples in (\ref{ex-arabic}). The asterisks in the English translations pertain only to the grammaticality of the English sentences.
+
+\pex\label{ex-arabic}
+\a
+\begingl
+\glpreamble Pronominal resumption in Lebanese Arabic: //
+\gla S-Sabe \nogloss{[} @ yalli raɦ təʃT-o Zeena mən l-madrase harab]. //
+\glb the-boy that {\sc fut} kick.{\sc 3fs}-him Zeina from the-school ran.away.{\sc 3ms} //
+\glft `The boy that Zeina will kick (*him) out of school ran away.'\label{ex-arabic-a} //
+\endgl 
+\a
+\begingl
+\glpreamble Full NP resumption in Lebanese Arabic: //
+\gla S-Sabe \nogloss{[} @ yalli raɦ təʃɦaT Zeena ha-l-maʒduub mən l-madrase harab]. //
+\glb the-boy that {\sc fut} kick.{\sc 3fs} Zeina this-the-idiot from the-school ran.away.{\sc 3ms} //
+\glft `The boy that Zeina will kick (*this idiot) out of school ran away.'\label{ex-arabic-b} // 
+\vspace{5pt}
+\hfill (adapted from \cite{aoun.choueiri2000}, p. 10, (15b) and (13b))
+\endgl 
+\xe
+
+I am inclined to view the choice of pronominal foot vs. full NP foot as reflecting general pragmatic considerations rather than fundamentally different relativization strategies (for~a similar perspective, see~\cite{asudeh2012}, p.~285; \cite{prince1990}, p.~492; \cite{radford2019}, p.~122). For one thing, pragmatic considerations equally favor a pronominal realization of the foot in resumptive RCs like the one in (\ref{ex-antecedent1-a}) and coordinated clauses like the one in (\ref{ex-antecedent1-b}), at least in a language like English. I~use number signs here to indicate pragmatic awkwardness.
+
+\pex\label{ex-antecedent1}
+\a Coreference in a resumptive RC: \vspace{5pt}\newline
+\ljudge*Judy interviewed the man [that Tina hired \{him / \#the man\}].\label{ex-antecedent1-a}
+\a Coreference in coordinated clauses: \vspace{5pt}\newline
+Judy interviewed the man and Tina hired \{him / \#the man\}.\label{ex-antecedent1-b}
+\xe
+
+\noindent Furthermore, a language has yet to be found that has a specialized class of nominals that are used only in resumptive dependencies (\cite{francis2021,mccloskey2002,mccloskey2017,meltzer-asscher2021}). Although this observation does not constitute conclusive evidence one way or the other, it is at least consistent with the view that the relationship between a resumptive nominal and the head noun be treated as analogous to the relationship between any other nominal and its antecedent (see~also~\cite{doron2011}, p.~290; \cite{prince1990}, p.~492; \cite{sells1987}, p.~292).
+
+%========================================================%
+\section{Distribution of well-formed gapping and resumption in RCs}\label{pro-distribution}
+%========================================================%
+
+Languages differ with respect to the syntactic environments that allow gapped RCs and resumptive RCs. Table \ref{tab:distribution} shows the distribution of well-formed gapping and resumption as reported by \textcite{keenan.comrie1977} for English, Korean, and Mandarin across five single-clause (i.e.,~short-distance) RC environments: subject (SU), direct object (DO), indirect object (IO), oblique (OBL), genitive (GEN), and object of comparison (OCOMP). The use of resumption is ungrammatical in English and highly restricted in Korean, compared with Mandarin, where resumption is permitted at all positions from DO through OCOMP. Although there is ongoing debate as to the exact distribution of resumptive RCs in Korean (\cite{han2013,kwon2008,song2003}) and Mandarin (\cite{hitz.francis2016,pan2016}), I~note that the judgments of my language consultants align very well with Keenan and Comrie's observations. For more information on my language consultants, see Section~\ref{stu-consultant}.
+
+\begin{table}
+\caption{Distribution of gapping (−), resumption (+), and unrelativizable domains (0) in single-clause RCs}\label{tab:distribution}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={lX[l]X[l]X[l]X[l]X[l]X[l]}}\toprule
+Language & SU & DO & IO & OBL & GEN & OCOMP \\\midrule
+English & − & − & − & − & − & − \\
+Korean & − & − & − & − & + & 0 \\
+Mandarin~~ & − & ± & + & + & + & + \\\bottomrule
+\end{tblr}\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{keenan.comrie1977}, p.~93, Table~2)
+\vspace{-12pt}
+\end{table}
+
+Many languages, including all three involved in this dissertation, allow not only short-distance relativization (i.e.,~relativization targeting the main clause within the RC) but also long-distance relativization (i.e.,~relativization across a clause boundary). As Table \ref{tab:embedding} shows, English allows multiple levels of embedding.
+
+\begin{table}
+\caption{Multiple levels of embedding in English RCs}\label{tab:embedding}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={ll}}\toprule
+Embedding & Example \\\midrule
+0 & the man [who Tina hired \_\_] \\
+1 & the man [who I think [Tina hired \_\_]] \\
+2 & the man [who Judy told me [that she thinks [Tina hired\_\_]]] \\
+3 & the man [who Judy told me [she wishes [she had known [that Tina hired \_\_]]]] \\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+It is also common for languages to have domains from which relativization---at least relativization via gapping---is not permitted. English sets the bar fairly high, allowing gapping to target a wide range of grammatical functions and to extend into complement clauses at unbounded levels of embedding. Still, there are some environments where gapping is disallowed in English. These domains, many of which were first described in Ross's (\citeyear{ross1967}) dissertation, are termed `syntactic islands' (`islands' for short). A few of the island types that have received the most attention in the L1 adult experimental literature on English resumptive RCs are listed in Table \ref{tab:island}.
+
+\begin{table}
+\caption{Four types of syntactic island}\label{tab:island}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={ll}}\toprule
+Type & \phantom{* }Example \\\midrule
+Adjunct island & * the man [who I resigned [because Tina hired \_\_]]] \\
+Complex NP island~~ & * the man [who I heard a rumor [that Tina hired \_\_]] \\
+Subject island & * the man [who [the rumor about \_\_] surprised Tina]]]] \\
+\textit{Wh}-island & * the man [that I wonder [who hired \_\_]] \\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+\noindent These island effects have been formalized in the generative literature as the constraints in (\ref{ex-island-constraint}).
+
+\pex \label{ex-island-constraint}
+\a Adjunct Island Constraint (paraphrased):
+\par\nobreak\vspace{5pt}
+Gapped dependencies cannot extend into adjunct clauses.
+\par\nobreak\vspace{5pt}
+\hfill (based on \cite{huang1982}, p. 503)
+\a Complex NP Constraint (paraphrased): 
+\par\nobreak\vspace{5pt}
+Gapped dependencies cannot extend into complex NPs.
+\par\nobreak\vspace{5pt}
+\hfill (based on \cite{ross1967}, p. 127)
+\a Subject Condition (paraphrased): 
+\par\nobreak\vspace{5pt}
+Gapped dependencies cannot extend into subjects.
+\par\nobreak\vspace{5pt}
+\hfill (based on \cite{chomsky1973}; \cite{huang1982})
+\a \textit{Wh}-Island Condition (paraphrased):
+\par\nobreak\vspace{5pt}
+Gapped dependencies cannot extend into interrogative complement clauses introduced by a moved \textit{wh}-phrase.
+\par\nobreak\vspace{5pt}
+\hfill (based on \cite{chomsky1964,chomsky1973})
+\xe 
+
+The island constraints in (\ref{ex-island-constraint}) are not strictly speaking constraints on RCs, but rather constraints on gapped dependencies more generally. I use `gapped dependency' throughout the dissertation as an umbrella term for filler-gap dependencies and gap-filler dependencies; I am referring to the same types of dependencies that are traditionally called `A-bar dependencies' in the generative literature. Table \ref{tab:adjunct} demonstrates that the Adjunct Island Constraint applies not only to RCs but also to other gapped dependencies, such as clefts, topic structures, and \textit{wh}-questions.
+
+\begin{table}
+\caption{Adjunct islands across four expression types}\label{tab:adjunct}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={ll}}\toprule
+Type & \textcolor{white}{* }Example \\\midrule
+Relative clause~~ & \textcolor{black}{* }the man [who I resigned [because Tina hired \_\_]] \\
+Cleft & \textcolor{black}{* }It was this man [that I resigned [because Tina hired \_\_]]. \\
+Topic structure & \textcolor{black}{* }This man, I resigned [because Tina hired \_\_]. \\
+\textit{Wh}-question & \textcolor{black}{* }Who did you resign [because Tina hired \_\_]? \\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+%========================================================%
+\section{RCs in English, Korean, and Mandarin compared}\label{pro-compare}
+%========================================================%
+
+English RCs differ from Korean and Mandarin RCs in several ways besides the environments where gapping and resumption are permitted. One of these differences has to do with the types of relativizers that are used to set the RC apart from the rest of the sentence. English RCs can be introduced by a relative pronoun (\textit{who}, \textit{which}, \textit{whose}, etc.), a complementizer (\textit{that}), or a null relativizer ($\emptyset$). However, the availability of each of these relativizers varies somewhat depending on verb form and relativization target, as shown in Tables \ref{tab:pro-relativizer-verb} and \ref{tab:pro-relativizer-target}.
+
+\begin{table}
+\caption{English relativizer options by verb form}\label{tab:pro-relativizer-verb}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={ll}}
+\toprule
+Form & Example \\
+\midrule
+Finite & someone [\{who/that/$\varnothing$\} I hired \_\_ this week] \\
+Infinitival & someone [\{*who/*that/$\varnothing$\} to hire \_\_ this week] \\
+Participial & someone [\{*who/*that/$\varnothing$\} hired \_\_ this week] \\
+\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+\begin{table}
+\caption{English relativizer options by relativization target}\label{tab:pro-relativizer-target}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec={ll}}
+\toprule
+Target & Example \\\midrule
+SU & the man [\{who/that/*$\varnothing$\} \_\_ hired Tina] \\
+DO & the man [\{who/that/$\varnothing$\} Tina hired \_\_] \\
+IO & the man [\{who/that/$\varnothing$\} Tina gave \_\_ a book] \\
+OBL & the man [\{who/that/$\varnothing$\} Tina talked about \_\_] \\
+GEN & the man [\{who/that/$\varnothing$\} Tina knew the mother of \_\_] \\
+OCOMP & the man [\{who/that/$\varnothing$\} Tina is taller than \_\_] \\
+Causal Adjunct & the reason [\{why/that/$\varnothing$\} Tina hired the man \_\_] \\
+Spatial Adjunct & the place [\{where/that/$\varnothing$\} Tina hired the man \_\_] \\
+Temporal Adjunct~~ & the time [\{when/that/$\varnothing$\} Tina hired the man \_\_] \\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+Korean and Mandarin typically mark RCs with an adnominal particle (ADN). In Korean, this particle is a bound morpheme attached to the main verb in the RC. As illustrated in (\ref{ex-adnominal-ko}), the particle has distinct past, present, and future forms (\cite{jeon.kim2007}, p.~255).
+
+\pex[everygla=\ko]\label{ex-adnominal-ko}
+\a
+\begingl
+\gla \nogloss{\ko [} @ 내가 \nogloss{\_\_~~} @ 한{]} 일들 //
+\glb nay-ka ha-n il-tul //
+\glc {\sc 1s-nom} do-{\sc adn.pst} work-{\sc pl} //
+\glft `things that I did' //
+\endgl
+\a
+\begingl
+\gla \nogloss{\ko [} @ 내가 \nogloss{\_\_~~} @ 하는{]} 일들 //
+\glb nay-ka ha-nun il-tul //
+\glc {\sc 1s-nom} do-{\sc adn.pres} work-{\sc pl} //
+\glft `things that I do' //
+\endgl
+\a
+\begingl
+\gla \nogloss{\ko [} @ 내가 \nogloss{\_\_~~} @ 할{]} 일들 //
+\glb nay-ka ha-l il-tul //
+\glc {\sc 1s-nom} do-{\sc adn.fut} work-{\sc pl} //
+\glft `things that I will do' //
+\endgl
+\xe
+
+\noindent In Mandarin, the adnominal particle is a free morpheme placed between the RC and its head, as shown in (\ref{ex-adnominal-zh}). Unlike its Korean equivalent, the Mandarin adnominal particle is invariable in form.
+
+\ex[everygla=\zh]
+\begingl
+\gla \nogloss{\zh [} @ 我 做 \nogloss{\_\_~~} @ 的{]} 事 //
+\glb wo zuo de shi //
+\glc I do {\sc adn} thing //
+\glft `things that I do' //
+\endgl\label{ex-adnominal-zh}
+\xe 
+
+Another way in which English RCs differ from Korean and Mandarin RCs is in the position of the RC in relation to its head. English is typical of verb-object (VO) languages in placing RCs after their heads (\cite{dryer2011}, p.~340; \cite{greenberg1963}, p.~71; \cite{kim1990a}, p.~109; \cite{ogrady2022a}, p.~41). In (\ref{ex-head-en}), for instance, the head noun \textit{man} precedes the RC \textit{who hired me}.
+
+\ex 
+John knows [the man [who \_\_ hired me]].\label{ex-head-en}
+\xe
+
+Korean has head-final RCs, which is a common feature of object-verb (OV) languages (\cite{dryer2011}, p.~340; \cite{greenberg1963}, p.~71; \cite{kim1990a}, p.~109). Notice that in (\ref{ex-head-ko}) the head noun \textit{khempyuthe} (`computer') comes after the RC \textit{kocangnan} (`that was out of order').
+
+\ex[everygla=\ko]
+\begingl
+\gla 존은 \nogloss{[[\ko \_\_ } @ 고장난{]} 컴퓨터를{]} 고치었다. //
+\glb John-un kocangna-n khemphyuthe-lul kochi-ess-ta //
+\glc John-{\sc top} out.of.order-{\sc adn} computer-{\sc acc} repair-{\sc pst-dec} //
+\glft `John repaired the computer that was out of order.' //
+\endgl
+\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{jhang1994}, p. 1, (1a)) \label{ex-head-ko}
+\xe
+
+\noindent Korean also has RCs of the kind shown in (\ref{ex-ihrc}), which are usually described as being `head-internal' (\cite{jeon.kim2007}, p.~256; \cite{jhang1994}, p.~10; \cite{song2021}, p.~90). Even here, though, there is a semantically-bleached nominal \textit{kes} (`thing') which occupies the same position that the head would in an RC of the ordinary head-final type (\cite{jeon.kim2007}, p.~256).
+
+\ex[everygla=\ko]
+\begingl
+\gla 존이 \nogloss{\ko [[} @ 컴퓨터가 고장난{]}  것을{]} 고치었다. //
+\glb John-i khemphyuthe-ka kocangna-n kes-ul kochi-ess-ta //
+\glc John-{\sc nom} computer-{\sc nom} out.of.order-{\sc adn} thing-{\sc acc} repair-{\sc pst-dec} //
+\glft `John repaired the computer that was out of order.' //
+\endgl
+\par\nobreak\vspace{5pt}
+\hfill (adapted from \cite{jhang1994}, p. 2, (1b)) \label{ex-ihrc}
+\xe
+
+Mandarin is unusual for a VO language in that it has head-final RCs rather than head-initial RCs (\cite{comrie2008}, p.~725; \cite{dryer2011}, p.~340; \cite{greenberg1963}, p.~71; \cite{ogrady2022a}, p.~42). Mandarin RCs are universally of the head-final type, like the one in (\ref{ex-head-zh}), and do not have head-internal variants (\cite{chan.etal2011}, p.~198).
+
+\ex[everygla=\zh]
+\begingl
+\gla 張三 認識 \nogloss{[[\ko \_\_ } @ 僱用 我 的{\ko ]} 人{\ko ]}。 //
+\glb Zhangsan renshi guyong wo de ren //
+\glc Zhangsan know  hire me {\sc adn} person //
+\glft `Zhangsan knows the person who hired me.' //
+\endgl \label{ex-head-zh}
+\xe
+
+These differences in RC placement have implications for how RCs are processed. In English RCs, the head is encountered/identified before the foot, whereas in Korean and Mandarin RCs, the foot is encountered/identified before the head (see~Section~\ref{dis-limitation-distance}).
+
+%========================================================%
+\section{Modeling the structure of RCs}\label{pro-structure}
+%========================================================%
+
+Ways of modeling the structure of RCs vary widely across different approaches to syntactic analysis. For the present purposes, it suffices to consider the standard approach to representing RC structure in the generative program, known as the `operator-movement analysis' (\cite{chomsky1977}; \cite{haegeman1994}; \cite{jackendoff1977}; \cite{safir1982}). The description of the operator-movement analysis I~present in this section is as non-technical as possible, and it is more or less compatible with a variety of proposals on the structure of RCs.
+
+In generative approaches to modeling syntactic structure, it is traditionally assumed that each phrase minimally consists of a Head\footnotemark{} (X) node, a Phrase (XP) node, and an intermediate (X′) node which together provide dedicated positions where Heads, Complements, and Specifiers can be merged in (e.g.,~\cite{chomsky1970,chomsky1981,jackendoff1977}), as shown in (\ref{tree-schema}). The linear ordering of elements is irrelevant.
+
+\footnotetext{I use \textit{Head} (uppercase) here to refer to the core element of a phrase in the X′-schema and \textit{head} (lowercase) to refer to the category which an RC modifies.}
+
+\ex 
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[XP [(Specifier)][X′ [X [Head]] [(Complement)]]]
+\end{forest} \label{tree-schema}
+\xe
+
+\noindent Adjuncts such as RCs are accommodated by inserting additional X′ nodes, as shown in (\ref{tree-adjunct}).
+
+\ex 
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[XP [(Specifier)][X′ [X′ [X [Head]] [(Complement)]] [(Adjunct)]]]
+\end{forest} \label{tree-adjunct}
+\xe
+
+\noindent As a sentence is constructed, new phrases merge into the Adjunct, Complement, and Specifier positions of other phrases to form an increasingly complex hierarchical structure which serves as the basis for dominance relations such as c-command (\cite{reinhart1976}) that are at the heart of generative theories regarding the structure and interpretation of linguistic expressions.
+
+The tree in (\ref{tree-placement}) shows the RC \textit{which I~bought} merged into an NP as an Adjunct of the head noun \textit{book}. The triangle indicates that the internal structure of the CP is hidden to save space.
+
+\ex 
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[NP [N′ [N′ [N [book]]] [CP [which~I~bought, roof]]]]
+\end{forest} \label{tree-placement}
+\xe
+
+The internal structure of RCs according to the operator-movement analysis is exemplified in (\ref{tree-3}), a tree diagram for \textit{which I~bought}.
+
+\ex 
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[CP [DP [which, name = target]] [C′ [C [+REL]][TP [DP [I]] [T′ [T [+PST]][VP [V′ [V [bought]][DP [$t$, name = source]]]]]]]]
+\draw[->] ([yshift=2pt]source.south west) to[out=215, in=270] ([yshift=1.5pt]target.south);
+\end{forest} \label{tree-3}
+\xe
+\vspace{-42pt}
+
+\noindent The relative pronoun \textit{which} serves as a relative operator (e.g.,~\cite{radford2024}, p.~285), moving from its base position (the Complement of V in the present example) to a landing site in the left periphery of the clause to check a +REL feature there. It has traditionally been assumed that the +REL feature is housed in C (e.g.,~\cite{haegeman1994}, p.~407) and that the landing site of the relative operator is the Specifier of CP (spec-CP), as depicted in (\ref{tree-3}). More recently, it has been proposed that the +REL feature may instead be the Head of a dedicated `RELP' projection (e.g.,~\cite{radford2019}, p.~22; \cite{radford2024}, p.~285), in which case the landing site would be spec-RELP. In either case, the operator-movement analysis holds that the movement operation leaves behind a phonologically empty element called a trace ($t$)---or a copy---at the gap site and that a further coindexation rule (not shown here) links the relative operator to the head of the RC (e.g.,~\cite{haegeman1994}, p.~408). When no relative pronoun is present, it is assumed that a null operator (OP) undergoes the movement operation instead (e.g.,~\cite{haegeman1994}, p.~463), as illustrated in the tree diagram in (\ref{tree-4}) for \textit{(that) I~bought}. Whether or not an overt complementizer is present in C, OP moves from the complement of V to spec-CP, just as \textit{which} did in (\ref{tree-3}).
+
+\ex 
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[CP, s sep=25 [DP [OP, name = target]] [C′ [C, s sep=5 [(that)][+REL]][TP [DP [I]] [T′ [T [+PST]][VP [V′ [V [bought]][DP [$t$, name = source]]]]]]]]
+\draw[->] ([yshift=2pt]source.south west) to[out=215, in=270] ([yshift=1.5pt]target.south);
+\end{forest} \label{tree-4}
+\xe
+\vspace{-42pt}
+
+There are two other well-known analyses of gapped RCs in the generative literature, which I~will not discuss in detail here: a head-raising analysis \parencite{bhatt2002,brame1976,kayne1994,schachter1973,vergnaud1974} and a matching analysis \parencite{catasso2013,chomsky1965,citko2001,lees1960,lees1961}. The head-raising analysis is another movement-based approach in which the head of the RC (i.e., the `head noun') originates within the RC and subsequently exits it through successive movement operations. The matching analysis, by contrast, is a movement-free approach in which the head noun is coindexed or `matched' with an unpronounced copy inside the RC. For an overview of these approaches and the theoretical arguments both for and against them, see p.~406ff in \textcite{radford2016} and p.~45ff in \textcite{radford2019}.
+
+There is also debate among generativists about how resumptive RCs are formed. One analysis that is frequently encountered in the literature treats them as base-generated (i.e.,~movement-free) expressions with an anaphoric dependency linking the resumptive nominal to a relative operator already present in spec-CP \parencite{borer1984,chomsky1977,haegeman1994,mccloskey1990,radford2019,radford2024,ross1967,sells1984}, as shown in (\ref{tree-5}) and (\ref{tree-6}), which are tree diagrams for *\textit{which I~bought it} and *\textit{(that) I~bought it}, respectively. Note that both of these expressions are marked as ill-formed, reflecting the fact that resumptive RCs are widely held to be ungrammatical in English.
+
+\hbox{\vbox{\hsize=.45\textwidth
+\ex 
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[CP [DP [which$_1$]] [C′ [C [+WH]][TP [DP [I]] [T′ [T [+PST]][VP [V′ [V [bought]][DP [it$_1$]]]]]]]]
+\end{forest} \label{tree-5}
+\xe
+}\hss
+\vbox{\hsize=.55\textwidth
+\ex 
+\begin{forest}
+for tree = {inner sep=0, l sep=7, l=7, parent anchor = south, child anchor = north}
+[CP, s sep=25 [DP [OP$_1$]] [C′ [C, s sep=5 [(that)][+WH]][TP [DP [I]] [T′ [T [+PST]][VP [V′ [V [bought]][DP [it$_1$]]]]]]]]
+\end{forest} \label{tree-6}
+\xe}}
+
+By contrast, some researchers in the generative program argue that resumptive RCs are movement-derived, interpreting the resumptive nominal as either a phonologically spelled-out trace \parencite{perlmutter1972,pesetsky1998,vanurk2018} or a stranded determiner (\cite{boeckx2003}; see~also~\cite{radford2019}, p.~101). Still others have proposed that the derivation strategy for resumptive RCs varies across and perhaps also within languages, with base generation employed in some cases and movement employed in others (\cite{aoun.benmamoun1998,aoun.etal2001,sichel2014,sichel2022}; see~also~\cite{meltzer-asscher2021}, p.~178).
+
+%========================================================%
+\section{Processing routines for RCs} \label{pro-routine}
+%========================================================%
+
+Having a framework for describing the sequences of operations involved in producing or comprehending RCs can facilitate discussion of the factors that contribute to processing strain. This section presents an approach to diagramming the step-by-step processing of RCs that draws inspiration from the processing routines that \textcite{ogrady2022a} gives for simple transitive clauses (p.~36ff) and \textit{wh}-questions (p.~57ff). Each routine is composed of operations that map strings of words onto semantic representations or vice versa, with the semantic representations being rendered in an adapted version of predicate logic notation (see~\cite{saeed2016}, p.~370ff). Though they grew out of work in the emergentist framework (broadly-construed), I~believe that routines of the kind presented here can be of use to any researchers interested in modeling how sentence processing unfolds in real time, regardless of the approach to linguistic analysis to which they happen to subscribe. That the processing operations in these routines make no reference to hierarchical syntactic representations is to be expected since emergentists argue that mapping between strings of words and semantic representations takes place in a direct manner (e.g.,~\cite{macwhinney.etal1984}, p.~128; \cite{ogrady2022a}, p.~19). However, my intent in this section is not to challenge the dominant view in formal linguistics that such mapping is mediated by syntactic structure (e.g.,~\cite{chomsky1964}, p.~52; \cite{jackendoff2007}, p.~3). Instead, my goal is simply to present an example of a highly incremental approach to modeling the real-time processing of sentences.
+
+Let us start by examining a processing routine for comprehending a simple transitive sentence. The routine in Table~\ref{tblr:pro-routine-simple} for \textit{Mary likes the book} closely follows the routine that \textcite{ogrady2022a} gives for \textit{Harry plays football} (p.~36ff) with only a few minor notational changes.
+
+% pro-routine-simple
+
+\setstretch{1}
+\begin{longtblr}[caption={Processing routine for comprehending \textit{Mary likes the book}}, label={tblr:pro-routine-simple}, remark{Note}={PRED~=~predicate position; $\alpha$~=~first-argument position; $\beta$~=~second-argument position.}]{colspec={|X[c]|}, rowhead = 0}\hline
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 0:} & \textbf{Semantic Base Projection} \vspace{2pt} \\ 
+& Project a minimal predicate-argument complex.  \vspace{2pt} \\
+& PRED($\alpha$) \\
+\end{tblr} \\*
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape{\bfseries Mary}\dots\phantom{likes the book }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 1:} & \textbf{First-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the content of \textit{Mary}, represented here as $m$, at the first-argument position.  \vspace{2pt} \\
+& PRED($\mathbfit{m}$) \\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary {\bfseries likes}\dots\phantom{the book }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 2:} & \textbf{Predicate Algorithm + Argument Addition} \vspace{2pt} \\ 
+& Integrate the content of \textit{likes}, represented here as LIKE($\alpha$, $\beta$), at the predicate position, extending the argument grid to accommodate a second argument. \vspace{2pt} \\
+& {\bfseries LIKE}($m$, $\mathbfit{\beta}$) \\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes {\bfseries the book}\phantom{\dots}}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 3:} & \textbf{Second-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the content of \textit{the book}, represented here as $b$, at the second-argument position. \vspace{2pt} \\
+& LIKE($m$, $\mathbfit{b}$) \\
+\end{tblr} \\
+
+\hline
+\end{longtblr}
+\vspace{-6pt}
+\setstretch{1.5}
+
+\noindent On the expectation that the incoming linguistic message will consist of at least one clause, the processor begins by projecting a minimal predicate-argument complex called a `semantic base' (\cite{ogrady2022a}, p.~29), which comes equipped with positions for a predicate (PRED) and its first argument ($\alpha$), as shown in Step 0. Note that in predicate logic a predicate is simply a function that takes one or more arguments (\cite{saeed2016}, p.~550); the semantic content of a verb (or adjective) is therefore referred to a predicate in this tradition.
+
+For \textcite{ogrady2022a}, language comprehension involves interpreting words and integrating their content into the broader semantic representation of the sentence (p.~22). The words themselves are subsequently discarded and rapidly decay in working memory (\cite{ogrady2011}, p.~17). Although a complete semantic representation would include features like aspect, definiteness, gender, number, and tense (\cite{ogrady2022a}, p.~29), I~omit such details here to keep the representations as simple as possible.
+
+Because \textit{Mary likes the book} is an English sentence, the processing routine follows the regular pathway for transitive clauses in subject-verb-object (SVO) languages (\cite{ogrady2022a}, p.~38), targeting the first-argument position ($\alpha$), then the predicate position (PRED), and finally the second-argument position ($\beta$). On encountering the nominal \textit{Mary}, the processor integrates its content, represented here as $m$, at the first-argument position (Step~1). Next, the processor encounters the verb \textit{likes} and integrates its content, represented here as LIKE($\alpha$, $\beta$), at the predicate position (Step~2), extending the argument grid in the process to accommodate a second argument. Finally, the processor encounters the nominal \textit{the~book} and integrates its content, represented here as $b$, at the second-argument position (Step~3).
+
+The processing routine in Table \ref{tblr:pro-routine-simple}, like most of the processing routines in this dissertation, focuses on comprehension, but it is easy enough to construct a parallel routine for production, as demonstrated in Table \ref{tblr:pro-routine-production} (cf. \cite{ogrady2022a}, p.~33). On the assumption that language production involves constant self-monitoring (e.g.,~\cite{levelt.etal1999,roelofs2020}), I~show both the message being encoded by the production system (on the left) and the semantic representation being built by the comprehension system (on the right) at each step in the routine. I~use strikethroughs to mark elements in the semantic representation that have already been encoded.
+
+% pro-routine-production
+
+\setstretch{1}
+\begin{longtblr}[caption={Processing routine for producing \textit{Mary likes the book}}, label={tblr:pro-routine-production}, remark{Note}={PRED~=~predicate position; $\alpha$~=~first-argument position; $\beta$~=~second-argument position; strikethroughs mark previously encoded items.}]{colspec={|X[c]|}, rowhead = 0}\hline
+
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \draw[black] (-7.9,0) rectangle (7.9,-.73);
+    \node (0) at (0,-.4) {\phantom{.}};
+    \node (1) [left=2cm of 0.center, anchor=east] {\strut LIKE($m$, $b$)};
+    \node (2) [right=2cm of 0.center, anchor=west] {\strut PRED($\alpha$)};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 1:} & \textbf{First-Argument Algorithm for Production} \vspace{2pt} \\ 
+& Encode the first argument as the nominal \textit{Mary}. \vspace{2pt} \\
+& \textit{\textbf{Mary}}\dots \\
+\end{tblr} \\
+
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \draw[black] (-7.9,0) rectangle (7.9,-.73);
+    \node (0) at (0,-.4) {\phantom{.}};
+    \node (1) [left=2cm of 0.center, anchor=east] {\strut LIKE(\st{$m$}, $b$)};
+    \node (2) [right=2cm of 0.center, anchor=west] {\strut PRED($\mathbfit{m}$)};
+\end{tikzpicture} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 2:} & \textbf{Predicate Algorithm for Production} \vspace{2pt} \\ 
+& Encode the predicate as the verb \textit{likes}. \vspace{2pt} \\
+& \textit{Mary \textbf{likes}}\dots \\
+\end{tblr} \\
+
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \draw[black] (-7.9,0) rectangle (7.9,-.73);
+    \node (0) at (0,-.4) {\phantom{.}};
+    \node (1) [left=2cm of 0.center, anchor=east] {\strut \st{LIKE}(\st{$m$}, $b$)};
+    \node (2) [right=2cm of 0.center, anchor=west] {\strut {\bfseries LIKE}($m$, $\mathbfit{\beta}$)};
+\end{tikzpicture} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 3:} & \textbf{Second-Argument Algorithm for Production} \vspace{2pt} \\ 
+& Encode the second argument as the nominal \textit{the book}. \vspace{2pt} \\
+& \textit{Mary likes \textbf{the book}} \\
+\end{tblr} \\
+
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \draw[black] (-7.9,0) rectangle (7.9,-.73);
+    \node (0) at (0,-.4) {\phantom{.}};
+    \node (1) [left=2cm of 0.center, anchor=east] {\strut \st{LIKE}(\st{$m$}, \st{$b$})};
+    \node (2) [right=2cm of 0.center, anchor=west] {\strut LIKE($m$, $\mathbfit{b}$)};
+\end{tikzpicture} \\
+
+\hline
+\end{longtblr}
+\vspace{-6pt}
+\setstretch{1.5}
+
+\noindent Comparing Table~\ref{tblr:pro-routine-production} to Table~\ref{tblr:pro-routine-simple}, we can see that the processing routines for \textit{Mary likes the book} follow the same $\alpha$-PRED-$\beta$ pattern in both production and comprehension, with the key difference being that the operations work in opposite directions, mapping a string of words onto a semantic representation in the case of comprehension and a semantic representation onto a string of words in the case of production (\cite{ogrady2022a}, p.~32).
+
+Table \ref{tblr:pro-routine-gapping-that} is my take on a processing routine for comprehending \textit{Mary likes the book that I~bought}, focusing on the RC \textit{that I~bought}.
+
+% pro-routine-gapping-that
+
+\setstretch{1}
+\begin{longtblr}[caption={Processing routine for comprehending the RC in \textit{Mary likes the book that I~bought}}, label={tblr:pro-routine-gapping-that}, remark{Note}={PRED~=~predicate position; $\alpha$~=~first-argument position; $\beta$~=~second-argument position; vertical lines indicate modification; superscripts are fillers.}]{colspec={|X[c]|}, rowhead = 0}\hline
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book {\bfseries that}\dots\phantom{I bought }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 1:} & \textbf{Relativization Algorithm} \vspace{2pt} \\ 
+& Project a semantic base as a modifier of $b$ and give it a filler, represented here as a superscript $b$, that needs to be integrated into its argument grid. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\bfseries\strut PRED};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\bfseries\strut $^{\mathbfit{b}}$(${\mathbfit{\alpha}}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book that {\bfseries I}\dots\phantom{bought }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 2:} & \textbf{First-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the content of \textit{I}, represented here as $s$ for `speaker,' at the first-argument position. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut PRED};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^{b}$(${\mathbfit{s}}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book that I~{\bfseries bought}\phantom{\dots}}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 3:} & \textbf{Predicate Algorithm + Argument Addition} \vspace{2pt} \\ 
+& Integrate the content of \textit{bought}, represented here as BUY($\alpha$, $\beta$), at the predicate position, extending the argument grid to accommodate a second argument. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\bfseries\strut BUY};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^{b}$($s$, ${\mathbfit{\beta}}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 4:} & \textbf{Filler Integration + Second-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the filler at the second-argument position. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut BUY};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut ($s$, ${\mathbfit{b}}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\hline
+\end{longtblr}
+\vspace{-6pt}
+\setstretch{1.5}
+
+\noindent The appearance of the complementizer \textit{that} after the nominal \textit{the book} signals the onset of an RC, and the processor responds by projecting a semantic base with a filler, represented here as a superscript $b$, that needs to be integrated into its argument grid (Step~1). I~use a vertical line to indicate that the new predicate-argument complex is a modifier of $b$. Representing fillers as superscripts is a convention that I~borrow from O'Grady's (\citeyear{ogrady2022a}) processing routines for \textit{wh}-questions (p.~57ff). The presence of the filler in the RC's semantic representation reflects the processor's attempt to associate the modified argument with a position in the new predicate's argument grid, thereby satisfying the Aboutness Constraint.
+
+When the first-person pronoun \textit{I} appears, the processor integrates its content, represented here as $s$ for `speaker,' at the first-argument position (Step~2). Next, the processor encounters the verb \textit{bought} and integrates its content, represented here as BUY($\alpha$, $\beta$), at the predicate position (Step~3), extending the argument grid to accommodate a second argument. The filler is then integrated at the new second-argument position at Step 10, thereby resolving the gapped dependency.
+
+Comprehending an RC introduced by a relative pronoun follows a similar procedure, as demonstrated in Table~\ref{tblr:pro-routine-gapping-which}.
+
+% pro-routine-gapping-which 
+
+\setstretch{1}
+\begin{longtblr}[caption={Processing routine for comprehending the RC in \textit{Mary likes the book which I~bought}}, label={tblr:pro-routine-gapping-which}, remark{Note}={PRED~=~predicate position; $\alpha$~=~first-argument position; $\beta$~=~second-argument position; vertical lines indicate modification; superscripts are fillers.}]{colspec={|X[c]|}, rowhead = 0}\hline
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book {\bfseries which}\dots\phantom{I bought }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 1:} & \textbf{Relativization Algorithm with a Relative Pronoun} \vspace{2pt} \\ 
+& Project a new semantic base with a \textit{wh}-filler, represented here as a superscript $wh$, that needs to be integrated into its argument grid. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\bfseries\strut PRED};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\bfseries\strut $^{\mathbfit{wh}}$($\mathbfit{\alpha}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 2:} & \textbf{Antecedent Identification} \vspace{2pt} \\ 
+& Identify $b$ as $wh$'s antecedent. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut PRED};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^{\mathbfit{b}}$($\alpha$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book which {\bfseries I}\dots\phantom{bought }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 3:} & \textbf{First-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the content of \textit{I}, represented here as $s$ for `speaker,' at the first-argument position. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut PRED};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^{b}$(${\mathbfit{s}}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book which I~{\bfseries bought}\phantom{\dots}}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 4:} & \textbf{Predicate Algorithm + Argument Addition} \vspace{2pt} \\ 
+& Integrate the content of \textit{bought}, represented here as BUY($\alpha$, $\beta$), at the predicate position, extending the argument grid to accommodate a second argument. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\bfseries\strut BUY};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^{b}$($s$, ${\mathbfit{\beta}}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 5:} & \textbf{Filler Integration + Second-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the filler at the second-argument position. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut BUY};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut ($s$, ${\mathbfit{b}}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\hline
+\end{longtblr}
+\vspace{-6pt}
+\setstretch{1.5}
+
+\noindent The appearance of the relative pronoun \textit{which} after the nominal \textit{the book} signals the onset of a relative clause, just as the complementizer \textit{that} did in Table~\ref{tblr:pro-routine-gapping-that}. Once again, the processor responds by projecting a new semantic base with a filler that needs to be integrated into its argument grid (Step~1). This time, the filler is a \textit{wh}-argument representing the relative pronoun's semantic content. Relative pronouns are sometimes marked for features (case, gender, number, etc.) that can assist with dependency resolution (e.g.,~\cite{haendler2016}, p.~27). The pronoun \textit{which}, for instance, takes a non-human antecedent. The processor rapidly associates this filler with the modified argument, which I~show by replacing $wh$ with $b$ in the semantic representation (Step~2). The rest of the routine is identical to the one in Table~\ref{tblr:pro-routine-gapping-that}, with the processor ultimately resolving the gapped dependency by integrating the filler as the second argument of BUY.
+
+Things play out only slightly differently when no complementizer or relative pronoun is present to mark the beginning of the RC, as illustrated in Table~\ref{tblr:pro-routine-gapping-null}.
+
+% pro-routine-gapping-null
+
+\setstretch{1}
+\begin{longtblr}[caption={Processing routine for comprehending the RC in \textit{Mary likes the book I~bought}}, label={tblr:pro-routine-gapping-null}, remark{Note}={PRED~=~predicate position; $\alpha$~=~first-argument position; $\beta$~=~second-argument position; vertical lines indicate modification; superscripts are fillers.}]{colspec={|X[c]|}, rowhead = 0}\hline
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book {\bfseries I}\dots\phantom{bought }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 1:} & \textbf{Relativization Algorithm} \vspace{2pt} \\ 
+& Project a semantic base as a modifier of $b$ and give it a filler, represented here as a superscript $b$, that needs to be integrated into its argument grid. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\bfseries\strut PRED};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\bfseries\strut $^{\mathbfit{b}}$(${\mathbfit{\alpha}}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 2:} & \textbf{First-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the content of \textit{I}, represented here as $s$ for `speaker,' at the first-argument position. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut PRED};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^{b}$(${\mathbfit{s}}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book I~{\bfseries bought}\phantom{\dots}}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 3:} & \textbf{Predicate Algorithm + Argument Addition} \vspace{2pt} \\ 
+& Integrate the content of \textit{bought}, represented here as BUY($\alpha$, $\beta$), at the predicate position, extending the argument grid to accommodate a second argument. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\bfseries\strut BUY};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^{b}$($s$, ${\mathbfit{\beta}}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 4:} & \textbf{Filler Integration + Second-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the filler at the second-argument position. \vspace{2pt} \\
+& 
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut BUY};
+    \draw[semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut ($s$, ${\mathbfit{b}}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\hline
+\end{longtblr}
+\vspace{-6pt}
+\setstretch{1.5}
+
+\noindent Here, the processor takes the appearance of the first-person pronoun \textit{I} after the nominal \textit{the book} as a cue that an RC is being started. Like when an overt relativizer is present, the processor responds by projecting a new semantic base with a filler that needs to be integrated into its argument grid. The remaining steps are identical to those in Tables~\ref{tblr:pro-routine-gapping-that} and \ref{tblr:pro-routine-gapping-which}.
+
+Long-distance gapped dependencies appear to require that the filler be passed from one predicate-argument complex to another, as shown in Table~\ref{tblr:pro-routine-long}.
+
+% pro-routine-long
+
+\setstretch{1}
+\begin{longtblr}[caption={Processing routine for comprehending the RC in \textit{Mary likes the book that I~think John wrote}}, label={tblr:pro-routine-long}, remark{Note}={PRED~=~predicate position; $\alpha$~=~first-argument position; $\beta$~=~second-argument position; vertical lines indicate modification; superscripts are fillers.}]{colspec={|X[c]|}, rowhead = 0}\hline
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book {\bfseries that}\dots\phantom{I think John wrote. }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 1:} & \textbf{Relativization Algorithm} \vspace{2pt} \\ 
+& Project a semantic base as a modifier of $b$ and give it a filler, represented here as a superscript $b$, that needs to be integrated into its argument grid. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut\bfseries PRED};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut\bfseries $^{\mathbfit{b}}$($\mathbfit{\alpha}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book that {\bfseries I}\dots\phantom{think John wrote. }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 2:} & \textbf{First-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the content of \textit{I}, represented here as $s$ for `speaker,' at the first-argument position. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut PRED};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^b$($\mathbfit{s}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book that I~{\bfseries think}\dots\phantom{John wrote. }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 3:} & \textbf{Predicate Algorithm + Argument Addition} \vspace{2pt} \\ 
+& Integrate the content of \textit{think}, represented here as THINK($\alpha$, $\beta$), at the predicate position, extending the argument grid to accommodate a second argument. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {{\strut\bfseries THINK}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^b$($s$, $\mathbfit{\beta}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book that I~think {\bfseries John}\dots\phantom{wrote. }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 4:} & \textbf{Semantic Base Projection + Second-Argument Algorithm} \vspace{2pt} \\ 
+& Project a semantic base and integrate it at the second-argument position. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {{\strut THINK}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^b$($s$, {\bfseries PRED($\mathbfit{\alpha}$)})};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 5:} & \textbf{First-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the content of \textit{John}, represented here as $j$, at the first-argument position. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {{\strut THINK}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^b$($s$, PRED($\mathbfit{j}$))};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 6:} & \textbf{Reactivation Algorithm} \vspace{2pt} \\ 
+& Transfer the filler to the new predicate-argument complex. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {{\strut THINK}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut ($s$, PRED$^{\mathbfit{b}}$($j$))};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book that I~think John {\bfseries wrote}.\phantom{\dots}}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 7:} & \textbf{Predicate Algorithm + Argument Addition} \vspace{2pt} \\ 
+& Integrate the content of \textit{wrote}, represented here as WRITE($\alpha$, $\beta$), at the predicate position, extending the argument grid to accommodate a second argument. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {{\strut THINK}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut ($s$, {\bfseries WRITE}$^b$($j$, $\mathbfit{\beta}$))};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 8:} & \textbf{Filler Integration + Second-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the filler at the second-argument position. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {{\strut THINK}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut ($s$, WRITE($j$, $\mathbfit{b}$))};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\hline
+\end{longtblr}
+\vspace{-6pt}
+\setstretch{1.5}
+
+\noindent THINK's second-argument position cannot take \textit{Mary} (a person), but it can take a proposition. The appearance of \textit{Mary} therefore signals that the second argument will be a new predicate with \textit{Mary} as its first argument. The processor responds by projecting a semantic base in THINK's second-argument position (Step~4) and integrating the content of \textit{Mary}, represented here as $m$, at the available first-argument position (Step~5). Once this semantic base has been added to the semantic representation of the sentence, there is no longer any hope of integrating the filler as one of THINK's core arguments. To avoid abandoning the RC dependency altogether, the processor must pass the filler to the newly created predicate-argument complex. This process, which \textcite{ogrady2022a} calls the `Reactivation Algorithm' (p.~61), opens up a new set of opportunities to integrate the filler. In the present example, it is thanks to reactivation at Step~6 that the filler can ultimately be integrated as the second argument of WRITE in Step~8. For experimental evidence of filler reactivation in long-distance gapped dependencies, see, e.g., \textcite{kluender.kutas1993} and \textcite{phillips.etal2005}.
+
+Now let us consider the processing of an RC containing a resumptive pronoun (RP). In Table~\ref{tblr:pro-routine-resumption-comprehension}, I~propose a processing routine for comprehending the RC in *\textit{Mary likes the book that I~wonder who wrote it}. Note that the RP \textit{it} is located inside a \textit{wh}-island introduced by \textit{who}---it is in exactly these sorts of island domains that RPs are most often produced in adult L1 English (see Section~\ref{res-evidence-production}).
+
+% pro-routine-resumption-comprehension
+
+\setstretch{1}
+\begin{longtblr}[caption={Processing routine for comprehending the RC in \textit{Mary likes the book that I~wonder who wrote it}}, label={tblr:pro-routine-resumption-comprehension}, remark{Note}={PRED~=~predicate position; $\alpha$~=~first-argument position; $\beta$~=~second-argument position; vertical lines indicate modification; superscripts are fillers.}]{colspec={|X[c]|}, rowhead = 0}\hline
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book {\bfseries that}\dots\phantom{I wonder who wrote it. }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 1:} & \textbf{Relativization Algorithm} \vspace{2pt} \\ 
+& Project a semantic base as a modifier of $b$ and give it a filler, represented here as a superscript $b$, that needs to be integrated into its argument grid. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut\bfseries PRED};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut\bfseries $^{\mathbfit{b}}$($\mathbfit{\alpha}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book that {\bfseries I}\dots\phantom{wonder who wrote it. }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 2:} & \textbf{First-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the content of \textit{I}, represented here as $s$ for `speaker,' at the first-argument position. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut PRED};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^b$($\mathbfit{s}$)};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book that I~{\bfseries wonder}\dots\phantom{who wrote it. }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 3:} & \textbf{Predicate Algorithm} \vspace{2pt} \\ 
+& Integrate the content of \textit{wonder}, represented here as WONDER($\alpha$, $\beta$), at the predicate position, extending the argument grid to accommodate a second argument. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {{\strut\bfseries WONDER}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^b$($s$, $\mathbfit{\beta}$)};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \bs{¬}};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book that I~wonder {\bfseries who}\dots\phantom{wrote it. }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 4:} & \textbf{\textit{Wh}-Question Algorithm + Second-Argument Algorithm} \vspace{2pt} \\ 
+& Project a semantic base with a \textit{wh}-filler and integrate the new predicate-argument complex at the second-argument position. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {{\strut WONDER}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^b$($s$, {\bfseries PRED$^{\mathbfit{wh}}$($\mathbfit{\alpha}$)})};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \ns{¬}};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book that I~wonder who {\bfseries wrote}\dots\phantom{it. }}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 5:} & \textbf{Filler Integration + First-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the \textit{wh}-filler at the first-argument position. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {{\strut WONDER}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^b$($s$, PRED($\mathbfit{wh}$))};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \ns{¬}};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 6:} & \textbf{Predicate Algorithm + Argument Addition} \vspace{2pt} \\ 
+& Integrate the content of \textit{wrote}, represented here as WRITE($\alpha$, $\beta$), at the predicate position, extending the argument grid to accommodate a second argument. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {{\strut WONDER}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^b$($s$, {\bfseries WRITE}($wh$, $\mathbfit{\beta}$))};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \ns{¬}};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tikzpicture}
+\node[draw=black, minimum height=20pt, minimum width=6.2in] (box) {
+{\itshape Mary likes the book that I~wonder who wrote {\bfseries it}.\phantom{\dots}}};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 7:} & \textbf{Second-Argument Algorithm} \vspace{2pt} \\ 
+& Integrate the content of \textit{it}, represented here as $x$, at the second-argument position. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {{\strut WONDER}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^b$($s$, WRITE($wh$, $\mathbfit{x}$))};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \ns{¬}};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 8:} & \textbf{Antecedent Identification} \vspace{2pt} \\ 
+& Identify $b$ as the antecedent of $x$. \vspace{2pt} \\
+&
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \node (1) {\strut LIKE($m$,\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut $b$};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {{\strut WONDER}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut $^b$($s$, WRITE($wh$, $\mathbfit{b}$))};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \ns{¬}};
+\end{tikzpicture} 
+\\
+\end{tblr} \\
+
+\hline
+\end{longtblr}
+\vspace{-6pt}
+\setstretch{1.5}
+
+\noindent Table~\ref{tblr:pro-routine-resumption-comprehension} diverges from the routines given thus far at Step~4, where the appearance of \textit{who} causes the processor to project an embedded question as the second argument of WONDER. Carrying out the Reactivation Algorithm at this point in the routine would require the first filler (\textit{book}) to be passed to a new predicate-argument complex that already has a filler (\textit{which}) waiting to be integrated into it. I~follow \textcite{ogrady2022a} in treating this as a costly operation that is not permitted in English (p.~72; see Section~\ref{gap-lw}).
+
+Because the \textit{wh}-filler prevents reactivation at Step~4, the processor is unable to resolve the RC dependency with a gap prior to the appearance of the pronoun \textit{it} at Step~7. The introduction of \textit{it} as WRITE's second argument triggers a search for a viable antecedent, as it would for any third-person pronoun (\cite{doron2011}, p.~290; \cite{prince1990}, p.~492; \cite{sells1987}, p.~292). In this case, the head of the RC (i.e.,~\textit{book}) is swiftly identified as the pronoun's only possible antecedent (Step~8), thereby satisfying the Aboutness Constraint and rendering \textit{it} an RP in the present sentence. I~will be arguing that resumption facilitates RC processing in cases such as this where the processor (a)~fails to resolve the RC dependency with a gap prior to the arrival of the resumptive nominal (see Section~\ref{res-gapping}) and (b)~encounters little difficulty in identifying the head of the RC as the resumptive nominal's antecedent (see Section~\ref{res-morgan}).
+
+If it is right to think that the entire phenomenon of resumption in English RCs originates from the speaker, as a number of researchers have suggested (e.g.,~\cite{asudeh2004}, p.~295ff; \cite{ferreira.swets2005}, p.~276; \cite{polinsky.etal2013}, p.~357; see~Section~\ref{res-selfish}), then it is also important to examine how the processing of resumptive RCs plays out during production. Table~\ref{tblr:pro-routine-resumption-production} shows a processing routine for producing the RC from Table~\ref{tblr:pro-routine-resumption-comprehension}.
+
+% pro-routine-resumption-production
+
+\setstretch{1}
+\begin{longtblr}[caption={Processing routine for producing the RC in \textit{Mary likes the book that I~wonder who wrote it}}, label={tblr:pro-routine-resumption-production}, remark{Note}={PRED~=~predicate position; $\alpha$~=~first-argument position; $\beta$~=~second-argument position; strikethroughs mark previously encoded items; vertical lines indicate modification; superscripts are fillers.}]{colspec={|X[c]|}, rowhead = 0}\hline
+
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \draw[black] (-7.9,0) rectangle (7.9,-1.45);
+    \node (1) at (-5.6,-.4) {\strut \st{LIKE}(\st{$m$},\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut \st{$b$}};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut WONDER};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    \node (5) [right=of 4.east, anchor=west] {\strut ($s$, WRITE($wh$, $b$))};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \ns{¬}};
+    \node (a) at (1.5,-.4) {\strut LIKE($m$,\phantom{ }};
+    \node (b) [right=of a.east, anchor=west] {\strut $b$};
+    \node (c) [right=of b.east, anchor=west] {\strut )};
+\end{tikzpicture} \\*
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 1:} & \textbf{Relativization Algorithm for Production} \vspace{2pt} \\ 
+& Signal the onset of the relative clause with the complementizer \textit{that}. \vspace{2pt} \\
+& {\itshape Mary likes the book {\bfseries that}}\dots \\
+\end{tblr} \\
+
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \draw[black] (-7.9,0) rectangle (7.9,-1.45);
+    \node (1) at (-5.6,-.4) {\strut \st{LIKE}(\st{$m$},\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut \st{$b$}};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut WONDER};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    % \draw [semithick] ([xshift=-2pt, yshift=-1pt]2.south) -- ([xshift=2pt, yshift=-1pt]2.south);
+    \node (5) [right=of 4.east, anchor=west] {\strut ($s$, WRITE($wh$, $b$))};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \ns{¬}};
+    \node (a) at (1.5,-.4) {\strut LIKE($m$,\phantom{ }};
+    \node (b) [right=of a.east, anchor=west] {\strut $b$};
+    \node (c) [right=of b.east, anchor=west] {\strut )};
+    \node (d) [below=4pt of b.south, anchor=north] {\strut\bfseries PRED};
+    \draw [semithick] ([yshift=2pt]b.south) -- (d.north);
+    \node (e) [right=of d.east, anchor=west] {\strut\bfseries $^{\mathbfit{b}}$($\mathbfit{\alpha}$)};
+\end{tikzpicture} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 2:} & \textbf{First-Argument Algorithm for Production} \vspace{2pt} \\ 
+& Encode the first argument as the pronoun \textit{I}. \vspace{2pt} \\
+& {\itshape Mary likes the book that {\bfseries I}}\dots \\
+\end{tblr} \\
+
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \draw[black] (-7.9,0) rectangle (7.9,-1.45);
+    \node (1) at (-5.6,-.4) {\strut \st{LIKE}(\st{$m$},\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut \st{$b$}};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut WONDER};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    % \draw [semithick] ([xshift=-2pt, yshift=-1pt]2.south) -- ([xshift=2pt, yshift=-1pt]2.south);
+    \node (5) [right=of 4.east, anchor=west] {\strut (\st{$s$}, WRITE($wh$, $b$))};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \ns{¬}};
+    \node (a) at (1.5,-.4) {\strut LIKE($m$,\phantom{ }};
+    \node (b) [right=of a.east, anchor=west] {\strut $b$};
+    \node (c) [right=of b.east, anchor=west] {\strut )};
+    \node (d) [below=4pt of b.south, anchor=north] {\strut PRED};
+    \draw [semithick] ([yshift=2pt]b.south) -- (d.north);
+    \node (e) [right=of d.east, anchor=west] {\strut $^b$($\mathbfit{s}$)};
+\end{tikzpicture} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 3:} & \textbf{Predicate Algorithm for Production} \vspace{2pt} \\ 
+& Encode the predicate as the verb \textit{wonder}. \vspace{2pt} \\
+& {\itshape Mary likes the book that I~{\bfseries wonder}\dots} \\
+\end{tblr} \\
+
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \draw[black] (-7.9,0) rectangle (7.9,-1.45);
+    \node (1) at (-5.6,-.4) {\strut \st{LIKE}(\st{$m$},\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut \st{$b$}};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut \st{WONDER}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    % \draw [semithick] ([xshift=-2pt, yshift=-1pt]2.south) -- ([xshift=2pt, yshift=-1pt]2.south);
+    \node (5) [right=of 4.east, anchor=west] {\strut (\st{$s$}, WRITE($wh$, $b$))};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \ns{\st{¬}}};
+    \node (a) at (1.5,-.4) {\strut LIKE($m$,\phantom{ }};
+    \node (b) [right=of a.east, anchor=west] {\strut $b$};
+    \node (c) [right=of b.east, anchor=west] {\strut )};
+    \node (d) [below=4pt of b.south, anchor=north] {\strut\bfseries WONDER};
+    \draw [semithick] ([yshift=2pt]b.south) -- (d.north);
+    \node (e) [right=of d.east, anchor=west] {\strut $^b$($s$, $\mathbfit{\beta}$)};
+    % \node (f) [left=of d.west, anchor=east] {\strut \bs{¬}};
+\end{tikzpicture} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 4:} & \textbf{\textit{Wh}-Question Algorithm for Production} \vspace{2pt} \\ 
+& Signal the onset of the embedded question by encoding the \textit{wh}-phrase \textit{who}. \vspace{2pt} \\
+& {\itshape Mary likes the book that I~wonder {\bfseries who}\dots} \\
+\end{tblr} \\
+
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \draw[black] (-7.9,0) rectangle (7.9,-2.75);
+    \node (1) at (-5.6,-.4) {\strut \st{LIKE}(\st{$m$},\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut \st{$b$}};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut \st{WONDER}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    % \draw [semithick] ([xshift=-2pt, yshift=-1pt]2.south) -- ([xshift=2pt, yshift=-1pt]2.south);
+    \node (5) [right=of 4.east, anchor=west] {\strut (\st{$s$}, WRITE(\st{$wh$}, $b$))};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \ns{\st{¬}}};
+    \node (a) at (1.5,-.4) {\strut LIKE($m$,\phantom{ }};
+    \node (b) [right=of a.east, anchor=west] {\strut $b$};
+    \node (c) [right=of b.east, anchor=west] {\strut )};
+    \node (d) [below=4pt of b.south, anchor=north] {\strut WONDER};
+    \draw [semithick] ([yshift=2pt]b.south) -- (d.north);
+    \node (e) [right=of d.east, anchor=west] {\strut $^b$($s$, {\bfseries PRED$^{\mathbfit{wh}}$($\mathbfit{\alpha}$)})};
+    % \node (f) [left=of d.west, anchor=east] {\strut \ns{¬}};
+    \node (aa) [below=.8cm of a.south, anchor=north] {\strut LIKE($m$,\phantom{ }};
+    \node (bb) [right=of aa.east, anchor=west] {\strut $b$};
+    \node (cc) [right=of bb.east, anchor=west] {\strut )};
+    \node (dd) [below=4pt of bb.south, anchor=north] {\strut WONDER};
+    \draw [semithick] ([yshift=2pt]bb.south) -- (dd.north);
+    \node (ee) [right=of dd.east, anchor=west] {\strut $^b$($s$, PRED($\mathbfit{wh}$))};
+    % \node (ff) [left=of dd.west, anchor=east] {\strut \ns{¬}};
+\end{tikzpicture} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 5:} & \textbf{Predicate Algorithm for Production} \vspace{2pt} \\ 
+& Encode the predicate as the verb \textit{wrote}. \vspace{2pt} \\
+& {\itshape Mary likes the book that I~wonder who {\bfseries wrote}\dots} \\
+\end{tblr} \\
+
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \draw[black] (-7.9,0) rectangle (7.9,-1.45);
+    \node (1) at (-5.6,-.4) {\strut \st{LIKE}(\st{$m$},\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut \st{$b$}};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut \st{WONDER}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    % \draw [semithick] ([xshift=-2pt, yshift=-1pt]2.south) -- ([xshift=2pt, yshift=-1pt]2.south);
+    \node (5) [right=of 4.east, anchor=west] {\strut (\st{$s$}, \st{WRITE}(\st{$wh$}, $b$))};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \ns{\st{¬}}};
+    \node (a) at (1.5,-.4) {\strut LIKE($m$,\phantom{ }};
+    \node (b) [right=of a.east, anchor=west] {\strut $b$};
+    \node (c) [right=of b.east, anchor=west] {\strut )};
+    \node (d) [below=4pt of b.south, anchor=north] {\strut WONDER};
+    \draw [semithick] ([yshift=2pt]b.south) -- (d.north);
+    \node (e) [right=of d.east, anchor=west] {\strut $^b$($s$, {\bfseries WRITE}($wh$, $\mathbfit{\beta}$))};
+    % \node (f) [left=of d.west, anchor=east] {\strut \ns{¬}};
+\end{tikzpicture} \\
+
+\begin{tblr}{colspec={X[.6in]X[l]}} 
+\textbf{Step 6:} & \textbf{Second-Argument Algorithm for Production} \vspace{2pt} \\ 
+& Encode the second argument as the pronoun \textit{it}. \vspace{2pt} \\
+& {\itshape Mary likes the book that I~wonder who wrote {\bfseries it}.} \\
+\end{tblr} \\
+
+\begin{tikzpicture}[node distance=0pt, inner sep=0pt]
+    \draw[black] (-7.9,0) rectangle (7.9,-2.75);
+    \node (1) at (-5.6,-.4) {\strut \st{LIKE}(\st{$m$},\phantom{ }};
+    \node (2) [right=of 1.east, anchor=west] {\strut \st{$b$}};
+    \node (3) [right=of 2.east, anchor=west] {\strut )};
+    \node (4) [below=4pt of 2.south, anchor=north] {\strut \st{WONDER}};
+    \draw [semithick] ([yshift=2pt]2.south) -- (4.north);
+    % \draw [semithick] ([xshift=-2pt, yshift=-1pt]2.south) -- ([xshift=2pt, yshift=-1pt]2.south);
+    \node (5) [right=of 4.east, anchor=west] {\strut (\st{$s$}, \st{WRITE}(\st{$wh$}, \st{$b$}))};
+    % \node (6) [left=of 4.west, anchor=east] {\strut \ns{\st{¬}}};
+    \node (a) at (1.5,-.4) {\strut LIKE($m$,\phantom{ }};
+    \node (b) [right=of a.east, anchor=west] {\strut $b$};
+    \node (c) [right=of b.east, anchor=west] {\strut )};
+    \node (d) [below=4pt of b.south, anchor=north] {\strut WONDER};
+    \draw [semithick] ([yshift=2pt]b.south) -- (d.north);
+    \node (e) [right=of d.east, anchor=west] {\strut $^b$($s$, WRITE(};
+    % \node (f) [left=of d.west, anchor=east] {\strut \ns{¬}};
+    \node (g) [right=of e.east, anchor=west] {\strut $wh$, $\mathbfit{x}$))};
+    \node (aa) [below=.8cm of a.south, anchor=north] {\strut LIKE($m$,\phantom{ }};
+    \node (bb) [right=of aa.east, anchor=west] {\strut $b$};
+    \node (cc) [right=of bb.east, anchor=west] {\strut )};
+    \node (dd) [below=4pt of bb.south, anchor=north] {\strut WONDER};
+    \draw [semithick] ([yshift=2pt]bb.south) -- (dd.north);
+    \node (ee) [right=of dd.east, anchor=west] {\strut $^b$($s$, WRITE(};
+    % \node (f) [left=of dd.west, anchor=east] {\strut \ns{¬}};
+    \node (gg) [right=of ee.east, anchor=west] {\strut $wh$, $\mathbfit{b}$))};
+\end{tikzpicture} \\
+
+\hline
+\end{longtblr}
+\vspace{-6pt}
+\setstretch{1.5}
+
+\noindent The routine I~propose in Table~\ref{tblr:pro-routine-resumption-production} relies on the speaker using the language comprehension system to keep track of the unfolding linguistic message, as we can see in Steps~4--6: When the speaker initiates the embedded question by encoding the \textit{wh}-phrase (Step~4), reactivation of the RC filler is blocked on the comprehension side of things by the \textit{wh}-filler already present in the new predicate-argument complex. The search for a gap is therefore suspended for the duration of the embedded question, and when it comes time to deal with WRITE's second argument (Step~6), the speaker proceeds as s/he would outside a gapped dependency (i.e.,~in a sentence like \textit{Mary likes the book and I~wonder who wrote it}), namely by encoding the second argument as a pronoun. Thus, the speaker's decision to have a gap or an overt nominal at the foot of the RC dependency hinges on whether the filler can be carried over into the critical predicate-argument complex in the unfolding semantic representation of the sentence. When the speaker is unable to reactivate the RC filler, whether due to cognitive overload or a constraint on grammar (or a combination of the two), then the RC dependency is completed via resumption rather than via gapping.
+
+As I~see it, the difference in processing routines between languages like English and languages with grammatical resumption is that in English-type languages, failure of the Reactivation Algorithm leaves the sentence irrevocably ill-formed. Even if the RC dependency can later be resolved with the aid of a resumptive nominal, the possibility of having a well-formed sentence has been lost (see Section~\ref{res-wellformedness}). In languages with grammatical resumption, by contrast, it may be the case that failure to reactivate the filler simply signals that the RC dependency must be resolved by resumption instead of gapping.
+
+%========================================================%
+\section{Summing up}\label{pro-conclusion}
+%========================================================%
+
+This chapter introduced the reader to a few of the basic properties of RCs, focusing on those RCs of particular interest to the present dissertation, namely gapped and resumptive RCs of the restrictive variety. It also highlighted some of the key differences between RCs in my three languages of interest: English, Korean, and Mandarin. We observed, for instance, that English has head-initial RCs whereas Korean and Mandarin have head-final RCs. Towards the end of the chapter, I~presented models of the structure of RCs and the processing of RCs, which I~utilize in the coming chapters when exploring factors that affect the extent of strain placed on the processor during RC production and comprehension.

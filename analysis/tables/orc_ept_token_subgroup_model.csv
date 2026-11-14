@@ -1,0 +1,10 @@
+Parameter,Estimate,$SE$,$z$,$p$
+(Intercept),−5.48,0.50,−10.91,< .001
+Environment[Long], 1.86,0.58,  3.24,0.001
+Environment[Island], 3.91,0.59,  6.59,< .001
+Group[KLE],−1.24,0.91, −1.36,0.174
+Group[MLE],−0.26,0.83, −0.31,0.757
+Environment[Long]:Group[KLE], 1.18,1.53,  0.77,0.443
+Environment[Island]:Group[KLE],−0.69,1.55, −0.44,0.657
+Environment[Long]:Group[MLE],−0.11,1.07, −0.10,0.922
+Environment[Island]:Group[MLE],−3.94,1.06, −3.72,< .001

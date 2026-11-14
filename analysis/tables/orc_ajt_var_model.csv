@@ -1,0 +1,31 @@
+Parameter,Estimate,$SE$,$t$,$p$
+(Intercept), 0.10,0.00,27.82,< .001
+Dependency[RP], 0.01,0.01, 1.09,0.278
+Environment[Long], 0.02,0.01, 3.10,0.002
+Environment[Island], 0.03,0.01, 5.73,< .001
+Pairing[KE], 0.03,0.01, 2.98,0.003
+Pairing[ME], 0.05,0.01, 4.81,< .001
+Pairing[KK], 0.03,0.01, 2.94,0.004
+Pairing[MM], 0.06,0.01, 5.95,< .001
+Dependency[RP]:Environment[Long],−0.02,0.01,−2.06,0.040
+Dependency[RP]:Environment[Island],−0.02,0.01,−1.91,0.056
+Dependency[RP]:Pairing[KE],−0.02,0.02,−1.00,0.320
+Dependency[RP]:Pairing[ME],−0.01,0.02,−0.50,0.616
+Dependency[RP]:Pairing[KK], 0.01,0.02, 0.37,0.710
+Dependency[RP]:Pairing[MM],−0.02,0.02,−1.29,0.198
+Environment[Long]:Pairing[KE],−0.01,0.02,−0.42,0.673
+Environment[Island]:Pairing[KE],−0.01,0.02,−0.67,0.500
+Environment[Long]:Pairing[ME],−0.01,0.02,−0.47,0.635
+Environment[Island]:Pairing[ME],−0.01,0.02,−0.53,0.599
+Environment[Long]:Pairing[KK], 0.03,0.02, 1.44,0.151
+Environment[Island]:Pairing[KK], 0.04,0.02, 2.45,0.015
+Environment[Long]:Pairing[MM],−0.03,0.02,−1.68,0.092
+Environment[Island]:Pairing[MM],−0.05,0.02,−2.62,0.009
+Dependency[RP]:Envir.[Long]:Pairing[KE], 0.02,0.04, 0.61,0.544
+Dependency[RP]:Envir.[Island]:Pairing[KE], 0.07,0.04, 1.86,0.063
+Dependency[RP]:Envir.[Long]:Pairing[ME], 0.03,0.04, 0.94,0.346
+Dependency[RP]:Envir.[Island]:Pairing[ME], 0.04,0.04, 1.10,0.272
+Dependency[RP]:Envir.[Long]:Pairing[KK], 0.00,0.04,−0.03,0.979
+Dependency[RP]:Envir.[Island]:Pairing[KK],−0.02,0.04,−0.45,0.652
+Dependency[RP]:Envir.[Long]:Pairing[MM], 0.08,0.04, 2.26,0.024
+Dependency[RP]:Envir.[Island]:Pairing[MM], 0.10,0.04, 2.85,0.004

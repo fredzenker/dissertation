@@ -1,0 +1,16 @@
+Parameter,Estimate,$SE$,$z$,$p$
+(Intercept),−1.26,0.15,−8.39,< .001
+Environment[Long], 1.20,0.35, 3.47,< .001
+Environment[Island], 1.74,0.29, 5.98,< .001
+Pairing[KE], 2.59,0.57, 4.57,< .001
+Pairing[ME], 4.00,0.57, 7.06,< .001
+Pairing[KK], 2.45,0.58, 4.20,< .001
+Pairing[MM], 3.22,0.56, 5.72,< .001
+Environment[Long]:Pairing[KE], 0.82,1.51, 0.54,0.587
+Environment[Island]:Pairing[KE],−0.82,1.18,−0.69,0.488
+Environment[Long]:Pairing[ME], 0.82,1.49, 0.55,0.583
+Environment[Island]:Pairing[ME],−1.99,1.15,−1.74,0.082
+Environment[Long]:Pairing[KK], 2.98,1.56, 1.90,0.057
+Environment[Island]:Pairing[KK], 0.37,1.24, 0.29,0.768
+Environment[Long]:Pairing[MM], 1.29,1.49, 0.87,0.385
+Environment[Island]:Pairing[MM],−1.23,1.15,−1.06,0.287

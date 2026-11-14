@@ -1,0 +1,19 @@
+Parameter,Estimate,$SE$,$t$,$p$
+(Intercept), 0.06,0.00,16.37,< .001
+Dependency[RP],−0.04,0.00,−8.67,< .001
+Environment[Long], 0.02,0.01, 3.42,< .001
+Environment[Island], 0.03,0.01, 5.56,< .001
+Group[KLE], 0.01,0.01, 0.65,0.519
+Group[MLE], 0.00,0.01, 0.12,0.901
+Dependency[RP]:Environment[Long],−0.02,0.01,−2.34,0.019
+Dependency[RP]:Environment[Island],−0.03,0.01,−3.21,0.001
+Dependency[RP]:Group[KLE], 0.00,0.01,−0.31,0.756
+Dependency[RP]:Group[MLE], 0.00,0.01, 0.24,0.811
+Environment[Long]:Group[KLE], 0.01,0.01, 1.06,0.291
+Environment[Island]:Group[KLE], 0.01,0.01, 1.04,0.299
+Environment[Long]:Group[MLE], 0.01,0.01, 0.56,0.573
+Environment[Island]:Group[MLE],−0.01,0.01,−0.60,0.547
+Dependency[RP]:Envir.[Long]:Group[KLE],−0.01,0.03,−0.46,0.648
+Dependency[RP]:Envir.[Island]:Group[KLE], 0.01,0.03, 0.43,0.664
+Dependency[RP]:Envir.[Long]:Group[MLE],−0.04,0.03,−1.64,0.102
+Dependency[RP]:Envir.[Island]:Group[MLE], 0.02,0.03, 0.83,0.406

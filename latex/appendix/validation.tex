@@ -1,0 +1,93 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% # C-Test Validation Study
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{C-Test Validation Study}\label{app-validation}
+
+\setlength{\parindent}{2.6em}
+\setstretch{1.5}
+
+This appendix describes the procedure I used to check the reliability and validity of the C-test (henceforth, the `Zenker C-test') that I developed for use in this dissertation as an independent measure of English proficiency.
+
+%========================================================%
+\section{Creation of the C-test}\label{app-validation-creation}
+%========================================================%
+
+The Zenker C-test consists of two short passages, each with 25 blanks that the participant needs to fill in (50 blanks total). The first passage, on algae, is from the Britannica Kids website (\url{https://kids.britannica.com}). The second passage, on noise pollution, is from the Encyclopedia Britannica website (\url{https://www.britannica.com}). Following standard procedure for C-test creation (e.g.,~\cite{babaii.ansary2001}), blanks were created by removing the second half of every other word after the first sentence. The following types of words were skipped over: (a)~words that appeared more than once in the passages and (b)~words that were shorter than four letters in length. The passages themselves were also altered slightly to remove technical terms and specific cultural references.
+
+%========================================================%
+\section{Participants and tasks}\label{app-validation-participant}
+%========================================================%
+
+Sixty-two adult L1-Korean L2ers of English participated in the C-test validation study. Participants were recruited on Korean university websites such as SNULife (\url{https://www.snulife.com}) and Ewhaian (\url{http://www.ewhaian.com}) as well as on Korean job boards such as Spec Up (\url{https://cafe.naver.com/specup}). They gave informed consent before starting the experiment and were compensated with a small monetary award.
+
+The experiment consisted of seven tasks: a language background questionnaire (see~Appendix \ref{app-lbq}), the Zenker C-test (see~Appendix \ref{app-zenker}), Park and Choi's (\citeyear{park.choi2018}) C-test (henceforth, the `Park and Choi C-test'; see~Appendix \ref{app-parkchoi}), Brown's (\citeyear{brown1980}) cloze test (henceforth, the `Brown cloze test'; see~Appendix \ref{app-brown}), a speaking task (see~Appendix \ref{app-speaking}), a writing task (see~Appendix \ref{app-writing}), and a short exit survey (see~Appendix \ref{app-exit}). The presentation order of the three gap-filling tasks was randomized across participants. The discussion in this appendix deals only with the results from the Zenker C-test, the Brown cloze test, the Park and Choi C-test, and the writing task.
+
+%========================================================%
+\section{Automatic scoring}\label{app-validation-scoring}
+%========================================================%
+
+An automatic scoring procedure was developed in R to score the gap-filling tasks more efficiently. The steps in this scoring procedure are outlined in (\ref{ex-autoscore}).
+
+\pex Automatic scoring procedure: \label{ex-autoscore}
+\a Check for a perfect match between the response and one of the acceptable answers. Matches are marked as ACCURACY~=~TRUE and mismatches are passed to the next step.
+\a Check the spelling of the response using the \textit{hunspell} package (\cite{ooms2022}). Correctly spelled words are marked as ACCURACY~=~FALSE (this is done to ensure that alternative inflectional forms of the correct answer, such as \textit{come} instead of \textit{comes}, are marked as ACCURACY~=~FALSE) and incorrectly spelled words are passed to the next step.
+\a Finally, spelling suggestions are generated using the \textit{hunspell} package. Cases where one of the spelling suggestions matches one of the acceptable answers are marked as ACCURACY~=~TRUE and all other responses are marked as ACCURACY~=~FALSE.
+\xe 
+
+The accuracy of the automatic scorer was checked by comparing its scoring data to those of human scorers on a sample of the cloze test and C-test data. For each of the three tasks, data from 20 participants were manually scored by two human raters. The sample dataset was created by randomly assigning the response data from 20 participants to each of the three tasks; it therefore amounted to 1,000 response tokens for the Brown cloze test, 900 response tokens for the Park and Choi C-test, and 1,000 tokens from the Zenker C-test. Each response in the sample was manually scored by the two raters. Inter-rater reliability was high, both when calculated over the entire sample ($\kappa$~=~.99), and when calculated for each task individually ($\kappa$~=~.98 for the Brown cloze test, 1.00 for the Park and Choi C-test, and 1.00 for the Zenker C-test). Discrepancies were dealt with via discussion.
+
+Next, the accuracy of the automatic scorer and the two human raters was assessed by comparing their data to the corrected version of the manually scored sample dataset, which was treated as the gold standard for accuracy. The results of this analysis, displayed in Table~\ref{tab:app-scorer-accuracy}, showed that all three scorers (i.e.,~the automatic scorer and the two human scorers) were highly accurate, with only a small advantage for the human scorers over the automatic scorer. 
+
+\begin{table}
+\caption{Scorer accuracy in the sample data}\label{tab:app-scorer-accuracy}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec = {lX[r]X[r]X[r]X[r]}}\toprule
+Dataset & Brown & Park and Choi & Zenker & Overall \\\midrule
+Automatic Scorer & 97.60\% & 99.67\% & 99.40\% & 98.86\% \\
+Human Scorer 1 & 99.80\% & 100.00\% & 100.00\% & 99.93\% \\
+Human Scorer 2 & 99.30\% & 100.00\% & 100.00\% & 99.75\% \\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+Given that the agreement rate should be at or near 100\% for perfect-match tokens (i.e.,~cases where the response perfectly matched one of the acceptable answers), I also calculated the agreement rates for the subset of each sample that consisted of imperfect-match tokens: 302 tokens (30\%) for the Brown sample, 371 tokens (41\%) for the Park and Choi sample, 353 tokens (35\%) for the Zenker sample. Filtered down to the imperfect match data, accuracy of the automatic and human scorers was still very high, as shown in Table \ref{tab:app-scorer-imperfect}.
+
+\begin{table}
+\caption{Scorer accuracy in the imperfect-match data}\label{tab:app-scorer-imperfect}
+\raggedright\setstretch{1}
+\begin{tblr}{colspec = {lX[r]X[r]X[r]X[r]}}\toprule
+Dataset & Brown & Park and Choi & Zenker & Overall \\\midrule
+Automatic Scorer & 99.67\% & 99.19\% & 98.30\% & 99.03\% \\
+Human Scorer 1 & 100.00\% & 100.00\% & 100.00\% & 100.00\% \\
+Human Scorer 2 & 99.34\% & 100.00\% & 100.00\% & 99.81\% \\\bottomrule
+\end{tblr}
+\vspace{-12pt}
+\end{table}
+
+Because the accuracy rate for each task was so close to ceiling, I decided to use the automatic scorer to mark the C-test and cloze test data used in the remaining analyses in this appendix as well as the C-test data used in the main studies in the dissertation.
+
+%========================================================%
+\section{Reliability}
+%========================================================%
+
+KR-20 was used to assess reliability the reliability of the three gap-filling tasks. KR-20 values were high and comparable across the three tasks (Brown: .928; Park and Choi: .902; Zenker: .900). These results indicate that all the tasks are highly reliable instruments and therefore well-suited for use in linguistic experiments.
+
+%========================================================%
+\section{Validity}
+%========================================================%
+
+To assess the validity of the Zenker C-test, I compared the scores it yielded to the scores from the Brown cloze test and the Park and Choi C-test (two measures of English proficiency that have previously been subjected to their own validation studies). Pearson correlations were used to compare the scores from these three gap-filling tasks. I follow Dancey and Reidy's (\citeyear{dancey.reidy2007}) guidelines for the interpretation of Pearson correlation coefficients in psychology, according to which $r$ < .4 is a weak correlation, .4 ≥ $r$ > .7 is a moderate correlation, and $r$ ≥ .7 is a strong correlation. The Zenker C-test scores were strongly correlated with the Park and Choi C-test scores ($r$~=~.808) and moderately correlated with the Brown cloze test scores ($r$~=~.668). The Brown cloze test scores and the Park and Choi C-test scores were also moderately correlated with each other ($r$~=~.619).
+
+Pearson correlations were also used to compare the scores from each task to the human-rated essay scores from the writing task. These writing scores were obtained by having three writing teachers score the participants' essays with with reference to a rubric. The three resulting scores for each essay were then averaged to give the final score. The Zenker C-test had the strongest correlation with essay scores ($r$~=~.576, a moderate correlation), followed by the Park and Choi C-test ($r$~=~.521, a moderate correlation), and finally the Brown cloze test ($r$~=~.349, a weak correlation). 
+
+These results support the validity of the Zenker C-test as a tool for the rapid assessment of L2 English proficiency in experimental research settings. 
+
+%========================================================%
+\section{Summing up}
+%========================================================%
+
+Based on these results, I decided to proceed with my plan to use the Zenker C-test with automatic scoring as the L2 English proficiency measure for the main studies in this dissertation.
+
+\setlength{\parindent}{0in}
+\setstretch{1}

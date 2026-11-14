@@ -1,0 +1,4 @@
+Parameter,Estimate,$SE$,$z$,$p$
+(Intercept), 1.51,0.25, 6.15,< .001
+Group[KLE],−2.13,0.31,−6.92,< .001
+Group[MLE],−2.50,0.33,−7.69,< .001

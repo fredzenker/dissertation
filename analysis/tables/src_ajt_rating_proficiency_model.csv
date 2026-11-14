@@ -1,0 +1,29 @@
+Parameter,Estimate,$SE$,$z$,$p$
+1|2,−2.54,0.15,−16.42,< .001
+2|3,−1.04,0.15, −6.95,< .001
+3|4,−0.43,0.15, −2.89,0.004
+4|5, 0.15,0.15,  1.04,0.300
+5|6, 1.32,0.15,  8.80,< .001
+Dependency[RP],−0.49,0.23, −2.13,0.033
+Environment[Long],−1.10,0.22, −5.05,< .001
+Environment[Island],−1.88,0.23, −8.31,< .001
+Pairing[ME], 0.87,0.28,  3.12,0.002
+Proficiency, 0.06,0.14,  0.44,0.664
+Dependency[RP]:Environment[Long], 4.69,0.38, 12.52,< .001
+Dependency[RP]:Environment[Island], 7.26,0.51, 14.21,< .001
+Dependency[RP]:Pairing[ME], 2.38,0.44,  5.39,< .001
+Environment[Long]:Pairing[ME],−0.18,0.41, −0.44,0.662
+Environment[Island]:Pairing[ME],−0.70,0.43, −1.65,0.099
+Dependency[RP]:Proficiency,−0.44,0.22, −2.00,0.045
+Environment[Long]:Proficiency, 0.34,0.20,  1.66,0.097
+Environment[Island]:Proficiency, 0.17,0.21,  0.80,0.427
+Pairing[ME]:Proficiency,−0.04,0.28, −0.14,0.887
+Dependency[RP]:Envir.[Long]:Pairing[ME], 0.25,0.68,  0.38,0.708
+Dependency[RP]:Envir.[Island]:Pairing[ME],−1.26,0.95, −1.33,0.185
+Dependency[RP]:Envir.[Long]:Proficiency, 0.76,0.34,  2.22,0.026
+Dependency[RP]:Envir.[Island]:Proficiency, 2.20,0.48,  4.62,< .001
+Dependency[RP]:Pairing[ME]:Proficiency, 0.82,0.44,  1.86,0.062
+Environment[Long]:Pairing[ME]:Proficiency,−0.56,0.41, −1.38,0.167
+Environment[Island]:Pairing[ME]:Proficiency,−0.40,0.42, −0.94,0.345
+Dependency[RP]:Envir.[Long]:Pairing[ME]:Proficiency, 0.37,0.68,  0.54,0.586
+Dependency[RP]:Envir.[Island]:Pairing[ME]:Proficiency,−0.71,0.95, −0.75,0.451

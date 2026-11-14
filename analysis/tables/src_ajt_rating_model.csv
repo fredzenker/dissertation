@@ -1,0 +1,35 @@
+Parameter,Estimate,$SE$,$z$,$p$
+1|2,−1.87,0.09,−21.19,< .001
+2|3,−0.79,0.09, −9.08,< .001
+3|4,−0.28,0.09, −3.29,< .001
+4|5, 0.28,0.09,  3.25,0.001
+5|6, 1.28,0.09, 14.71,< .001
+Dependency[RP],−1.59,0.10,−15.43,< .001
+Environment[Long],−0.64,0.10, −6.16,< .001
+Environment[Island],−1.48,0.12,−12.30,< .001
+Pairing[KE], 0.60,0.21,  2.83,0.005
+Pairing[ME], 1.24,0.21,  5.86,< .001
+Pairing[KK], 1.10,0.21,  5.13,< .001
+Pairing[MM], 1.33,0.21,  6.26,< .001
+Dependency[RP]:Environment[Long], 3.23,0.12, 27.73,< .001
+Dependency[RP]:Environment[Island], 5.34,0.12, 43.55,< .001
+Dependency[RP]:Pairing[KE], 2.06,0.26,  7.76,< .001
+Dependency[RP]:Pairing[ME], 3.90,0.26, 14.94,< .001
+Dependency[RP]:Pairing[KK], 1.04,0.27,  3.92,< .001
+Dependency[RP]:Pairing[MM], 2.49,0.26,  9.62,< .001
+Environment[Long]:Pairing[KE], 0.15,0.28,  0.54,0.586
+Environment[Island]:Pairing[KE], 1.77,0.31,  5.80,< .001
+Environment[Long]:Pairing[ME],−0.11,0.27, −0.39,0.694
+Environment[Island]:Pairing[ME], 1.13,0.30,  3.76,< .001
+Environment[Long]:Pairing[KK], 0.57,0.28,  2.04,0.041
+Environment[Island]:Pairing[KK], 2.48,0.31,  8.02,< .001
+Environment[Long]:Pairing[MM], 0.41,0.27,  1.54,0.125
+Environment[Island]:Pairing[MM], 1.84,0.30,  6.19,< .001
+Dependency[RP]:Envir.[Long]:Pairing[KE], 0.64,0.39,  1.63,0.104
+Dependency[RP]:Envir.[Island]:Pairing[KE],−2.33,0.40, −5.88,< .001
+Dependency[RP]:Envir.[Long]:Pairing[ME], 0.82,0.39,  2.12,0.034
+Dependency[RP]:Envir.[Island]:Pairing[ME],−3.77,0.39, −9.63,< .001
+Dependency[RP]:Envir.[Long]:Pairing[KK], 2.26,0.40,  5.61,< .001
+Dependency[RP]:Envir.[Island]:Pairing[KK],−3.25,0.41, −7.97,< .001
+Dependency[RP]:Envir.[Long]:Pairing[MM],−0.05,0.38, −0.13,0.900
+Dependency[RP]:Envir.[Island]:Pairing[MM],−4.59,0.39,−11.89,< .001

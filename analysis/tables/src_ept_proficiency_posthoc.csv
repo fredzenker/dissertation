@@ -1,0 +1,7 @@
+Group,Environment,Proficiency Trend,$SE$,$z$,$p$
+KLE,Short, 0.71,50.72, 0.01,> .999
+KLE,Long,−0.03, 0.84,−0.03,> .999
+KLE,Island, 2.13, 0.86, 2.47,0.072
+MLE,Short,−0.63, 1.48,−0.42,0.998
+MLE,Long, 1.28, 0.80, 1.59,0.464
+MLE,Island, 0.93, 0.79, 1.17,0.763

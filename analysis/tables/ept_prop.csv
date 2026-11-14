@@ -1,0 +1,55 @@
+study,Group,Environment,Dependency,Percent
+ORC,ENS,Short,Gapping,92.13
+ORC,ENS,Short,Resumption, 3.37
+ORC,ENS,Short,Other,35.96
+ORC,ENS,Long,Gapping,89.89
+ORC,ENS,Long,Resumption, 6.74
+ORC,ENS,Long,Other,20.22
+ORC,ENS,Island,Gapping,65.17
+ORC,ENS,Island,Resumption,57.30
+ORC,ENS,Island,Other,32.58
+ORC,KLE,Short,Gapping,61.54
+ORC,KLE,Short,Resumption, 7.69
+ORC,KLE,Short,Other,47.69
+ORC,KLE,Long,Gapping,70.77
+ORC,KLE,Long,Resumption,20.00
+ORC,KLE,Long,Other,35.38
+ORC,KLE,Island,Gapping,64.62
+ORC,KLE,Island,Resumption,30.77
+ORC,KLE,Island,Other,27.69
+ORC,MLE,Short,Gapping,57.75
+ORC,MLE,Short,Resumption, 4.23
+ORC,MLE,Short,Other,57.75
+ORC,MLE,Long,Gapping,76.06
+ORC,MLE,Long,Resumption,22.54
+ORC,MLE,Long,Other,30.99
+ORC,MLE,Island,Gapping,73.24
+ORC,MLE,Island,Resumption,25.35
+ORC,MLE,Island,Other,32.39
+SRC,ENS,Short,Gapping,96.61
+SRC,ENS,Short,Resumption, 0.00
+SRC,ENS,Short,Other, 0.00
+SRC,ENS,Long,Gapping,93.22
+SRC,ENS,Long,Resumption, 3.39
+SRC,ENS,Long,Other, 5.08
+SRC,ENS,Island,Gapping, 0.00
+SRC,ENS,Island,Resumption,83.05
+SRC,ENS,Island,Other,30.51
+SRC,KLE,Short,Gapping,98.46
+SRC,KLE,Short,Resumption, 0.00
+SRC,KLE,Short,Other, 0.00
+SRC,KLE,Long,Gapping,50.77
+SRC,KLE,Long,Resumption,38.46
+SRC,KLE,Long,Other,38.46
+SRC,KLE,Island,Gapping,26.15
+SRC,KLE,Island,Resumption,53.85
+SRC,KLE,Island,Other,36.92
+SRC,MLE,Short,Gapping,91.18
+SRC,MLE,Short,Resumption, 8.82
+SRC,MLE,Short,Other, 0.00
+SRC,MLE,Long,Gapping,32.35
+SRC,MLE,Long,Resumption,63.24
+SRC,MLE,Long,Other,23.53
+SRC,MLE,Island,Gapping,10.29
+SRC,MLE,Island,Resumption,60.29
+SRC,MLE,Island,Other,36.76

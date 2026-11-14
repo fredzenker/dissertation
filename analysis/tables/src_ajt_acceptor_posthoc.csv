@@ -1,0 +1,16 @@
+Pairing,Contrast,Estimate,$SE$,$z$,$p$
+EE,Long − Short, 0.02,1.44, 0.01,> .999
+EE,Island − Short, 2.47,1.09, 2.28,0.259
+EE,Island − Long, 2.46,1.09, 2.26,0.267
+KE,Long − Short, 0.84,0.47, 1.79,0.605
+KE,Island − Short, 1.66,0.46, 3.62,0.004
+KE,Island − Long, 0.82,0.41, 2.00,0.447
+ME,Long − Short, 0.83,0.38, 2.21,0.300
+ME,Island − Short, 0.48,0.37, 1.29,0.921
+ME,Island − Long,−0.35,0.38,−0.94,0.991
+KK,Long − Short, 2.99,0.61, 4.87,< .001
+KK,Island − Short, 2.84,0.61, 4.63,< .001
+KK,Island − Long,−0.15,0.39,−0.39,> .999
+MM,Long − Short, 1.31,0.39, 3.32,0.013
+MM,Island − Short, 1.24,0.39, 3.15,0.022
+MM,Island − Long,−0.07,0.37,−0.18,> .999

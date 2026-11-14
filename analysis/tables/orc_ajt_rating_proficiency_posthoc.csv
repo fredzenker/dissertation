@@ -1,0 +1,7 @@
+Pairing,Environment,Contrast,Estimate,$SE$,$z$,$p$
+KE,Short,RP − Gap,−3.03,0.64,−4.70,< .001
+KE,Long,RP − Gap,−2.39,0.56,−4.26,< .001
+KE,Island,RP − Gap,−0.69,0.55,−1.26,0.588
+ME,Short,RP − Gap,−0.99,0.53,−1.85,0.234
+ME,Long,RP − Gap,−0.77,0.48,−1.61,0.356
+ME,Island,RP − Gap,−0.61,0.48,−1.27,0.582

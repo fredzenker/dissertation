@@ -1,0 +1,10 @@
+Group,Contrast,Estimate,$SE$,$z$,$p$
+ENS,Long − Short,1.31,0.72,1.83,0.398
+ENS,Island − Short,5.94,0.72,8.29,< .001
+ENS,Island − Long,4.63,0.51,9.08,< .001
+KLE,Long − Short,1.86,0.56,3.34,0.007
+KLE,Island − Short,3.16,0.55,5.70,< .001
+KLE,Island − Long,1.29,0.42,3.07,0.017
+MLE,Long − Short,2.10,0.66,3.16,0.013
+MLE,Island − Short,2.84,0.65,4.39,< .001
+MLE,Island − Long,0.75,0.44,1.68,0.498
