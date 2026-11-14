@@ -1,10 +1,19 @@
 cff-version: 1.2.0
 message: "If you use this dissertation, its data, or related materials, please cite it as below."
-type: dissertation
+type: generic
 authors:
   - family-names: Zenker
     given-names: Fred
 title: "The processing and acceptability of gapped vs. resumptive relative clauses in first and second language English"
-year: 2024
-school: "University of Hawaiʻi at Mānoa"
-url: "https://hdl.handle.net/10125/108677"
+preferred-citation:
+  type: thesis
+  authors:
+    - family-names: Zenker
+      given-names: Fred
+  title: "The processing and acceptability of gapped vs. resumptive relative clauses in first and second language English"
+  year: 2024
+  date-released: 2024-08-09
+  thesis-type: "Doctoral dissertation"
+  institution:
+    name: "University of Hawaiʻi at Mānoa"
+  url: "https://hdl.handle.net/10125/108677"
